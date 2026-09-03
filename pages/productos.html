@@ -1,954 +1,1893 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "on-tertiary-fixed-variant": "#5c4300",
-                "inverse-surface": "#362f2d",
-                "tertiary-container": "#856200",
-                "on-tertiary-container": "#ffe4b4",
-                "on-primary-fixed-variant": "#76320f",
-                "error": "#ba1a1a",
-                "error-container": "#ffdad6",
-                "surface-container-low": "#fff1ed",
-                "surface-variant": "#ede0dc",
-                "on-tertiary": "#ffffff",
-                "surface-bright": "#fff8f6",
-                "secondary-fixed": "#c9eea9",
-                "on-surface": "#211a18",
-                "tertiary-fixed-dim": "#f2bf50",
-                "on-secondary": "#ffffff",
-                "outline-variant": "#dac1b8",
-                "on-primary-container": "#ffe1d6",
-                "outline": "#87736b",
-                "on-background": "#211a18",
-                "on-surface-variant": "#54433c",
-                "primary-fixed": "#ffdbcd",
-                "inverse-primary": "#ffb596",
-                "inverse-on-surface": "#fceeea",
-                "surface-dim": "#e4d7d4",
-                "secondary-container": "#c9eea9",
-                "surface-container-lowest": "#ffffff",
-                "primary-fixed-dim": "#ffb596",
-                "on-error": "#ffffff",
-                "secondary-fixed-dim": "#aed18f",
-                "primary": "#823b18",
-                "surface-tint": "#944925",
-                "on-primary": "#ffffff",
-                "on-secondary-container": "#4e6d36",
-                "surface-container-high": "#f3e5e2",
-                "on-error-container": "#93000a",
-                "tertiary-fixed": "#ffdea1",
-                "secondary": "#486730",
-                "on-tertiary-fixed": "#261900",
-                "primary-container": "#a0522d",
-                "surface-container-highest": "#ede0dc",
-                "on-secondary-fixed": "#0b2000",
-                "surface-container": "#f9ebe7",
-                "on-primary-fixed": "#360f00",
-                "surface": "#fff8f6",
-                "on-secondary-fixed-variant": "#314e1b",
-                "tertiary": "#674b00",
-                "background": "#fff8f6"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-        },
-        "spacing": {
-                "space-3xl": "6rem",
-                "space-4xl": "8rem",
-                "margin-desktop": "4rem",
-                "space-xs": "0.75rem",
-                "space-lg": "2rem",
-                "gutter-desktop": "2rem",
-                "margin-mobile": "1.25rem",
-                "space-2xl": "4rem",
-                "space-sm": "1rem",
-                "margin-tablet": "2.5rem",
-                "space-md": "1.5rem",
-                "space-xl": "3rem",
-                "space-3xs": "0.25rem",
-                "gutter-mobile": "1rem",
-                "space-2xs": "0.5rem"
-        },
-        "fontFamily": {
-                "headline-lg": [
-                        "playfairDisplay"
-                ],
-                "headline-md": [
-                        "playfairDisplay"
-                ],
-                "display-hero-mobile": [
-                        "playfairDisplay"
-                ],
-                "label-sm": [
-                        "inter"
-                ],
-                "headline-lg-mobile": [
-                        "playfairDisplay"
-                ],
-                "body-md": [
-                        "inter"
-                ],
-                "body-sm": [
-                        "inter"
-                ],
-                "headline-sm": [
-                        "playfairDisplay"
-                ],
-                "display-hero": [
-                        "playfairDisplay"
-                ],
-                "label-md": [
-                        "inter"
-                ],
-                "body-lg": [
-                        "inter"
-                ],
-                "title-editorial": [
-                        "playfairDisplay"
-                ],
-                "label-caps": [
-                        "inter"
-                ]
-        },
-        "fontSize": {
-                "headline-lg": [
-                        "40px",
-                        {
-                                "lineHeight": "48px",
-                                "letterSpacing": "-0.015em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-md": [
-                        "28px",
-                        {
-                                "lineHeight": "36px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "display-hero-mobile": [
-                        "38px",
-                        {
-                                "lineHeight": "44px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-sm": [
-                        "12px",
-                        {
-                                "lineHeight": "16px",
-                                "letterSpacing": "0.02em",
-                                "fontWeight": "500"
-                        }
-                ],
-                "headline-lg-mobile": [
-                        "30px",
-                        {
-                                "lineHeight": "36px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-md": [
-                        "15px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-sm": [
-                        "13px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-sm": [
-                        "22px",
-                        {
-                                "lineHeight": "28px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "display-hero": [
-                        "56px",
-                        {
-                                "lineHeight": "64px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-md": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "body-lg": [
-                        "18px",
-                        {
-                                "lineHeight": "28px",
-                                "letterSpacing": "-0.005em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "title-editorial": [
-                        "18px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-caps": [
-                        "11px",
-                        {
-                                "lineHeight": "14px",
-                                "letterSpacing": "0.14em",
-                                "fontWeight": "600"
-                        }
-                ]
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
         }
-},
-    },
-  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,37,35,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Abrir menú" class="md:hidden flex items-center justify-center text-on-surface p-space-2xs hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">menu</span></button><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Hermanos Jota</span><span class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant uppercase pt-0.5">Ebanistería</span></a></div><nav class="hidden md:flex items-center gap-space-xl" data-active-classes="text-primary font-medium border-b border-primary"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="inicio" href="#">Inicio</a><a aria-current="page" class="uppercase transition-colors py-space-2xs text-primary font-medium border-b border-primary" data-path="productos" href="#">Productos</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><a aria-label="Carrito de compra" class="relative flex items-center justify-center p-space-2xs text-on-surface hover:text-primary transition-colors" data-path="carrito" href="#"><span class="material-symbols-outlined text-2xl">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-5 h-5 flex items-center justify-center rounded-full">2</span></a><div class="pl-space-2xs border-l border-outline-variant/30 flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALDdDaB8RJrrIHsy-ViENV9GDWv0ITbLoL8u6slpSgDbZG6npIxkPz_Iadlkd1pisd_aj4ikPXXC5CXt-SUbwK_XK7ccTbUECIWGyv-0OTAKo0ZbSB-6Kr7G5J54X0n18NNtej1vQuFQCIE7Dn84MkfFtrHGTqt6qIgMB8kYxpJOgz4y7nkpCmO4IGjjyO0AI937XdJ9c_AtOd_inYUWxIbm5RGxAqCgsk8kMW2nkEsc_2c6teNhY"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- ENCABEZADO EDITORIAL DE COLECCIÓN -->
-<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-lg max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-<div class="max-w-2xl">
-<div class="flex items-center gap-space-2xs text-secondary mb-space-3xs">
-<span class="material-symbols-outlined text-sm">verified</span>
-<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Edición Artesanal 2025</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Catálogo de Mobiliario</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-2xs">
-          Mobiliario atemporal fabricado a mano en maderas argentinas nobles y sostenibles. Piezas concebidas bajo el rigor del ensamble tradicional.
-        </p>
-</div>
-<div class="flex items-center gap-space-sm self-start md:self-auto">
-<div class="bg-surface-container-low px-space-sm py-space-2xs flex items-center gap-space-2xs rounded">
-<span class="material-symbols-outlined text-outline text-lg">forest</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Madera 100% Nativa FSC</span>
-</div>
-<div class="bg-surface-container-low px-space-sm py-space-2xs flex items-center gap-space-2xs rounded">
-<span class="material-symbols-outlined text-outline text-lg">handyman</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Garantía Decenal</span>
-</div>
-</div>
-</div>
-</section>
-<!-- BARRA DE UTILIDADES, BÚSQUEDA Y FILTROS -->
-<section class="w-full sticky top-20 z-30 bg-surface/95 backdrop-blur-md px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm max-w-7xl mx-auto shadow-sm transition-shadow">
-<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
-<!-- Filtros por Categoría -->
-<div class="flex items-center gap-space-2xs overflow-x-auto pb-1 lg:pb-0 scrollbar-none" id="categoryFilterBar">
-<button class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-primary-container text-on-primary" data-filter="all" type="button">
-          Todos los muebles (11)
-        </button>
-<button class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" data-filter="living" type="button">
-          Living &amp; Descanso
-        </button>
-<button class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" data-filter="comedor" type="button">
-          Comedor &amp; Sillas
-        </button>
-<button class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" data-filter="estudio" type="button">
-          Espacios de Trabajo
-        </button>
-<button class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface" data-filter="guardado" type="button">
-          Guardado &amp; Mesas
-        </button>
-</div>
-<!-- Buscador y Ordenador -->
-<div class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap">
-<!-- Input de búsqueda -->
-<div class="relative flex-1 sm:w-72">
-<span class="material-symbols-outlined absolute left-space-xs top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span>
-<input class="w-full bg-surface-container pl-9 pr-space-sm py-space-2xs font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded focus:outline-none focus:bg-surface-container-high transition-colors" id="searchInput" placeholder="Buscar por nombre, madera..." type="text"/>
-<button class="hidden absolute right-space-xs top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clearSearch">
-<span class="material-symbols-outlined text-sm">close</span>
-</button>
-</div>
-<!-- Ordenación Select -->
-<div class="relative flex items-center bg-surface-container rounded px-space-sm py-space-2xs">
-<span class="material-symbols-outlined text-outline text-base mr-1 pointer-events-none">sort</span>
-<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer pr-4 appearance-none" id="sortSelect">
-<option value="featured">Destacados</option>
-<option value="price-asc">Menor precio</option>
-<option value="price-desc">Mayor precio</option>
-<option value="alpha">Alfabético (A-Z)</option>
-</select>
-<span class="material-symbols-outlined text-outline text-sm absolute right-2 pointer-events-none">expand_more</span>
-</div>
-</div>
-</div>
-<!-- Indicador de conteo y filtros aplicados -->
-<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
-<div class="flex items-center gap-space-2xs">
-<span class="font-medium text-on-surface" id="resultsCount">Mostrando 11 piezas exclusivas</span>
-<span class="hidden text-outline" id="activeFilterLabel">• Colección filtrada</span>
-</div>
-<div class="hidden md:flex items-center gap-space-3xs text-outline">
-<span>Diseñado en Buenos Aires</span>
-<span>•</span>
-<span>Envíos a todo el país</span>
-</div>
-</div>
-</section>
-<!-- GRILLA PRINCIPAL DE MOBILIARIO -->
-<section class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xl max-w-7xl mx-auto flex-1">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop" id="productGrid">
-<!-- Card 1: Sofá Patagonia -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="living" data-id="1" data-price="1450000" data-title="Sofá Patagonia" data-wood="Petiribí macizo con tapiz texturado">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Sofá Patagonia en Petiribí macizo" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkaSaF7662B39V3fmvnVrmqknu4Avun1y8Yrklnt5Dm0KcsUwJPs7aRkSOmaQN-7xBXnuu8ozafVNudT0FPfhdDCGaqOIn5WwicYbP1vHBafA3ozh0rPY7ixfxr8RWVf8H7IniE1DQso4PQzHtJtAZMds-0FkJZUAoLghFFAEWeDgGOhzZIYiVkSc4LBPikQRUHKMAWmcQoxBBwpWa-RUt39A6z2NoRtSCFJ0MPsquV6k715CPQA22OUKFn034Fqqy"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Living</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Petiribí Macizo &amp; Tapiz Lino</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Sofá Patagonia</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Estructura esculpida de líneas sutiles con cojines de densidad graduada y tapizado hidrófugo artesanal.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 1.450.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(1)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 2: Sillón Copacabana -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="living" data-id="2" data-price="890000" data-title="Sillón Copacabana" data-wood="Incienso oscuro y cuero vaqueta">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Sillón Copacabana en cuero curtido y madera oscura" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO99tgjWLG4aKcOF4QTfYiJnmW_9DR8yeTEnGDFa0Gj-oC1pz9rUvmOXcK3rJX-qfjdEdpQQ8uanKJWtBP_ZiF5uovsOEvSFK4mM7_whMwiLYLDpdbUgmnL_1eg8-RpRAQdE3Pmhe56e36QRF21WPvHi5SRzhQNxRu9fLG7bkp_3-4YwbJvxnf_159p83yBLfWRzRl6ZTQQMbq6ArMO4OgB1lRLLez60giyM9If1Bdu8nYKTwMK_a8J22jlUcj-sDw"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Living</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Incienso &amp; Cuero Vaqueta</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Sillón Copacabana</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Inspirado en la vanguardia brasileña de los años 60 con curvatura lumbar anatómica y cuero tratado al tanino.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 890.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(2)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 3: Sillas Córdoba (par) -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="comedor" data-id="3" data-price="520000" data-title="Sillas Córdoba (par)" data-wood="Nogal criollo torneado">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Par de Sillas Córdoba en Nogal criollo" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3x95eDw6mJoLCYKjXickSDkdJewX-ppN_cACJTngtQ1uybuKK9CdYjgzn-VHSbZcWBYncc6Tywjhw5cQ-oIa42Dpwy-D9pLH0oe38KUT-ekvOlu3FOULgMSs1KZ9gqxJ261gayRsWfXseZipakmwYX7EavvlZRRzSPX_z1OTfl5FZDU4nSqJsHBbpYGuKlyG_gLJCmpDJGYY8aYjhnPIGgPvyscoAv6DsdCMFTNCNqBTdn6h-NZWsfnC2977A9QAU"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Comedor</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Nogal Criollo &amp; Lana Bouclé</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Sillas Córdoba (par)</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Varillas verticales torneadas con respaldo arqueado al vapor. Juego por dos unidades ensambladas en caja y espiga.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio por par</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 520.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(3)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 4: Silla de Trabajo Belgrano -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="estudio" data-id="4" data-price="680000" data-title="Silla de Trabajo Belgrano" data-wood="Guatambú teñido y malla ergonómica">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Silla de oficina ergonómica Belgrano con estructura de madera" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjf1ZNDYQWwT631oSD0l8_Q9d0XrfMTncpbwJAsoheOvkkPV0iPRhMU7tf-0a4C3yXsIRAVemtqCn3lQuRInKjxzsNlItNh0aPGwHUAFTux4HOZqyF4b-7XCY2XK99yKu6CrO0eF4SWwElmrxsG_7uv_lowANWvQApZZ49ioiVx4cwN52tcUHOP6SzrF4PvLEl-ghFVlYH0Hcxwko51oHM4I7bfcZ3_cvLIN-5CoQTThX_Kh_NGFmLiJfTKLzdDQ7a"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Estudio</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Guatambú &amp; Malla de Algodón</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Silla de Trabajo Belgrano</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Pistón neumático de precisión montado en estrella de madera multilaminada con apoyabrazos tallados.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 680.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(4)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 5: Mesa de Noche Aconcagua -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="guardado" data-id="5" data-price="340000" data-title="Mesa de Noche Aconcagua" data-wood="Roble europeo con bronce fundido">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Mesa de noche flotante Aconcagua con cajón y hueco pasacables" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuz1w0ViGAvuohNs2fv0g1TrATIsdNSsF6U1Kn6LMh3B0ootfd3DlorNOR0AWgh68Aj9bUs3E9VKTpfy0ZFcYoU34TwOUcDu85w1hmzNcaup4GeQJCW-JSq-wqKoTaJI2Lm4eaCcAKu0ZQrvkWQJQ-lVBWVgEjszYB_rcgKZ4QmvHxjmU_qBvzxNJWBg25kTGYt9Ba4gO1MH3UN9uNe89-Y3BK8mjByGMU9n0JGTl1M4Bhc5e2UvKfxNTomf7txqYz"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Guardado</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Roble Sólido &amp; Latón</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Mesa de Noche Aconcagua</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Módulo voladizo suspendido con guía oculta de extracción suave y pasador de iluminación en latón sólido.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 340.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(5)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 6: Mesa de Centro Araucaria -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="living" data-id="6" data-price="590000" data-title="Mesa de Centro Araucaria" data-wood="Lapacho curado con tapa de cristal óptico">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Mesa de centro escultórica Araucaria con tapa de cristal orgánico" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWXeLf1h_72GENA87wI4bAXa0Tu2xJvIKEaQeyqHMxkAc400ktBuDMPkvZqeyEzq7rSqIf40zWgEp3h2a-QQ3ZEEESZR4J9ZPqM7vAZRZxsY44yO7g_AEQ8x7jVd1zEj09pYmD70OzukVwwetuKcigGpVBJNcA_0in9ycKrMymwwieZ7heJJ0wLxqFglwpI_PFIBzzTs2d0Q5KBI6JAY1-e37h3Y2KSB5vW3IwgdTCVzE6FLuWO3x5PWZeYpmJWB8E"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Living</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Lapacho Oscuro &amp; Cristal 12mm</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Mesa de Centro Araucaria</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Pie biofílico articulado en dos piezas que se unen sin clavos bajo el principio de encastre por gravedad.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 590.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(6)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 7: Mesa Comedor Pampa -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="comedor" data-id="7" data-price="1620000" data-title="Mesa Comedor Pampa" data-wood="Incienso macizo terminado a la cera de abejas">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Mesa de comedor rectangular Pampa de gran formato en Incienso macizo" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARc9eWlyOrinJ_7a9hFUGzW6tgI1Z_lJE5RNJoC_K2PVzkE87LghsLBv2NoFfq9WSuMmRYBWIsHETrbr1OuJHjQ0Wfuhk47G6aUmbatQdLPswSBheIfKWIHmafEWMjCIdy2EFmg9wStjkrcdRoDI8ZL6bJEiF8ykG3naaa4aZOQYaHlIjfrMvH2q8YvlIYOsdpWYDjlESkrK7C9CvYi_3W7TRSCfCTFkuGiAYyet2WzJAYOc7_jAugwOqDpuqD6GXg"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Comedor</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Incienso Macizo 40mm</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Mesa Comedor Pampa</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Tablón continuo biselado con patas de geometría angular inspiradas en la arquitectura brutalista pampeana.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 1.620.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(7)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 8: Escritorio Costa -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="estudio" data-id="8" data-price="1150000" data-title="Escritorio Costa" data-wood="Nogal americano y carpeta de cuero badana">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Escritorio Costa con carpeta integrada de cuero e inserción para plumas" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Kfk4NzJu4WhshDXX_p52FnwSzxPYvQ8wV2FWRrXz2RYtoyug172omZ4XlffopaBMkMghi_Kthgozz1B_sQwrSy5ls22Lp8wgcm3WNMd71HeZbssbMRpcHDbcTPA4aKjJaQAJbFFSUXiRsFwgKd65vxudjjkxhpI3VInHQYyvc1LIpNwzt2AwJ4c3obTC4-LpjU7e0VpRa6j0JX08kJlQUEePFK7eco52bV0kk1nyJfedIxfH2YBfZ6szNPSbmcUr"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Estudio</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Nogal Americano &amp; Cuero Badana</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Escritorio Costa</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Puesto de escritura con carpeta rehundida de vaqueta natural, cajonera encastrada con cierre magnético y portaplumas en bronce.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 1.150.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(8)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 9: Butaca Mendoza -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="living" data-id="9" data-price="760000" data-title="Butaca Mendoza" data-wood="Petiribí seleccionado con terciopelo rosa palo">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Butaca de lectura Mendoza en pana de algodón rosa empolvado" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKPBlMHlaTzDW9hxlqlzc-_zvnpBS-9fFJCUaX728av2O-w3tRM2jGCtOYYIs3LIrmMcYMupmlyEQiN7eWR4AI5P2eHB3zNcmh0Frrpuj2kPgG4RFHOtYmOX-6VCnczy3KlHZtPshYf1cdDNkejCJB3yutLytdzeERl_hwE_yTGvcK0J2Z601OTXVfmk-fcMl9BZYU0x6Po1l0pHdlclDtX0-mXZ5oQN7vZePaMgjl3zpxr677Oj5HFL_Rpn9twA-X"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Living</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Petiribí &amp; Terciopelo Rosa Suave</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Butaca Mendoza</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Una pieza diseñada exclusivamente para la contemplación y la lectura vespertina con apoya-brazos esculturalmente perfilados.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 760.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(9)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 10: Biblioteca Recoleta -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="guardado" data-id="10" data-price="1950000" data-title="Biblioteca Recoleta" data-wood="Cedro misionero y columnas de bronce patinado">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Biblioteca modular Recoleta en cedro y montantes de latón cepillado" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuBKpo2ViAYSuDEZYMZ74TxM2nqrKHAUDeyPYPd4HwuPZpJyFfYKDorZHGEVTc2QDcG-v1NbUiUXrm_W9kWBWOjkd9qd4k_PwYDn2muQ2q16_iKp6AiRs0ZMFuBZ3jhM3KE6ZG8Y8GKi-Be5cxwTVNnuevlByb300_P4HUqeFRv6yj6EnpNoYH_o-jJ5lTE98xkb4l43hgH1nfdxZsvROwxuj6ajs7z_a_LvfvPHA6eHw0x8NZQgUXtWDo8sxc3Ur"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Guardado</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Cedro Misionero &amp; Latón Oro</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Biblioteca Recoleta</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Sistema modular de 5 estantes abiertos que combina la calidez del grano de cedro con los pasadores torneados en latón pulido mate.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 1.950.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(10)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-<!-- Card 11: Aparador Uspallata -->
-<article class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md" data-category="guardado" data-id="11" data-price="1780000" data-title="Aparador Uspallata" data-wood="Guayubirá maciza con frente de esterilla vienesa y mármol">
-<div class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs">
-<img alt="Aparador Uspallata en Guayubirá con esterilla natural y tapa de mármol Carrara" class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzbrlQAIrZve7kUtoFbPD_mHroJNhSl0Mnb-uXIqettFw7RI6KfF1Yigv6VxybwV1bG0mCYoHXq9uGNlf6E57hkO7ME6gNzuDTQbbc0vzBrTuccQ5uV7TcbE8b1KRMgTmvQwLMzUUOhMvv34NsP8sEj-zPJ4vsRFa_8C2RVn758jjA_BUCvOuKanAlSlXwH3vNChsVczmHiOa26OKypk2hR3uKB1F9l4RIEIiFMLkdYPzaEWyzsbJ_CCvDs_pNcFp7"/>
-<span class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider">Guardado</span>
-</div>
-<div class="flex flex-col flex-1 justify-between pt-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider block">Guayubirá, Esterilla &amp; Mármol</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors">Aparador Uspallata</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Puertas corredizas con tejido de ratán francés tradicional y encimera de mármol nacional pulido al agua.</p>
-</div>
-<div class="mt-space-md pt-space-xs flex items-center justify-between">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-outline uppercase">Precio de lista</span>
-<span class="font-body-lg text-body-lg font-semibold text-on-surface">$ 1.780.000</span>
-</div>
-<button class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm" onclick="openProductModal(11)" type="button">
-<span>Ver producto</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</article>
-</div>
-<!-- ESTADO VACÍO (NO SE ENCONTRARON PIEZAS) -->
-<div class="hidden flex-col items-center justify-center py-space-3xl text-center max-w-md mx-auto" id="emptyState">
-<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-space-sm">
-<span class="material-symbols-outlined text-3xl">chair_alt</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface">No se encontraron piezas</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">
-        No pudimos encontrar mobiliario que coincida con tu búsqueda actual. Intentá restablecer los filtros para ver el catálogo completo.
-      </p>
-<button class="mt-space-md px-space-lg py-space-2xs bg-primary text-on-primary font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-primary-container" id="resetFiltersBtn" type="button">
-        Restablecer Catálogo
-      </button>
-</div>
-</section>
-<!-- BANNER EDITORIAL DE ENCARGOS A MEDIDA -->
-<section class="w-full bg-surface-container py-space-2xl px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
-<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl">
-<div class="max-w-xl">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-1">Ebanistería Especial</span>
-<h2 class="font-headline-md text-headline-md text-on-surface">¿Buscás una dimensión o madera particular?</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
-          Nuestro taller proyecta y produce piezas singulares adaptadas a la espacialidad de tu residencia o estudio de arquitectura. Trabajamos con maderas estacionadas y acabados a pedido.
-        </p>
-</div>
-<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
-<a class="w-full sm:w-auto text-center px-space-xl py-3 bg-on-surface text-surface font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-primary" data-path="contacto" href="#">
-          Consultar por Proyecto
-        </a>
-<a class="w-full sm:w-auto text-center px-space-lg py-3 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-surface-container-high" href="#">
-          Descargar Ficha Técnica PDF
-        </a>
-</div>
-</div>
-</section>
-<!-- MODAL FLOTANTE DE DETALLE DE PRODUCTO -->
-<div class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm transition-opacity opacity-0" id="productModal">
-<div class="bg-surface rounded max-w-3xl w-full max-h-[90vh] overflow-y-auto p-space-lg shadow-xl relative flex flex-col md:flex-row gap-space-lg">
-<button aria-label="Cerrar modal" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors" onclick="closeProductModal()" type="button">
-<span class="material-symbols-outlined text-2xl">close</span>
-</button>
-<!-- Columna Imagen -->
-<div class="w-full md:w-1/2 flex flex-col justify-center items-center bg-surface-container-lowest p-space-md rounded">
-<img alt="Mobiliario Hermanos Jota" class="w-full max-h-72 object-contain" id="modalImage" src=""/>
-<div class="mt-space-sm flex items-center gap-2 text-outline font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-sm">zoom_in</span>
-<span>Acabado satinado a la cera vegetal</span>
-</div>
-</div>
-<!-- Columna Datos -->
-<div class="w-full md:w-1/2 flex flex-col justify-between">
-<div>
-<div class="flex items-center gap-2 mb-1">
-<span class="bg-surface-container px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider" id="modalCategoryBadge">Living</span>
-<span class="text-secondary font-label-sm text-label-sm flex items-center gap-1">
-<span class="material-symbols-outlined text-xs">check_circle</span>
-<span>En stock de taller</span>
-</span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface" id="modalTitle">Nombre del Mueble</h2>
-<p class="font-label-caps text-label-caps text-primary uppercase tracking-wider mt-1" id="modalWood">Petiribí Macizo</p>
-<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs" id="modalDescription">Descripción ampliada del mueble y técnicas de encastre tradicionales.</p>
-<!-- Especificaciones Técnicas Ficticias -->
-<div class="mt-space-md border-t border-outline-variant/30 pt-space-xs flex flex-col gap-1 font-body-sm text-body-sm">
-<div class="flex justify-between py-1 border-b border-outline-variant/15">
-<span class="text-on-surface-variant">Procedencia:</span>
-<span class="text-on-surface font-medium">Taller Gorriti, Palermo</span>
-</div>
-<div class="flex justify-between py-1 border-b border-outline-variant/15">
-<span class="text-on-surface-variant">Tratamiento:</span>
-<span class="text-on-surface font-medium">Aceites naturales y filtro UV</span>
-</div>
-<div class="flex justify-between py-1">
-<span class="text-on-surface-variant">Tiempo de entrega:</span>
-<span class="text-on-surface font-medium">7 a 14 días hábiles</span>
-</div>
-</div>
-</div>
-<div class="mt-space-lg pt-space-sm border-t border-outline-variant/30 flex items-center justify-between gap-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-outline uppercase block">Inversión</span>
-<span class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="modalPrice">$ 0</span>
-</div>
-<button class="px-space-lg py-3 bg-primary text-on-primary hover:bg-primary-container font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-2 shadow-sm" id="modalAddBtn" type="button">
-<span class="material-symbols-outlined text-base">shopping_bag</span>
-<span>Solicitar Pieza</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- COMPORTAMIENTO INTERACTIVO JAVASCRIPT VANILLA -->
-<script>
-  (function () {
-    // Definición de datos de los productos
-    const catalogData = {
-      1: {
-        title: "Sofá Patagonia",
-        category: "Living",
-        wood: "Petiribí Macizo & Tapiz Lino Natural",
-        price: "$ 1.450.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuApdaFZl64b8I4R8caN7QHSmz3VRYrdU79N7R82x1xXCKm2I-YXyj0AQLYvES9ELAXs0sWKnwnW-tvZCYj2kmxP3Fyi3fMgwrPxkFJOcyOfzv_uUMwSxbAtPFj8cWd_AzYs2LFyBuTmA1wD53S56teneSHiSvdjwGtZJVgN6TXqWgyIXFfFhJOEnq0tiwJ76Nqs0TW_lnG-1GbMQeH82dqBYAOjjwRmtgFLmILqdGDsz8ziTtXBrmpvCv3Ifoqp4J-q",
-        description: "Estructura esculpida de líneas sutiles con cojines de densidad graduada y tapizado hidrófugo artesanal. Diseñado para ofrecer confort envolvente con un perfil arquitectónico bajo."
-      },
-      2: {
-        title: "Sillón Copacabana",
-        category: "Living",
-        wood: "Incienso & Cuero Vaqueta Curtido",
-        price: "$ 890.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCOlb8NR53koeqZgBjpNYB9ZaiVmvGnpcyyWr5hGz1QBEYHQ7q7vrKYOXDWLh7pJkiErwj5THSnVpawNk96B27Zk2JzQEwz8WS1LqBWiWJxTrZno2YPEpyqaHl6wSddIJLdJ8LJkujDjo1Xx9AnSMJ9NZ_HlRZK-0CMeraO5ElJq1FLgiKmI-MZ-1s9PBkC0QQ459yuRzp0_vFuBnjVaBruEDv7UhgJ-g8uChtCCSf8NOnLsuoL8Kb_ZjDdD6Yw1RlN",
-        description: "Inspirado en la vanguardia sudamericana de mediados de siglo. Los apoyabrazos fluidos son tallados a mano a partir de bloques macizos seleccionados de incienso chaqueño."
-      },
-      3: {
-        title: "Sillas Córdoba (par)",
-        category: "Comedor",
-        wood: "Nogal Criollo & Lana Bouclé",
-        price: "$ 520.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3Gs0AqST5U2ojlL69aIEDPyLvMYDzEt6X1VFipEU68_mTUOSN_szVAUVHyYscs4uDPwx4Bfxv_V66fD7rBY9A-XT-_Hec8iUY7llMq9p2pkELw8aZofF6xczN11pgJ82z7mVgLSG0Ho7PAtafgBT3vedEMx6MlENPe7Ak8V_obI5FTxW-HC45NASnkI_Rz6Q_AbrSLaQZ70cJsswtllAQLHK4_E0gdWjdKlgK-X2AAkeGPHmM7wg6KybFonTLuOkH",
-        description: "Varillas verticales torneadas con respaldo arqueado al vapor. Juego por dos unidades ensambladas en caja y espiga que aseguran rigidez estructural perpetua."
-      },
-      4: {
-        title: "Silla de Trabajo Belgrano",
-        category: "Estudio",
-        wood: "Guatambú & Malla de Algodón",
-        price: "$ 680.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAsMbMqv3tZLjzPkGnSNriILtIkfg6rnr8D7-V3qZcklrCqcmp5NUZSQAmIwVPMwtE_GnRQPeQoFIdWkr5hGsvBeN-emwXaRg96S_ooZd1vTCp_Tz3FLwYBvKxt7-XNyZmkXqKRiBuCHDOqt81DZA7Goe4y8Pt32qkzia2sCabnPVEr57r5na0wYTNNkDebbjq8KrOsIS8uVgJ0WZjoDlszUETjcmpj5JIRGR8BwnrbyvN12-QBRzGqipRx5UpegRwJ",
-        description: "Pistón neumático de precisión montado en estrella de madera multilaminada con apoyabrazos tallados. Ergonometría silenciosa para jornadas extensas de concentración."
-      },
-      5: {
-        title: "Mesa de Noche Aconcagua",
-        category: "Guardado",
-        wood: "Roble Sólido & Latón Cepillado",
-        price: "$ 340.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEbVO9XOTG6dCGqGODAw9DRgOxA78brA9aOx6nNlJU7-S-oUy6LaNwpTo7B8g0kETlmaL6jZ3hZHODIxTa02Yz_WNd9htqsM_3oe0FH7_559TS6rvzngp-G_ZpMlxJpieYFpiCXE5pXSzXKXYW24PYbbH9xrpT6ANT7jOtemRXdJrfAwQGvCbPgN7GtzQteaQ8THUngMLK_VVEcsAophb3ZHxppoE92zMNOSd8ZMqg69yapPZaMiDrpTnQFnqZAYAf",
-        description: "Módulo voladizo suspendido con guía oculta de extracción suave y pasador de iluminación en latón macizo. Solución ligera que maximiza el aire visual en la cabecera."
-      },
-      6: {
-        title: "Mesa de Centro Araucaria",
-        category: "Living",
-        wood: "Lapacho Oscuro & Cristal 12mm",
-        price: "$ 590.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBzQqCPImVUq9IVbmwSP2MlvkLU3qhQpCpER0xv5na7yCsOTt7IfHdo7E868LKfGE1_2bMDHPxF0oadxQ_B2mlDTrvE3eTt2S4n9RdgxpMfnKvxrxvs6AXUMwx2YfhJI92qHZmJXcaM8C0q0Mk4k_ut6ftSTiDmlGHu6-VvAUy7fX-PeMvR9Oun0xqeeEdOQbbuBQp-kTgcpTJlnz_QBJjUoDdEzNE9lpq-nvuSRmCv9oLyJKf_P2ZEng8p2AIyHyWV",
-        description: "Pie biofílico articulado en dos piezas que se autosostienen bajo el principio de encastre por gravedad. Cristal templado biselado que expone la belleza del nudo central."
-      },
-      7: {
-        title: "Mesa Comedor Pampa",
-        category: "Comedor",
-        wood: "Incienso Macizo 40mm",
-        price: "$ 1.620.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC8okOJ95pJlYwct7rvKzdvai6gp0yYQomPLrW_wfvS6_vTtefWmsVBpac7dfYKwIkwTxnyILg-TwySauk4rmOJEGzeqItKwtFZlVVty8yKdT45YQztPh-kFlpXh8LZdzW-JzDsuwuEgcj4STG0_lypmYywf-1pC4hDBya-RWGCw5-sMSKn32kKkAAWZNDA45xwEf9TucR5QUB6TLntgf4FAr6Q1pE4BpZn4lm3B-koqKNJKaDJYxGJ3clt-soxQ0XU",
-        description: "Tablón continuo biselado con patas de geometría angular inspiradas en la arquitectura brutalista pampeana. Con capacidad generosa para 8 a 10 comensales."
-      },
-      8: {
-        title: "Escritorio Costa",
-        category: "Estudio",
-        wood: "Nogal Americano & Cuero Badana",
-        price: "$ 1.150.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDE3enCktqpi7skXNezHu0661yot1Lp7_jMBFEMEU0KxZfcCdghUefTu9fNndT0SQIVQmdVuzvPQgpVFqBOHODFnytzNRwoA2Tq2QmTSOa-eunmOZdRZEtmAQmWExQOBNtQJdCM8P05f1u3x3VOQTK-TO6OrKRFBaqvRHqZjsWwilar9MY1AoKU_k2Q3vj3ry6sK_VuzMbRClNHraU42-so4inum7De1MTwfM5e1rNqroLt81r0cQylCDAsfIBmvlaJ",
-        description: "Puesto de escritura con carpeta rehundida de vaqueta natural, cajonera encastrada con cierre magnético y portaplumas fresado en latón macizo."
-      },
-      9: {
-        title: "Butaca Mendoza",
-        category: "Living",
-        wood: "Petiribí & Terciopelo Rosa Suave",
-        price: "$ 760.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCsEoPeYB-d3Lktdbqr9nq5f8QAju55hy3DJXBFSi3SesfDvzEW906m6fJHqg3DVXz6DkJk7--cWrWi9tFvEDJHZ0TbdCV7sXYS1tEH8uQMAu6RK0sT2G2srULWkwDjfxnoiQ0rxYO68L3NKTQDHfeetvsIU7PUi9suauMZGLJsPDxNmL2rB3zjp14tIuVLe-d2Ncx4ObAxewb7LvGO1u974odfPjwkYrLXR0vvsBdiHNZ3rTlgTrXRxNEG4GVLUlYb",
-        description: "Una pieza diseñada exclusivamente para la contemplación y la lectura vespertina con apoya-brazos esculturalmente perfilados y tapicería en pana empolvada."
-      },
-      10: {
-        title: "Biblioteca Recoleta",
-        category: "Guardado",
-        wood: "Cedro Misionero & Latón Oro",
-        price: "$ 1.950.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBvghqmbpRdcSPUwKBfm9w8yz-54eJeTNE_Yu_Q-OYcOA9sa9lpwpwjYsg2aapvR8-MRiVSbeKDLytgXg19GV_gbVdwgskz2PrqMNUhD5mGVHg1u2ScjqZndUHo-yC-beTpI7CUoeK-X9oi1p_7DPdTSgS5JweIbM2PiQrWpWLpyBJoJXX-LRuJd7lDjdB98-WvmDkbaFB45DFfq4v8CMszgFTm2jRSuikornXHbFfJSL8ThHCuitW5-PHATAyUf3LD",
-        description: "Sistema modular de 5 estantes abiertos que combina la calidez del grano de cedro con los pasadores torneados en latón pulido mate. Desarmable y ampliable."
-      },
-      11: {
-        title: "Aparador Uspallata",
-        category: "Guardado",
-        wood: "Guayubirá, Esterilla & Mármol",
-        price: "$ 1.780.000",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCysE6wict5WwGs_e0ORYFHQdnaje7AKAJ1v7xruq3kSUADNh3Z0QrxegpyBTpEqz3pKM2BEKAuzGeBBxpvHs7ogt28tgHVGtHIDOj55zoSFHELHBwPK4RjEUw7QcnkPUT3Sh7frcQ9ac-eDBjoh31Cq2LDA3PyfN_3eGsR3Rq_vyNH4Up9Pm460LSlLmFiJNgX-DR38gs1_bKVFruoBQvgfTojQIpHHS9e58-sq3sYgdxD4lPxOkSJx3wGmW3RdanL",
-        description: "Puertas corredizas con tejido de ratán francés tradicional y encimera de mármol nacional pulido al agua. Interior compartimentado para vajilla y cristalería."
-      }
-    };
-
-    // Elementos del DOM
-    const filterButtons = document.querySelectorAll(".category-btn");
-    const searchInput = document.getElementById("searchInput");
-    const clearSearchBtn = document.getElementById("clearSearch");
-    const sortSelect = document.getElementById("sortSelect");
-    const productGrid = document.getElementById("productGrid");
-    const emptyState = document.getElementById("emptyState");
-    const resultsCount = document.getElementById("resultsCount");
-    const activeFilterLabel = document.getElementById("activeFilterLabel");
-    const resetFiltersBtn = document.getElementById("resetFiltersBtn");
-
-    // Modal elements
-    const productModal = document.getElementById("productModal");
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalWood = document.getElementById("modalWood");
-    const modalPrice = document.getElementById("modalPrice");
-    const modalDescription = document.getElementById("modalDescription");
-    const modalCategoryBadge = document.getElementById("modalCategoryBadge");
-    const modalAddBtn = document.getElementById("modalAddBtn");
-
-    let currentCategory = "all";
-    let searchQuery = "";
-    let currentSort = "featured";
-
-    function filterAndSortProducts() {
-      const cards = Array.from(productGrid.querySelectorAll(".product-card"));
-      let visibleCount = 0;
-
-      // Filtrado
-      cards.forEach((card) => {
-        const category = card.getAttribute("data-category");
-        const title = card.getAttribute("data-title").toLowerCase();
-        const wood = card.getAttribute("data-wood").toLowerCase();
-        const matchesCategory = currentCategory === "all" || category === currentCategory;
-        const matchesSearch = !searchQuery || title.includes(searchQuery) || wood.includes(searchQuery);
-
-        if (matchesCategory && matchesSearch) {
-          card.classList.remove("hidden");
-          card.classList.add("flex");
-          visibleCount++;
-        } else {
-          card.classList.add("hidden");
-          card.classList.remove("flex");
+        body {
+          overscroll-behavior: none;
         }
-      });
-
-      // Ordenamiento de los elementos visibles
-      const visibleCards = cards.filter((c) => !c.classList.contains("hidden"));
-      visibleCards.sort((a, b) => {
-        const priceA = parseInt(a.getAttribute("data-price"), 10);
-        const priceB = parseInt(b.getAttribute("data-price"), 10);
-        const titleA = a.getAttribute("data-title");
-        const titleB = b.getAttribute("data-title");
-
-        if (currentSort === "price-asc") return priceA - priceB;
-        if (currentSort === "price-desc") return priceB - priceA;
-        if (currentSort === "alpha") return titleA.localeCompare(titleB);
-        return parseInt(a.getAttribute("data-id")) - parseInt(b.getAttribute("data-id"));
-      });
-
-      visibleCards.forEach((card) => productGrid.appendChild(card));
-
-      // Actualizar estado de visualización
-      if (visibleCount === 0) {
-        productGrid.classList.add("hidden");
-        emptyState.classList.remove("hidden");
-        emptyState.classList.add("flex");
-        resultsCount.textContent = "0 piezas encontradas";
-      } else {
-        productGrid.classList.remove("hidden");
-        emptyState.classList.add("hidden");
-        emptyState.classList.remove("flex");
-        resultsCount.textContent = `Mostrando ${visibleCount} pieza${visibleCount === 1 ? "" : "s"} exclusiva${visibleCount === 1 ? "" : "s"}`;
-      }
-
-      if (currentCategory !== "all" || searchQuery !== "") {
-        activeFilterLabel.classList.remove("hidden");
-      } else {
-        activeFilterLabel.classList.add("hidden");
-      }
-    }
-
-    // Manejo de botones de categoría
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        filterButtons.forEach((b) => {
-          b.classList.remove("bg-primary-container", "text-on-primary");
-          b.classList.add("bg-surface-container", "text-on-surface-variant");
-        });
-        btn.classList.add("bg-primary-container", "text-on-primary");
-        btn.classList.remove("bg-surface-container", "text-on-surface-variant");
-
-        currentCategory = btn.getAttribute("data-filter");
-        filterAndSortProducts();
-      });
-    });
-
-    // Búsqueda en tiempo real
-    searchInput.addEventListener("input", (e) => {
-      searchQuery = e.target.value.toLowerCase().trim();
-      if (searchQuery.length > 0) {
-        clearSearchBtn.classList.remove("hidden");
-      } else {
-        clearSearchBtn.classList.add("hidden");
-      }
-      filterAndSortProducts();
-    });
-
-    clearSearchBtn.addEventListener("click", () => {
-      searchInput.value = "";
-      searchQuery = "";
-      clearSearchBtn.classList.add("hidden");
-      filterAndSortProducts();
-    });
-
-    // Selector de Orden
-    sortSelect.addEventListener("change", (e) => {
-      currentSort = e.target.value;
-      filterAndSortProducts();
-    });
-
-    // Resetear filtros
-    resetFiltersBtn.addEventListener("click", () => {
-      currentCategory = "all";
-      searchQuery = "";
-      searchInput.value = "";
-      clearSearchBtn.classList.add("hidden");
-      filterButtons.forEach((b) => {
-        if (b.getAttribute("data-filter") === "all") {
-          b.classList.add("bg-primary-container", "text-on-primary");
-          b.classList.remove("bg-surface-container", "text-on-surface-variant");
-        } else {
-          b.classList.remove("bg-primary-container", "text-on-primary");
-          b.classList.add("bg-surface-container", "text-on-surface-variant");
+        main > :first-child {
+          margin-top: 0 !important;
         }
-      });
-      filterAndSortProducts();
-    });
-
-    // Apertura y cierre de modal
-    window.openProductModal = function (id) {
-      const data = catalogData[id];
-      if (!data) return;
-
-      modalImage.src = data.image;
-      modalImage.alt = data.title;
-      modalTitle.textContent = data.title;
-      modalWood.textContent = data.wood;
-      modalPrice.textContent = data.price;
-      modalDescription.textContent = data.description;
-      modalCategoryBadge.textContent = data.category;
-
-      modalAddBtn.onclick = function() {
-        modalAddBtn.innerHTML = '<span class="material-symbols-outlined text-base">done</span><span>¡Añadido al Carrito!</span>';
-        modalAddBtn.classList.add("bg-secondary", "text-on-secondary");
-        setTimeout(() => {
-          modalAddBtn.innerHTML = '<span class="material-symbols-outlined text-base">shopping_bag</span><span>Solicitar Pieza</span>';
-          modalAddBtn.classList.remove("bg-secondary", "text-on-secondary");
-          closeProductModal();
-        }, 1200);
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5c4300",
+              "inverse-surface": "#362f2d",
+              "tertiary-container": "#856200",
+              "on-tertiary-container": "#ffe4b4",
+              "on-primary-fixed-variant": "#76320f",
+              error: "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#fff1ed",
+              "surface-variant": "#ede0dc",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fff8f6",
+              "secondary-fixed": "#c9eea9",
+              "on-surface": "#211a18",
+              "tertiary-fixed-dim": "#f2bf50",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "on-primary-container": "#ffe1d6",
+              outline: "#87736b",
+              "on-background": "#211a18",
+              "on-surface-variant": "#54433c",
+              "primary-fixed": "#ffdbcd",
+              "inverse-primary": "#ffb596",
+              "inverse-on-surface": "#fceeea",
+              "surface-dim": "#e4d7d4",
+              "secondary-container": "#c9eea9",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#aed18f",
+              primary: "#823b18",
+              "surface-tint": "#944925",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#4e6d36",
+              "surface-container-high": "#f3e5e2",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffdea1",
+              secondary: "#486730",
+              "on-tertiary-fixed": "#261900",
+              "primary-container": "#a0522d",
+              "surface-container-highest": "#ede0dc",
+              "on-secondary-fixed": "#0b2000",
+              "surface-container": "#f9ebe7",
+              "on-primary-fixed": "#360f00",
+              surface: "#fff8f6",
+              "on-secondary-fixed-variant": "#314e1b",
+              tertiary: "#674b00",
+              background: "#fff8f6",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-3xl": "6rem",
+              "space-4xl": "8rem",
+              "margin-desktop": "4rem",
+              "space-xs": "0.75rem",
+              "space-lg": "2rem",
+              "gutter-desktop": "2rem",
+              "margin-mobile": "1.25rem",
+              "space-2xl": "4rem",
+              "space-sm": "1rem",
+              "margin-tablet": "2.5rem",
+              "space-md": "1.5rem",
+              "space-xl": "3rem",
+              "space-3xs": "0.25rem",
+              "gutter-mobile": "1rem",
+              "space-2xs": "0.5rem",
+            },
+            fontFamily: {
+              "headline-lg": ["playfairDisplay"],
+              "headline-md": ["playfairDisplay"],
+              "display-hero-mobile": ["playfairDisplay"],
+              "label-sm": ["inter"],
+              "headline-lg-mobile": ["playfairDisplay"],
+              "body-md": ["inter"],
+              "body-sm": ["inter"],
+              "headline-sm": ["playfairDisplay"],
+              "display-hero": ["playfairDisplay"],
+              "label-md": ["inter"],
+              "body-lg": ["inter"],
+              "title-editorial": ["playfairDisplay"],
+              "label-caps": ["inter"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "38px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg-mobile": [
+                "30px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  fontWeight: "400",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-sm": [
+                "22px",
+                {
+                  lineHeight: "28px",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "title-editorial": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  fontWeight: "400",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.14em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
       };
+    </script>
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,37,35,0.04)]"
+    >
+      <div
+        class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-sm">
+          <button
+            aria-label="Abrir menú"
+            class="md:hidden flex items-center justify-center text-on-surface p-space-2xs hover:bg-surface-container-high transition-colors"
+            type="button"
+          >
+            <span class="material-symbols-outlined">menu</span></button
+          ><a class="flex items-center gap-space-xs" data-path="inicio" href="#"
+            ><span
+              class="font-headline-sm text-headline-sm tracking-tight text-on-surface"
+              >Hermanos Jota</span
+            ><span
+              class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant uppercase pt-0.5"
+              >Ebanistería</span
+            ></a
+          >
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-space-xl"
+          data-active-classes="text-primary font-medium border-b border-primary"
+        >
+          <a
+            class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs"
+            data-path="inicio"
+            href="#"
+            >Inicio</a
+          ><a
+            aria-current="page"
+            class="uppercase transition-colors py-space-2xs text-primary font-medium border-b border-primary"
+            data-path="productos"
+            href="#"
+            >Productos</a
+          ><a
+            class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs"
+            data-path="contacto"
+            href="#"
+            >Contacto</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <a
+            aria-label="Carrito de compra"
+            class="relative flex items-center justify-center p-space-2xs text-on-surface hover:text-primary transition-colors"
+            data-path="carrito"
+            href="#"
+            ><span class="material-symbols-outlined text-2xl">shopping_bag</span
+            ><span
+              class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-5 h-5 flex items-center justify-center rounded-full"
+              >2</span
+            ></a
+          >
+          <div
+            class="pl-space-2xs border-l border-outline-variant/30 flex items-center"
+          >
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuALDdDaB8RJrrIHsy-ViENV9GDWv0ITbLoL8u6slpSgDbZG6npIxkPz_Iadlkd1pisd_aj4ikPXXC5CXt-SUbwK_XK7ccTbUECIWGyv-0OTAKo0ZbSB-6Kr7G5J54X0n18NNtej1vQuFQCIE7Dn84MkfFtrHGTqt6qIgMB8kYxpJOgz4y7nkpCmO4IGjjyO0AI937XdJ9c_AtOd_inYUWxIbm5RGxAqCgsk8kMW2nkEsc_2c6teNhY"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- ENCABEZADO EDITORIAL DE COLECCIÓN -->
+        <section
+          class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-lg max-w-7xl mx-auto"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-space-md"
+          >
+            <div class="max-w-2xl">
+              <div
+                class="flex items-center gap-space-2xs text-secondary mb-space-3xs"
+              >
+                <span class="material-symbols-outlined text-sm">verified</span>
+                <span
+                  class="font-label-caps text-label-caps uppercase tracking-widest text-secondary"
+                  >Edición Artesanal 2025</span
+                >
+              </div>
+              <h1
+                class="font-headline-lg text-headline-lg text-on-surface tracking-tight"
+              >
+                Catálogo de Mobiliario
+              </h1>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant mt-space-2xs"
+              >
+                Mobiliario atemporal fabricado a mano en maderas argentinas
+                nobles y sostenibles. Piezas concebidas bajo el rigor del
+                ensamble tradicional.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm self-start md:self-auto">
+              <div
+                class="bg-surface-container-low px-space-sm py-space-2xs flex items-center gap-space-2xs rounded"
+              >
+                <span class="material-symbols-outlined text-outline text-lg"
+                  >forest</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant"
+                  >Madera 100% Nativa FSC</span
+                >
+              </div>
+              <div
+                class="bg-surface-container-low px-space-sm py-space-2xs flex items-center gap-space-2xs rounded"
+              >
+                <span class="material-symbols-outlined text-outline text-lg"
+                  >handyman</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant"
+                  >Garantía Decenal</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- BARRA DE UTILIDADES, BÚSQUEDA Y FILTROS -->
+        <section
+          class="w-full sticky top-20 z-30 bg-surface/95 backdrop-blur-md px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-sm max-w-7xl mx-auto shadow-sm transition-shadow"
+        >
+          <div
+            class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm"
+          >
+            <!-- Filtros por Categoría -->
+            <div
+              class="flex items-center gap-space-2xs overflow-x-auto pb-1 lg:pb-0 scrollbar-none"
+              id="categoryFilterBar"
+            >
+              <button
+                class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-primary-container text-on-primary"
+                data-filter="all"
+                type="button"
+              >
+                Todos los muebles (11)
+              </button>
+              <button
+                class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
+                data-filter="living"
+                type="button"
+              >
+                Living &amp; Descanso
+              </button>
+              <button
+                class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
+                data-filter="comedor"
+                type="button"
+              >
+                Comedor &amp; Sillas
+              </button>
+              <button
+                class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
+                data-filter="estudio"
+                type="button"
+              >
+                Espacios de Trabajo
+              </button>
+              <button
+                class="category-btn whitespace-nowrap px-space-sm py-space-2xs font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
+                data-filter="guardado"
+                type="button"
+              >
+                Guardado &amp; Mesas
+              </button>
+            </div>
+            <!-- Buscador y Ordenador -->
+            <div
+              class="flex items-center gap-space-sm flex-wrap sm:flex-nowrap"
+            >
+              <!-- Input de búsqueda -->
+              <div class="relative flex-1 sm:w-72">
+                <span
+                  class="material-symbols-outlined absolute left-space-xs top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none"
+                  >search</span
+                >
+                <input
+                  class="w-full bg-surface-container pl-9 pr-space-sm py-space-2xs font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded focus:outline-none focus:bg-surface-container-high transition-colors"
+                  id="searchInput"
+                  placeholder="Buscar por nombre, madera..."
+                  type="text"
+                />
+                <button
+                  class="hidden absolute right-space-xs top-1/2 -translate-y-1/2 text-outline hover:text-on-surface"
+                  id="clearSearch"
+                >
+                  <span class="material-symbols-outlined text-sm">close</span>
+                </button>
+              </div>
+              <!-- Ordenación Select -->
+              <div
+                class="relative flex items-center bg-surface-container rounded px-space-sm py-space-2xs"
+              >
+                <span
+                  class="material-symbols-outlined text-outline text-base mr-1 pointer-events-none"
+                  >sort</span
+                >
+                <select
+                  class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer pr-4 appearance-none"
+                  id="sortSelect"
+                >
+                  <option value="featured">Destacados</option>
+                  <option value="price-asc">Menor precio</option>
+                  <option value="price-desc">Mayor precio</option>
+                  <option value="alpha">Alfabético (A-Z)</option>
+                </select>
+                <span
+                  class="material-symbols-outlined text-outline text-sm absolute right-2 pointer-events-none"
+                  >expand_more</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Indicador de conteo y filtros aplicados -->
+          <div
+            class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm"
+          >
+            <div class="flex items-center gap-space-2xs">
+              <span class="font-medium text-on-surface" id="resultsCount"
+                >Mostrando 11 piezas exclusivas</span
+              >
+              <span class="hidden text-outline" id="activeFilterLabel"
+                >• Colección filtrada</span
+              >
+            </div>
+            <div class="hidden md:flex items-center gap-space-3xs text-outline">
+              <span>Diseñado en Buenos Aires</span>
+              <span>•</span>
+              <span>Envíos a todo el país</span>
+            </div>
+          </div>
+        </section>
+        <!-- GRILLA PRINCIPAL DE MOBILIARIO -->
+        <section
+          class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-xl max-w-7xl mx-auto flex-1"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop"
+            id="productGrid"
+          >
+            <!-- Card 1: Sofá Patagonia -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="living"
+              data-id="1"
+              data-price="1450000"
+              data-title="Sofá Patagonia"
+              data-wood="Petiribí macizo con tapiz texturado"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Sofá Patagonia en Petiribí macizo"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkaSaF7662B39V3fmvnVrmqknu4Avun1y8Yrklnt5Dm0KcsUwJPs7aRkSOmaQN-7xBXnuu8ozafVNudT0FPfhdDCGaqOIn5WwicYbP1vHBafA3ozh0rPY7ixfxr8RWVf8H7IniE1DQso4PQzHtJtAZMds-0FkJZUAoLghFFAEWeDgGOhzZIYiVkSc4LBPikQRUHKMAWmcQoxBBwpWa-RUt39A6z2NoRtSCFJ0MPsquV6k715CPQA22OUKFn034Fqqy"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Living</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Petiribí Macizo &amp; Tapiz Lino</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Sofá Patagonia
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Estructura esculpida de líneas sutiles con cojines de
+                    densidad graduada y tapizado hidrófugo artesanal.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 1.450.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(1)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 2: Sillón Copacabana -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="living"
+              data-id="2"
+              data-price="890000"
+              data-title="Sillón Copacabana"
+              data-wood="Incienso oscuro y cuero vaqueta"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Sillón Copacabana en cuero curtido y madera oscura"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO99tgjWLG4aKcOF4QTfYiJnmW_9DR8yeTEnGDFa0Gj-oC1pz9rUvmOXcK3rJX-qfjdEdpQQ8uanKJWtBP_ZiF5uovsOEvSFK4mM7_whMwiLYLDpdbUgmnL_1eg8-RpRAQdE3Pmhe56e36QRF21WPvHi5SRzhQNxRu9fLG7bkp_3-4YwbJvxnf_159p83yBLfWRzRl6ZTQQMbq6ArMO4OgB1lRLLez60giyM9If1Bdu8nYKTwMK_a8J22jlUcj-sDw"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Living</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Incienso &amp; Cuero Vaqueta</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Sillón Copacabana
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Inspirado en la vanguardia brasileña de los años 60 con
+                    curvatura lumbar anatómica y cuero tratado al tanino.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 890.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(2)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 3: Sillas Córdoba (par) -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="comedor"
+              data-id="3"
+              data-price="520000"
+              data-title="Sillas Córdoba (par)"
+              data-wood="Nogal criollo torneado"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Par de Sillas Córdoba en Nogal criollo"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3x95eDw6mJoLCYKjXickSDkdJewX-ppN_cACJTngtQ1uybuKK9CdYjgzn-VHSbZcWBYncc6Tywjhw5cQ-oIa42Dpwy-D9pLH0oe38KUT-ekvOlu3FOULgMSs1KZ9gqxJ261gayRsWfXseZipakmwYX7EavvlZRRzSPX_z1OTfl5FZDU4nSqJsHBbpYGuKlyG_gLJCmpDJGYY8aYjhnPIGgPvyscoAv6DsdCMFTNCNqBTdn6h-NZWsfnC2977A9QAU"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Comedor</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Nogal Criollo &amp; Lana Bouclé</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Sillas Córdoba (par)
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Varillas verticales torneadas con respaldo arqueado al
+                    vapor. Juego por dos unidades ensambladas en caja y espiga.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio por par</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 520.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(3)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 4: Silla de Trabajo Belgrano -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="estudio"
+              data-id="4"
+              data-price="680000"
+              data-title="Silla de Trabajo Belgrano"
+              data-wood="Guatambú teñido y malla ergonómica"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Silla de oficina ergonómica Belgrano con estructura de madera"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjf1ZNDYQWwT631oSD0l8_Q9d0XrfMTncpbwJAsoheOvkkPV0iPRhMU7tf-0a4C3yXsIRAVemtqCn3lQuRInKjxzsNlItNh0aPGwHUAFTux4HOZqyF4b-7XCY2XK99yKu6CrO0eF4SWwElmrxsG_7uv_lowANWvQApZZ49ioiVx4cwN52tcUHOP6SzrF4PvLEl-ghFVlYH0Hcxwko51oHM4I7bfcZ3_cvLIN-5CoQTThX_Kh_NGFmLiJfTKLzdDQ7a"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Estudio</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Guatambú &amp; Malla de Algodón</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Silla de Trabajo Belgrano
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Pistón neumático de precisión montado en estrella de madera
+                    multilaminada con apoyabrazos tallados.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 680.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(4)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 5: Mesa de Noche Aconcagua -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="guardado"
+              data-id="5"
+              data-price="340000"
+              data-title="Mesa de Noche Aconcagua"
+              data-wood="Roble europeo con bronce fundido"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Mesa de noche flotante Aconcagua con cajón y hueco pasacables"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuz1w0ViGAvuohNs2fv0g1TrATIsdNSsF6U1Kn6LMh3B0ootfd3DlorNOR0AWgh68Aj9bUs3E9VKTpfy0ZFcYoU34TwOUcDu85w1hmzNcaup4GeQJCW-JSq-wqKoTaJI2Lm4eaCcAKu0ZQrvkWQJQ-lVBWVgEjszYB_rcgKZ4QmvHxjmU_qBvzxNJWBg25kTGYt9Ba4gO1MH3UN9uNe89-Y3BK8mjByGMU9n0JGTl1M4Bhc5e2UvKfxNTomf7txqYz"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Guardado</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Roble Sólido &amp; Latón</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Mesa de Noche Aconcagua
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Módulo voladizo suspendido con guía oculta de extracción
+                    suave y pasador de iluminación en latón sólido.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 340.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(5)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 6: Mesa de Centro Araucaria -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="living"
+              data-id="6"
+              data-price="590000"
+              data-title="Mesa de Centro Araucaria"
+              data-wood="Lapacho curado con tapa de cristal óptico"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Mesa de centro escultórica Araucaria con tapa de cristal orgánico"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWXeLf1h_72GENA87wI4bAXa0Tu2xJvIKEaQeyqHMxkAc400ktBuDMPkvZqeyEzq7rSqIf40zWgEp3h2a-QQ3ZEEESZR4J9ZPqM7vAZRZxsY44yO7g_AEQ8x7jVd1zEj09pYmD70OzukVwwetuKcigGpVBJNcA_0in9ycKrMymwwieZ7heJJ0wLxqFglwpI_PFIBzzTs2d0Q5KBI6JAY1-e37h3Y2KSB5vW3IwgdTCVzE6FLuWO3x5PWZeYpmJWB8E"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Living</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Lapacho Oscuro &amp; Cristal 12mm</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Mesa de Centro Araucaria
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Pie biofílico articulado en dos piezas que se unen sin
+                    clavos bajo el principio de encastre por gravedad.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 590.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(6)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 7: Mesa Comedor Pampa -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="comedor"
+              data-id="7"
+              data-price="1620000"
+              data-title="Mesa Comedor Pampa"
+              data-wood="Incienso macizo terminado a la cera de abejas"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Mesa de comedor rectangular Pampa de gran formato en Incienso macizo"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuARc9eWlyOrinJ_7a9hFUGzW6tgI1Z_lJE5RNJoC_K2PVzkE87LghsLBv2NoFfq9WSuMmRYBWIsHETrbr1OuJHjQ0Wfuhk47G6aUmbatQdLPswSBheIfKWIHmafEWMjCIdy2EFmg9wStjkrcdRoDI8ZL6bJEiF8ykG3naaa4aZOQYaHlIjfrMvH2q8YvlIYOsdpWYDjlESkrK7C9CvYi_3W7TRSCfCTFkuGiAYyet2WzJAYOc7_jAugwOqDpuqD6GXg"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Comedor</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Incienso Macizo 40mm</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Mesa Comedor Pampa
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Tablón continuo biselado con patas de geometría angular
+                    inspiradas en la arquitectura brutalista pampeana.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 1.620.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(7)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 8: Escritorio Costa -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="estudio"
+              data-id="8"
+              data-price="1150000"
+              data-title="Escritorio Costa"
+              data-wood="Nogal americano y carpeta de cuero badana"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Escritorio Costa con carpeta integrada de cuero e inserción para plumas"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Kfk4NzJu4WhshDXX_p52FnwSzxPYvQ8wV2FWRrXz2RYtoyug172omZ4XlffopaBMkMghi_Kthgozz1B_sQwrSy5ls22Lp8wgcm3WNMd71HeZbssbMRpcHDbcTPA4aKjJaQAJbFFSUXiRsFwgKd65vxudjjkxhpI3VInHQYyvc1LIpNwzt2AwJ4c3obTC4-LpjU7e0VpRa6j0JX08kJlQUEePFK7eco52bV0kk1nyJfedIxfH2YBfZ6szNPSbmcUr"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Estudio</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Nogal Americano &amp; Cuero Badana</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Escritorio Costa
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Puesto de escritura con carpeta rehundida de vaqueta
+                    natural, cajonera encastrada con cierre magnético y
+                    portaplumas en bronce.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 1.150.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(8)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 9: Butaca Mendoza -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="living"
+              data-id="9"
+              data-price="760000"
+              data-title="Butaca Mendoza"
+              data-wood="Petiribí seleccionado con terciopelo rosa palo"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Butaca de lectura Mendoza en pana de algodón rosa empolvado"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKPBlMHlaTzDW9hxlqlzc-_zvnpBS-9fFJCUaX728av2O-w3tRM2jGCtOYYIs3LIrmMcYMupmlyEQiN7eWR4AI5P2eHB3zNcmh0Frrpuj2kPgG4RFHOtYmOX-6VCnczy3KlHZtPshYf1cdDNkejCJB3yutLytdzeERl_hwE_yTGvcK0J2Z601OTXVfmk-fcMl9BZYU0x6Po1l0pHdlclDtX0-mXZ5oQN7vZePaMgjl3zpxr677Oj5HFL_Rpn9twA-X"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Living</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Petiribí &amp; Terciopelo Rosa Suave</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Butaca Mendoza
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Una pieza diseñada exclusivamente para la contemplación y la
+                    lectura vespertina con apoya-brazos esculturalmente
+                    perfilados.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 760.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(9)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 10: Biblioteca Recoleta -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="guardado"
+              data-id="10"
+              data-price="1950000"
+              data-title="Biblioteca Recoleta"
+              data-wood="Cedro misionero y columnas de bronce patinado"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Biblioteca modular Recoleta en cedro y montantes de latón cepillado"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuBKpo2ViAYSuDEZYMZ74TxM2nqrKHAUDeyPYPd4HwuPZpJyFfYKDorZHGEVTc2QDcG-v1NbUiUXrm_W9kWBWOjkd9qd4k_PwYDn2muQ2q16_iKp6AiRs0ZMFuBZ3jhM3KE6ZG8Y8GKi-Be5cxwTVNnuevlByb300_P4HUqeFRv6yj6EnpNoYH_o-jJ5lTE98xkb4l43hgH1nfdxZsvROwxuj6ajs7z_a_LvfvPHA6eHw0x8NZQgUXtWDo8sxc3Ur"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Guardado</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Cedro Misionero &amp; Latón Oro</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Biblioteca Recoleta
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Sistema modular de 5 estantes abiertos que combina la
+                    calidez del grano de cedro con los pasadores torneados en
+                    latón pulido mate.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 1.950.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(10)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- Card 11: Aparador Uspallata -->
+            <article
+              class="product-card group flex flex-col bg-surface-container-low rounded p-space-sm transition-all duration-300 hover:bg-surface-container-high hover:shadow-md"
+              data-category="guardado"
+              data-id="11"
+              data-price="1780000"
+              data-title="Aparador Uspallata"
+              data-wood="Guayubirá maciza con frente de esterilla vienesa y mármol"
+            >
+              <div
+                class="relative w-full aspect-[4/3] bg-surface-container-lowest rounded overflow-hidden flex items-center justify-center p-space-xs"
+              >
+                <img
+                  alt="Aparador Uspallata en Guayubirá con esterilla natural y tapa de mármol Carrara"
+                  class="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzbrlQAIrZve7kUtoFbPD_mHroJNhSl0Mnb-uXIqettFw7RI6KfF1Yigv6VxybwV1bG0mCYoHXq9uGNlf6E57hkO7ME6gNzuDTQbbc0vzBrTuccQ5uV7TcbE8b1KRMgTmvQwLMzUUOhMvv34NsP8sEj-zPJ4vsRFa_8C2RVn758jjA_BUCvOuKanAlSlXwH3vNChsVczmHiOa26OKypk2hR3uKB1F9l4RIEIiFMLkdYPzaEWyzsbJ_CCvDs_pNcFp7"
+                />
+                <span
+                  class="absolute top-space-2xs left-space-2xs bg-surface-container/90 backdrop-blur px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                  >Guardado</span
+                >
+              </div>
+              <div class="flex flex-col flex-1 justify-between pt-space-sm">
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase tracking-wider block"
+                    >Guayubirá, Esterilla &amp; Mármol</span
+                  >
+                  <h2
+                    class="font-headline-sm text-headline-sm text-on-surface mt-1 group-hover:text-primary transition-colors"
+                  >
+                    Aparador Uspallata
+                  </h2>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2"
+                  >
+                    Puertas corredizas con tejido de ratán francés tradicional y
+                    encimera de mármol nacional pulido al agua.
+                  </p>
+                </div>
+                <div
+                  class="mt-space-md pt-space-xs flex items-center justify-between"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-outline uppercase"
+                      >Precio de lista</span
+                    >
+                    <span
+                      class="font-body-lg text-body-lg font-semibold text-on-surface"
+                      >$ 1.780.000</span
+                    >
+                  </div>
+                  <button
+                    class="px-space-md py-space-2xs bg-primary-container text-on-primary hover:bg-primary font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-1 shadow-sm"
+                    onclick="openProductModal(11)"
+                    type="button"
+                  >
+                    <span>Ver producto</span>
+                    <span class="material-symbols-outlined text-sm"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- ESTADO VACÍO (NO SE ENCONTRARON PIEZAS) -->
+          <div
+            class="hidden flex-col items-center justify-center py-space-3xl text-center max-w-md mx-auto"
+            id="emptyState"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-space-sm"
+            >
+              <span class="material-symbols-outlined text-3xl">chair_alt</span>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">
+              No se encontraron piezas
+            </h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              No pudimos encontrar mobiliario que coincida con tu búsqueda
+              actual. Intentá restablecer los filtros para ver el catálogo
+              completo.
+            </p>
+            <button
+              class="mt-space-md px-space-lg py-space-2xs bg-primary text-on-primary font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-primary-container"
+              id="resetFiltersBtn"
+              type="button"
+            >
+              Restablecer Catálogo
+            </button>
+          </div>
+        </section>
+        <!-- BANNER EDITORIAL DE ENCARGOS A MEDIDA -->
+        <section
+          class="w-full bg-surface-container py-space-2xl px-margin-mobile md:px-margin-tablet lg:px-margin-desktop"
+        >
+          <div
+            class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl"
+          >
+            <div class="max-w-xl">
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-1"
+                >Ebanistería Especial</span
+              >
+              <h2 class="font-headline-md text-headline-md text-on-surface">
+                ¿Buscás una dimensión o madera particular?
+              </h2>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant mt-space-2xs"
+              >
+                Nuestro taller proyecta y produce piezas singulares adaptadas a
+                la espacialidad de tu residencia o estudio de arquitectura.
+                Trabajamos con maderas estacionadas y acabados a pedido.
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto"
+            >
+              <a
+                class="w-full sm:w-auto text-center px-space-xl py-3 bg-on-surface text-surface font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-primary"
+                data-path="contacto"
+                href="#"
+              >
+                Consultar por Proyecto
+              </a>
+              <a
+                class="w-full sm:w-auto text-center px-space-lg py-3 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase rounded tracking-wider transition-colors hover:bg-surface-container-high"
+                href="#"
+              >
+                Descargar Ficha Técnica PDF
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- MODAL FLOTANTE DE DETALLE DE PRODUCTO -->
+        <div
+          class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm transition-opacity opacity-0"
+          id="productModal"
+        >
+          <div
+            class="bg-surface rounded max-w-3xl w-full max-h-[90vh] overflow-y-auto p-space-lg shadow-xl relative flex flex-col md:flex-row gap-space-lg"
+          >
+            <button
+              aria-label="Cerrar modal"
+              class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface p-1 rounded hover:bg-surface-container transition-colors"
+              onclick="closeProductModal()"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <!-- Columna Imagen -->
+            <div
+              class="w-full md:w-1/2 flex flex-col justify-center items-center bg-surface-container-lowest p-space-md rounded"
+            >
+              <img
+                alt="Mobiliario Hermanos Jota"
+                class="w-full max-h-72 object-contain"
+                id="modalImage"
+                src=""
+              />
+              <div
+                class="mt-space-sm flex items-center gap-2 text-outline font-label-sm text-label-sm"
+              >
+                <span class="material-symbols-outlined text-sm">zoom_in</span>
+                <span>Acabado satinado a la cera vegetal</span>
+              </div>
+            </div>
+            <!-- Columna Datos -->
+            <div class="w-full md:w-1/2 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <span
+                    class="bg-surface-container px-2 py-0.5 rounded font-label-caps text-label-caps uppercase text-on-surface tracking-wider"
+                    id="modalCategoryBadge"
+                    >Living</span
+                  >
+                  <span
+                    class="text-secondary font-label-sm text-label-sm flex items-center gap-1"
+                  >
+                    <span class="material-symbols-outlined text-xs"
+                      >check_circle</span
+                    >
+                    <span>En stock de taller</span>
+                  </span>
+                </div>
+                <h2
+                  class="font-headline-md text-headline-md text-on-surface"
+                  id="modalTitle"
+                >
+                  Nombre del Mueble
+                </h2>
+                <p
+                  class="font-label-caps text-label-caps text-primary uppercase tracking-wider mt-1"
+                  id="modalWood"
+                >
+                  Petiribí Macizo
+                </p>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant mt-space-xs"
+                  id="modalDescription"
+                >
+                  Descripción ampliada del mueble y técnicas de encastre
+                  tradicionales.
+                </p>
+                <!-- Especificaciones Técnicas Ficticias -->
+                <div
+                  class="mt-space-md border-t border-outline-variant/30 pt-space-xs flex flex-col gap-1 font-body-sm text-body-sm"
+                >
+                  <div
+                    class="flex justify-between py-1 border-b border-outline-variant/15"
+                  >
+                    <span class="text-on-surface-variant">Procedencia:</span>
+                    <span class="text-on-surface font-medium"
+                      >Taller Gorriti, Palermo</span
+                    >
+                  </div>
+                  <div
+                    class="flex justify-between py-1 border-b border-outline-variant/15"
+                  >
+                    <span class="text-on-surface-variant">Tratamiento:</span>
+                    <span class="text-on-surface font-medium"
+                      >Aceites naturales y filtro UV</span
+                    >
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <span class="text-on-surface-variant"
+                      >Tiempo de entrega:</span
+                    >
+                    <span class="text-on-surface font-medium"
+                      >7 a 14 días hábiles</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-space-lg pt-space-sm border-t border-outline-variant/30 flex items-center justify-between gap-space-sm"
+              >
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-outline uppercase block"
+                    >Inversión</span
+                  >
+                  <span
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    id="modalPrice"
+                    >$ 0</span
+                  >
+                </div>
+                <button
+                  class="px-space-lg py-3 bg-primary text-on-primary hover:bg-primary-container font-label-caps text-label-caps uppercase tracking-wider rounded transition-colors flex items-center gap-2 shadow-sm"
+                  id="modalAddBtn"
+                  type="button"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >shopping_bag</span
+                  >
+                  <span>Solicitar Pieza</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- COMPORTAMIENTO INTERACTIVO JAVASCRIPT VANILLA -->
+      <script>
+        (function () {
+          // Definición de datos de los productos
+          const catalogData = {
+            1: {
+              title: "Sofá Patagonia",
+              category: "Living",
+              wood: "Petiribí Macizo & Tapiz Lino Natural",
+              price: "$ 1.450.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuApdaFZl64b8I4R8caN7QHSmz3VRYrdU79N7R82x1xXCKm2I-YXyj0AQLYvES9ELAXs0sWKnwnW-tvZCYj2kmxP3Fyi3fMgwrPxkFJOcyOfzv_uUMwSxbAtPFj8cWd_AzYs2LFyBuTmA1wD53S56teneSHiSvdjwGtZJVgN6TXqWgyIXFfFhJOEnq0tiwJ76Nqs0TW_lnG-1GbMQeH82dqBYAOjjwRmtgFLmILqdGDsz8ziTtXBrmpvCv3Ifoqp4J-q",
+              description:
+                "Estructura esculpida de líneas sutiles con cojines de densidad graduada y tapizado hidrófugo artesanal. Diseñado para ofrecer confort envolvente con un perfil arquitectónico bajo.",
+            },
+            2: {
+              title: "Sillón Copacabana",
+              category: "Living",
+              wood: "Incienso & Cuero Vaqueta Curtido",
+              price: "$ 890.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCOlb8NR53koeqZgBjpNYB9ZaiVmvGnpcyyWr5hGz1QBEYHQ7q7vrKYOXDWLh7pJkiErwj5THSnVpawNk96B27Zk2JzQEwz8WS1LqBWiWJxTrZno2YPEpyqaHl6wSddIJLdJ8LJkujDjo1Xx9AnSMJ9NZ_HlRZK-0CMeraO5ElJq1FLgiKmI-MZ-1s9PBkC0QQ459yuRzp0_vFuBnjVaBruEDv7UhgJ-g8uChtCCSf8NOnLsuoL8Kb_ZjDdD6Yw1RlN",
+              description:
+                "Inspirado en la vanguardia sudamericana de mediados de siglo. Los apoyabrazos fluidos son tallados a mano a partir de bloques macizos seleccionados de incienso chaqueño.",
+            },
+            3: {
+              title: "Sillas Córdoba (par)",
+              category: "Comedor",
+              wood: "Nogal Criollo & Lana Bouclé",
+              price: "$ 520.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuA3Gs0AqST5U2ojlL69aIEDPyLvMYDzEt6X1VFipEU68_mTUOSN_szVAUVHyYscs4uDPwx4Bfxv_V66fD7rBY9A-XT-_Hec8iUY7llMq9p2pkELw8aZofF6xczN11pgJ82z7mVgLSG0Ho7PAtafgBT3vedEMx6MlENPe7Ak8V_obI5FTxW-HC45NASnkI_Rz6Q_AbrSLaQZ70cJsswtllAQLHK4_E0gdWjdKlgK-X2AAkeGPHmM7wg6KybFonTLuOkH",
+              description:
+                "Varillas verticales torneadas con respaldo arqueado al vapor. Juego por dos unidades ensambladas en caja y espiga que aseguran rigidez estructural perpetua.",
+            },
+            4: {
+              title: "Silla de Trabajo Belgrano",
+              category: "Estudio",
+              wood: "Guatambú & Malla de Algodón",
+              price: "$ 680.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuAsMbMqv3tZLjzPkGnSNriILtIkfg6rnr8D7-V3qZcklrCqcmp5NUZSQAmIwVPMwtE_GnRQPeQoFIdWkr5hGsvBeN-emwXaRg96S_ooZd1vTCp_Tz3FLwYBvKxt7-XNyZmkXqKRiBuCHDOqt81DZA7Goe4y8Pt32qkzia2sCabnPVEr57r5na0wYTNNkDebbjq8KrOsIS8uVgJ0WZjoDlszUETjcmpj5JIRGR8BwnrbyvN12-QBRzGqipRx5UpegRwJ",
+              description:
+                "Pistón neumático de precisión montado en estrella de madera multilaminada con apoyabrazos tallados. Ergonometría silenciosa para jornadas extensas de concentración.",
+            },
+            5: {
+              title: "Mesa de Noche Aconcagua",
+              category: "Guardado",
+              wood: "Roble Sólido & Latón Cepillado",
+              price: "$ 340.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuDEbVO9XOTG6dCGqGODAw9DRgOxA78brA9aOx6nNlJU7-S-oUy6LaNwpTo7B8g0kETlmaL6jZ3hZHODIxTa02Yz_WNd9htqsM_3oe0FH7_559TS6rvzngp-G_ZpMlxJpieYFpiCXE5pXSzXKXYW24PYbbH9xrpT6ANT7jOtemRXdJrfAwQGvCbPgN7GtzQteaQ8THUngMLK_VVEcsAophb3ZHxppoE92zMNOSd8ZMqg69yapPZaMiDrpTnQFnqZAYAf",
+              description:
+                "Módulo voladizo suspendido con guía oculta de extracción suave y pasador de iluminación en latón macizo. Solución ligera que maximiza el aire visual en la cabecera.",
+            },
+            6: {
+              title: "Mesa de Centro Araucaria",
+              category: "Living",
+              wood: "Lapacho Oscuro & Cristal 12mm",
+              price: "$ 590.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuBzQqCPImVUq9IVbmwSP2MlvkLU3qhQpCpER0xv5na7yCsOTt7IfHdo7E868LKfGE1_2bMDHPxF0oadxQ_B2mlDTrvE3eTt2S4n9RdgxpMfnKvxrxvs6AXUMwx2YfhJI92qHZmJXcaM8C0q0Mk4k_ut6ftSTiDmlGHu6-VvAUy7fX-PeMvR9Oun0xqeeEdOQbbuBQp-kTgcpTJlnz_QBJjUoDdEzNE9lpq-nvuSRmCv9oLyJKf_P2ZEng8p2AIyHyWV",
+              description:
+                "Pie biofílico articulado en dos piezas que se autosostienen bajo el principio de encastre por gravedad. Cristal templado biselado que expone la belleza del nudo central.",
+            },
+            7: {
+              title: "Mesa Comedor Pampa",
+              category: "Comedor",
+              wood: "Incienso Macizo 40mm",
+              price: "$ 1.620.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuC8okOJ95pJlYwct7rvKzdvai6gp0yYQomPLrW_wfvS6_vTtefWmsVBpac7dfYKwIkwTxnyILg-TwySauk4rmOJEGzeqItKwtFZlVVty8yKdT45YQztPh-kFlpXh8LZdzW-JzDsuwuEgcj4STG0_lypmYywf-1pC4hDBya-RWGCw5-sMSKn32kKkAAWZNDA45xwEf9TucR5QUB6TLntgf4FAr6Q1pE4BpZn4lm3B-koqKNJKaDJYxGJ3clt-soxQ0XU",
+              description:
+                "Tablón continuo biselado con patas de geometría angular inspiradas en la arquitectura brutalista pampeana. Con capacidad generosa para 8 a 10 comensales.",
+            },
+            8: {
+              title: "Escritorio Costa",
+              category: "Estudio",
+              wood: "Nogal Americano & Cuero Badana",
+              price: "$ 1.150.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuDE3enCktqpi7skXNezHu0661yot1Lp7_jMBFEMEU0KxZfcCdghUefTu9fNndT0SQIVQmdVuzvPQgpVFqBOHODFnytzNRwoA2Tq2QmTSOa-eunmOZdRZEtmAQmWExQOBNtQJdCM8P05f1u3x3VOQTK-TO6OrKRFBaqvRHqZjsWwilar9MY1AoKU_k2Q3vj3ry6sK_VuzMbRClNHraU42-so4inum7De1MTwfM5e1rNqroLt81r0cQylCDAsfIBmvlaJ",
+              description:
+                "Puesto de escritura con carpeta rehundida de vaqueta natural, cajonera encastrada con cierre magnético y portaplumas fresado en latón macizo.",
+            },
+            9: {
+              title: "Butaca Mendoza",
+              category: "Living",
+              wood: "Petiribí & Terciopelo Rosa Suave",
+              price: "$ 760.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCsEoPeYB-d3Lktdbqr9nq5f8QAju55hy3DJXBFSi3SesfDvzEW906m6fJHqg3DVXz6DkJk7--cWrWi9tFvEDJHZ0TbdCV7sXYS1tEH8uQMAu6RK0sT2G2srULWkwDjfxnoiQ0rxYO68L3NKTQDHfeetvsIU7PUi9suauMZGLJsPDxNmL2rB3zjp14tIuVLe-d2Ncx4ObAxewb7LvGO1u974odfPjwkYrLXR0vvsBdiHNZ3rTlgTrXRxNEG4GVLUlYb",
+              description:
+                "Una pieza diseñada exclusivamente para la contemplación y la lectura vespertina con apoya-brazos esculturalmente perfilados y tapicería en pana empolvada.",
+            },
+            10: {
+              title: "Biblioteca Recoleta",
+              category: "Guardado",
+              wood: "Cedro Misionero & Latón Oro",
+              price: "$ 1.950.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuBvghqmbpRdcSPUwKBfm9w8yz-54eJeTNE_Yu_Q-OYcOA9sa9lpwpwjYsg2aapvR8-MRiVSbeKDLytgXg19GV_gbVdwgskz2PrqMNUhD5mGVHg1u2ScjqZndUHo-yC-beTpI7CUoeK-X9oi1p_7DPdTSgS5JweIbM2PiQrWpWLpyBJoJXX-LRuJd7lDjdB98-WvmDkbaFB45DFfq4v8CMszgFTm2jRSuikornXHbFfJSL8ThHCuitW5-PHATAyUf3LD",
+              description:
+                "Sistema modular de 5 estantes abiertos que combina la calidez del grano de cedro con los pasadores torneados en latón pulido mate. Desarmable y ampliable.",
+            },
+            11: {
+              title: "Aparador Uspallata",
+              category: "Guardado",
+              wood: "Guayubirá, Esterilla & Mármol",
+              price: "$ 1.780.000",
+              image:
+                "https://lh3.googleusercontent.com/aida-public/AB6AXuCysE6wict5WwGs_e0ORYFHQdnaje7AKAJ1v7xruq3kSUADNh3Z0QrxegpyBTpEqz3pKM2BEKAuzGeBBxpvHs7ogt28tgHVGtHIDOj55zoSFHELHBwPK4RjEUw7QcnkPUT3Sh7frcQ9ac-eDBjoh31Cq2LDA3PyfN_3eGsR3Rq_vyNH4Up9Pm460LSlLmFiJNgX-DR38gs1_bKVFruoBQvgfTojQIpHHS9e58-sq3sYgdxD4lPxOkSJx3wGmW3RdanL",
+              description:
+                "Puertas corredizas con tejido de ratán francés tradicional y encimera de mármol nacional pulido al agua. Interior compartimentado para vajilla y cristalería.",
+            },
+          };
 
-      productModal.classList.remove("hidden");
-      productModal.classList.add("flex");
-      setTimeout(() => {
-        productModal.classList.remove("opacity-0");
-        productModal.classList.add("opacity-100");
-      }, 10);
-      document.body.style.overflow = "hidden";
-    };
+          // Elementos del DOM
+          const filterButtons = document.querySelectorAll(".category-btn");
+          const searchInput = document.getElementById("searchInput");
+          const clearSearchBtn = document.getElementById("clearSearch");
+          const sortSelect = document.getElementById("sortSelect");
+          const productGrid = document.getElementById("productGrid");
+          const emptyState = document.getElementById("emptyState");
+          const resultsCount = document.getElementById("resultsCount");
+          const activeFilterLabel =
+            document.getElementById("activeFilterLabel");
+          const resetFiltersBtn = document.getElementById("resetFiltersBtn");
 
-    window.closeProductModal = function () {
-      productModal.classList.add("opacity-0");
-      productModal.classList.remove("opacity-100");
-      setTimeout(() => {
-        productModal.classList.add("hidden");
-        productModal.classList.remove("flex");
-        document.body.style.overflow = "";
-      }, 200);
-    };
+          // Modal elements
+          const productModal = document.getElementById("productModal");
+          const modalImage = document.getElementById("modalImage");
+          const modalTitle = document.getElementById("modalTitle");
+          const modalWood = document.getElementById("modalWood");
+          const modalPrice = document.getElementById("modalPrice");
+          const modalDescription = document.getElementById("modalDescription");
+          const modalCategoryBadge =
+            document.getElementById("modalCategoryBadge");
+          const modalAddBtn = document.getElementById("modalAddBtn");
 
-    productModal.addEventListener("click", (e) => {
-      if (e.target === productModal) {
-        closeProductModal();
-      }
-    });
+          let currentCategory = "all";
+          let searchQuery = "";
+          let currentSort = "featured";
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !productModal.classList.contains("hidden")) {
-        closeProductModal();
-      }
-    });
-  })();
-</script></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col gap-space-md"><h2 class="font-headline-md text-headline-md text-on-surface">Hermanos Jota</h2><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Piezas únicas de mobiliario de autor concebidas bajo la nobleza de la madera maciza, ensambladas a mano con rigor arquitectónico y vocación eterna.</p><div class="pt-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">eco</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Maderas Nativas con Certificación FSC</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Navegación</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li data-path="inicio"><a class="hover:text-primary transition-colors" href="#">Inicio</a></li><li data-path="productos"><a class="hover:text-primary transition-colors" href="#">Catálogo Completo</a></li><li data-path="contacto"><a class="hover:text-primary transition-colors" href="#">Contacto y Taller</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Taller &amp; Showroom</h3><address class="not-italic flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant"><span>Gorriti 5840, Palermo</span><span>Ciudad Autónoma de Buenos Aires</span><span class="pt-space-2xs">Martes a Sábados: 11:00 a 19:00 hs</span><span>Atención personalizada con cita previa</span></address></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Contacto Directo</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">contacto@hermanosjota.com.ar</a></li><li><a class="hover:text-primary transition-colors" href="#">+54 11 4772 9010</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-3xs" href="#"><span>@hermanosjota</span></a></li></ul></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-on-surface-variant"><p>© 2025 Hermanos Jota. Todos los derechos reservados. Fabricado en Argentina.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Términos de Adquisición</a><a class="hover:text-on-surface transition-colors" href="#">Garantía Artesanal</a></div></div></div></footer></body></html>
+          function filterAndSortProducts() {
+            const cards = Array.from(
+              productGrid.querySelectorAll(".product-card"),
+            );
+            let visibleCount = 0;
+
+            // Filtrado
+            cards.forEach((card) => {
+              const category = card.getAttribute("data-category");
+              const title = card.getAttribute("data-title").toLowerCase();
+              const wood = card.getAttribute("data-wood").toLowerCase();
+              const matchesCategory =
+                currentCategory === "all" || category === currentCategory;
+              const matchesSearch =
+                !searchQuery ||
+                title.includes(searchQuery) ||
+                wood.includes(searchQuery);
+
+              if (matchesCategory && matchesSearch) {
+                card.classList.remove("hidden");
+                card.classList.add("flex");
+                visibleCount++;
+              } else {
+                card.classList.add("hidden");
+                card.classList.remove("flex");
+              }
+            });
+
+            // Ordenamiento de los elementos visibles
+            const visibleCards = cards.filter(
+              (c) => !c.classList.contains("hidden"),
+            );
+            visibleCards.sort((a, b) => {
+              const priceA = parseInt(a.getAttribute("data-price"), 10);
+              const priceB = parseInt(b.getAttribute("data-price"), 10);
+              const titleA = a.getAttribute("data-title");
+              const titleB = b.getAttribute("data-title");
+
+              if (currentSort === "price-asc") return priceA - priceB;
+              if (currentSort === "price-desc") return priceB - priceA;
+              if (currentSort === "alpha") return titleA.localeCompare(titleB);
+              return (
+                parseInt(a.getAttribute("data-id")) -
+                parseInt(b.getAttribute("data-id"))
+              );
+            });
+
+            visibleCards.forEach((card) => productGrid.appendChild(card));
+
+            // Actualizar estado de visualización
+            if (visibleCount === 0) {
+              productGrid.classList.add("hidden");
+              emptyState.classList.remove("hidden");
+              emptyState.classList.add("flex");
+              resultsCount.textContent = "0 piezas encontradas";
+            } else {
+              productGrid.classList.remove("hidden");
+              emptyState.classList.add("hidden");
+              emptyState.classList.remove("flex");
+              resultsCount.textContent = `Mostrando ${visibleCount} pieza${visibleCount === 1 ? "" : "s"} exclusiva${visibleCount === 1 ? "" : "s"}`;
+            }
+
+            if (currentCategory !== "all" || searchQuery !== "") {
+              activeFilterLabel.classList.remove("hidden");
+            } else {
+              activeFilterLabel.classList.add("hidden");
+            }
+          }
+
+          // Manejo de botones de categoría
+          filterButtons.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              filterButtons.forEach((b) => {
+                b.classList.remove("bg-primary-container", "text-on-primary");
+                b.classList.add(
+                  "bg-surface-container",
+                  "text-on-surface-variant",
+                );
+              });
+              btn.classList.add("bg-primary-container", "text-on-primary");
+              btn.classList.remove(
+                "bg-surface-container",
+                "text-on-surface-variant",
+              );
+
+              currentCategory = btn.getAttribute("data-filter");
+              filterAndSortProducts();
+            });
+          });
+
+          // Búsqueda en tiempo real
+          searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            if (searchQuery.length > 0) {
+              clearSearchBtn.classList.remove("hidden");
+            } else {
+              clearSearchBtn.classList.add("hidden");
+            }
+            filterAndSortProducts();
+          });
+
+          clearSearchBtn.addEventListener("click", () => {
+            searchInput.value = "";
+            searchQuery = "";
+            clearSearchBtn.classList.add("hidden");
+            filterAndSortProducts();
+          });
+
+          // Selector de Orden
+          sortSelect.addEventListener("change", (e) => {
+            currentSort = e.target.value;
+            filterAndSortProducts();
+          });
+
+          // Resetear filtros
+          resetFiltersBtn.addEventListener("click", () => {
+            currentCategory = "all";
+            searchQuery = "";
+            searchInput.value = "";
+            clearSearchBtn.classList.add("hidden");
+            filterButtons.forEach((b) => {
+              if (b.getAttribute("data-filter") === "all") {
+                b.classList.add("bg-primary-container", "text-on-primary");
+                b.classList.remove(
+                  "bg-surface-container",
+                  "text-on-surface-variant",
+                );
+              } else {
+                b.classList.remove("bg-primary-container", "text-on-primary");
+                b.classList.add(
+                  "bg-surface-container",
+                  "text-on-surface-variant",
+                );
+              }
+            });
+            filterAndSortProducts();
+          });
+
+          // Apertura y cierre de modal
+          window.openProductModal = function (id) {
+            const data = catalogData[id];
+            if (!data) return;
+
+            modalImage.src = data.image;
+            modalImage.alt = data.title;
+            modalTitle.textContent = data.title;
+            modalWood.textContent = data.wood;
+            modalPrice.textContent = data.price;
+            modalDescription.textContent = data.description;
+            modalCategoryBadge.textContent = data.category;
+
+            modalAddBtn.onclick = function () {
+              modalAddBtn.innerHTML =
+                '<span class="material-symbols-outlined text-base">done</span><span>¡Añadido al Carrito!</span>';
+              modalAddBtn.classList.add("bg-secondary", "text-on-secondary");
+              setTimeout(() => {
+                modalAddBtn.innerHTML =
+                  '<span class="material-symbols-outlined text-base">shopping_bag</span><span>Solicitar Pieza</span>';
+                modalAddBtn.classList.remove(
+                  "bg-secondary",
+                  "text-on-secondary",
+                );
+                closeProductModal();
+              }, 1200);
+            };
+
+            productModal.classList.remove("hidden");
+            productModal.classList.add("flex");
+            setTimeout(() => {
+              productModal.classList.remove("opacity-0");
+              productModal.classList.add("opacity-100");
+            }, 10);
+            document.body.style.overflow = "hidden";
+          };
+
+          window.closeProductModal = function () {
+            productModal.classList.add("opacity-0");
+            productModal.classList.remove("opacity-100");
+            setTimeout(() => {
+              productModal.classList.add("hidden");
+              productModal.classList.remove("flex");
+              document.body.style.overflow = "";
+            }, 200);
+          };
+
+          productModal.addEventListener("click", (e) => {
+            if (e.target === productModal) {
+              closeProductModal();
+            }
+          });
+
+          document.addEventListener("keydown", (e) => {
+            if (
+              e.key === "Escape" &&
+              !productModal.classList.contains("hidden")
+            ) {
+              closeProductModal();
+            }
+          });
+        })();
+      </script>
+    </main>
+    <footer class="w-full bg-surface-container-low mt-space-3xl">
+      <div
+        class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"
+        >
+          <div class="lg:col-span-4 flex flex-col gap-space-md">
+            <h2 class="font-headline-md text-headline-md text-on-surface">
+              Hermanos Jota
+            </h2>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant max-w-sm"
+            >
+              Piezas únicas de mobiliario de autor concebidas bajo la nobleza de
+              la madera maciza, ensambladas a mano con rigor arquitectónico y
+              vocación eterna.
+            </p>
+            <div class="pt-space-xs flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-lg"
+                >eco</span
+              ><span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase"
+                >Maderas Nativas con Certificación FSC</span
+              >
+            </div>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Navegación
+            </h3>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li data-path="inicio">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li data-path="productos">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Catálogo Completo</a
+                >
+              </li>
+              <li data-path="contacto">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contacto y Taller</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Taller &amp; Showroom
+            </h3>
+            <address
+              class="not-italic flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <span>Gorriti 5840, Palermo</span
+              ><span>Ciudad Autónoma de Buenos Aires</span
+              ><span class="pt-space-2xs"
+                >Martes a Sábados: 11:00 a 19:00 hs</span
+              ><span>Atención personalizada con cita previa</span>
+            </address>
+          </div>
+          <div class="lg:col-span-3 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Contacto Directo
+            </h3>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >contacto@hermanosjota.com.ar</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >+54 11 4772 9010</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors flex items-center gap-space-3xs"
+                  href="#"
+                  ><span>@hermanosjota</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-on-surface-variant"
+        >
+          <p>
+            © 2025 Hermanos Jota. Todos los derechos reservados. Fabricado en
+            Argentina.
+          </p>
+          <div class="flex items-center gap-space-lg">
+            <a class="hover:text-on-surface transition-colors" href="#"
+              >Términos de Adquisición</a
+            ><a class="hover:text-on-surface transition-colors" href="#"
+              >Garantía Artesanal</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

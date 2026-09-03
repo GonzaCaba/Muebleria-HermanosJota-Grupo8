@@ -1,552 +1,1063 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "on-tertiary-fixed-variant": "#5c4300",
-                "inverse-surface": "#362f2d",
-                "tertiary-container": "#856200",
-                "on-tertiary-container": "#ffe4b4",
-                "on-primary-fixed-variant": "#76320f",
-                "error": "#ba1a1a",
-                "error-container": "#ffdad6",
-                "surface-container-low": "#fff1ed",
-                "surface-variant": "#ede0dc",
-                "on-tertiary": "#ffffff",
-                "surface-bright": "#fff8f6",
-                "secondary-fixed": "#c9eea9",
-                "on-surface": "#211a18",
-                "tertiary-fixed-dim": "#f2bf50",
-                "on-secondary": "#ffffff",
-                "outline-variant": "#dac1b8",
-                "on-primary-container": "#ffe1d6",
-                "outline": "#87736b",
-                "on-background": "#211a18",
-                "on-surface-variant": "#54433c",
-                "primary-fixed": "#ffdbcd",
-                "inverse-primary": "#ffb596",
-                "inverse-on-surface": "#fceeea",
-                "surface-dim": "#e4d7d4",
-                "secondary-container": "#c9eea9",
-                "surface-container-lowest": "#ffffff",
-                "primary-fixed-dim": "#ffb596",
-                "on-error": "#ffffff",
-                "secondary-fixed-dim": "#aed18f",
-                "primary": "#823b18",
-                "surface-tint": "#944925",
-                "on-primary": "#ffffff",
-                "on-secondary-container": "#4e6d36",
-                "surface-container-high": "#f3e5e2",
-                "on-error-container": "#93000a",
-                "tertiary-fixed": "#ffdea1",
-                "secondary": "#486730",
-                "on-tertiary-fixed": "#261900",
-                "primary-container": "#a0522d",
-                "surface-container-highest": "#ede0dc",
-                "on-secondary-fixed": "#0b2000",
-                "surface-container": "#f9ebe7",
-                "on-primary-fixed": "#360f00",
-                "surface": "#fff8f6",
-                "on-secondary-fixed-variant": "#314e1b",
-                "tertiary": "#674b00",
-                "background": "#fff8f6"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-        },
-        "spacing": {
-                "space-3xl": "6rem",
-                "space-4xl": "8rem",
-                "margin-desktop": "4rem",
-                "space-xs": "0.75rem",
-                "space-lg": "2rem",
-                "gutter-desktop": "2rem",
-                "margin-mobile": "1.25rem",
-                "space-2xl": "4rem",
-                "space-sm": "1rem",
-                "margin-tablet": "2.5rem",
-                "space-md": "1.5rem",
-                "space-xl": "3rem",
-                "space-3xs": "0.25rem",
-                "gutter-mobile": "1rem",
-                "space-2xs": "0.5rem"
-        },
-        "fontFamily": {
-                "headline-lg": [
-                        "playfairDisplay"
-                ],
-                "headline-md": [
-                        "playfairDisplay"
-                ],
-                "display-hero-mobile": [
-                        "playfairDisplay"
-                ],
-                "label-sm": [
-                        "inter"
-                ],
-                "headline-lg-mobile": [
-                        "playfairDisplay"
-                ],
-                "body-md": [
-                        "inter"
-                ],
-                "body-sm": [
-                        "inter"
-                ],
-                "headline-sm": [
-                        "playfairDisplay"
-                ],
-                "display-hero": [
-                        "playfairDisplay"
-                ],
-                "label-md": [
-                        "inter"
-                ],
-                "body-lg": [
-                        "inter"
-                ],
-                "title-editorial": [
-                        "playfairDisplay"
-                ],
-                "label-caps": [
-                        "inter"
-                ]
-        },
-        "fontSize": {
-                "headline-lg": [
-                        "40px",
-                        {
-                                "lineHeight": "48px",
-                                "letterSpacing": "-0.015em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-md": [
-                        "28px",
-                        {
-                                "lineHeight": "36px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "display-hero-mobile": [
-                        "38px",
-                        {
-                                "lineHeight": "44px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-sm": [
-                        "12px",
-                        {
-                                "lineHeight": "16px",
-                                "letterSpacing": "0.02em",
-                                "fontWeight": "500"
-                        }
-                ],
-                "headline-lg-mobile": [
-                        "30px",
-                        {
-                                "lineHeight": "36px",
-                                "letterSpacing": "-0.01em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-md": [
-                        "15px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "body-sm": [
-                        "13px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "headline-sm": [
-                        "22px",
-                        {
-                                "lineHeight": "28px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "display-hero": [
-                        "56px",
-                        {
-                                "lineHeight": "64px",
-                                "letterSpacing": "-0.02em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-md": [
-                        "14px",
-                        {
-                                "lineHeight": "20px",
-                                "fontWeight": "500"
-                        }
-                ],
-                "body-lg": [
-                        "18px",
-                        {
-                                "lineHeight": "28px",
-                                "letterSpacing": "-0.005em",
-                                "fontWeight": "400"
-                        }
-                ],
-                "title-editorial": [
-                        "18px",
-                        {
-                                "lineHeight": "24px",
-                                "fontWeight": "400"
-                        }
-                ],
-                "label-caps": [
-                        "11px",
-                        {
-                                "lineHeight": "14px",
-                                "letterSpacing": "0.14em",
-                                "fontWeight": "600"
-                        }
-                ]
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
         }
-},
-    },
-  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,37,35,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Abrir menú" class="md:hidden flex items-center justify-center text-on-surface p-space-2xs hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">menu</span></button><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Hermanos Jota</span><span class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant uppercase pt-0.5">Ebanistería</span></a></div><nav class="hidden md:flex items-center gap-space-xl" data-active-classes="text-primary font-medium border-b border-primary"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="inicio" href="#">Inicio</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="productos" href="#">Productos</a><a aria-current="page" class="uppercase transition-colors py-space-2xs text-primary font-medium border-b border-primary" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><a aria-label="Carrito de compra" class="relative flex items-center justify-center p-space-2xs text-on-surface hover:text-primary transition-colors" data-path="carrito" href="#"><span class="material-symbols-outlined text-2xl">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-5 h-5 flex items-center justify-center rounded-full">2</span></a><div class="pl-space-2xs border-l border-outline-variant/30 flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-OFgvstRahtKxFsxvBWcD8SfJ9UqlpZpwp7pJkLzMIkZsNxFfe7NZeEk2C3Z-5Wtmadgankmv4aB5DR2edARgXpEigPsZx3mIuQEzhfdSM_y4NQggdRhuJj1yNhP504Dir0y8eu39xBX-KcrV2gLEckOW_69yDCVBVevCLm2xzzzqGmat9OsZKZ3S5dKTW5kvLIUKqSglLJ7p29qCio_6bXXG9qJRcBimiRsj8DUrC6xOoc5CRNg"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
-<!-- Sección Principal: Encabezado Editorial & Introducción -->
-<section class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-2xl">
-<div class="max-w-3xl flex flex-col gap-space-sm">
-<div class="flex items-center gap-space-xs">
-<span class="w-8 h-[1px] bg-primary"></span>
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Atelier &amp; Showroom Palermo</span>
-</div>
-<h1 class="font-headline-lg text-headline-lg text-on-surface">
-        Conversemos sobre tu próximo espacio
-      </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-        Visita nuestro showroom en Palermo o escríbenos para proyectos a medida, curaduría de maderas nobles y asesoramiento integral en arquitectura interior.
-      </p>
-</div>
-<!-- Grid Principal de Contacto -->
-<div class="mt-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-gutter-desktop items-start">
-<!-- Columna Izquierda: Formulario Interactivo de Oficio -->
-<div class="lg:col-span-7 bg-surface-container-low p-space-md sm:p-space-xl rounded-none shadow-sm flex flex-col gap-space-lg relative overflow-hidden">
-<!-- Sello de Taller de Fondo sutil -->
-<div class="absolute -right-8 -bottom-8 pointer-events-none opacity-5 text-on-surface select-none">
-<span class="material-symbols-outlined text-[200px]">carpenter</span>
-</div>
-<div class="flex flex-col gap-space-3xs border-b border-outline-variant/30 pb-space-sm">
-<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Formulario de Consulta Directa</span>
-<p class="font-headline-sm text-headline-sm text-on-surface">Escríbenos al taller</p>
-</div>
-<!-- Formulario interactivo con gestión de estado -->
-<form class="flex flex-col gap-space-md relative z-10" id="contact-form" novalidate="">
-<!-- Fila: Nombre & Email -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<!-- Nombre -->
-<div class="flex flex-col gap-space-3xs">
-<label class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between" for="full-name">
-<span>Nombre Completo *</span>
-<span class="text-error font-body-sm text-body-sm hidden text-xs lowercase" id="name-error">Requerido</span>
-</label>
-<input class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm" id="full-name" name="name" placeholder="ej. Agustín Larrea" required="" type="text"/>
-</div>
-<!-- Email -->
-<div class="flex flex-col gap-space-3xs">
-<label class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between" for="email">
-<span>Correo Electrónico *</span>
-<span class="text-error font-body-sm text-body-sm hidden text-xs lowercase" id="email-error">Inválido</span>
-</label>
-<input class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm" id="email" name="email" placeholder="agustin@ejemplo.com" required="" type="email"/>
-</div>
-</div>
-<!-- Fila: Teléfono & Asunto -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<!-- Teléfono -->
-<div class="flex flex-col gap-space-3xs">
-<label class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between" for="phone">
-<span>Teléfono / WhatsApp</span>
-<span class="text-outline/70 font-body-sm text-body-sm text-xs">Opcional</span>
-</label>
-<input class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm" id="phone" name="phone" placeholder="+54 9 11 ..." type="tel"/>
-</div>
-<!-- Asunto -->
-<div class="flex flex-col gap-space-3xs">
-<label class="font-label-caps text-label-caps uppercase text-on-surface-variant" for="subject">
-                Tipo de Proyecto / Asunto *
-              </label>
-<div class="relative">
-<select class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface appearance-none outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm cursor-pointer" id="subject" name="subject" required="">
-<option value="consulta-pieza">Consulta sobre una pieza específica</option>
-<option value="proyecto-interiorismo">Proyecto de arquitectura / interiorismo</option>
-<option value="visita-showroom">Visita al showroom &amp; taller</option>
-<option value="mobiliario-medida">Mobiliario a medida personalizado</option>
-</select>
-<span class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">
-                  expand_more
-                </span>
-</div>
-</div>
-</div>
-<!-- Mensaje -->
-<div class="flex flex-col gap-space-3xs">
-<label class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between" for="message">
-<span>Detalles del proyecto o consulta *</span>
-<span class="text-error font-body-sm text-body-sm hidden text-xs lowercase" id="message-error">Por favor escribe tu consulta</span>
-</label>
-<textarea class="w-full bg-surface-container-lowest p-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm resize-none" id="message" name="message" placeholder="Cuéntanos tus requerimientos, dimensiones deseadas o la colección que te interesa..." required="" rows="5"></textarea>
-</div>
-<!-- Checkbox Boletín de Diseño -->
-<div class="flex items-start gap-space-xs pt-space-2xs cursor-pointer select-none">
-<input class="mt-1 w-4 h-4 rounded-none accent-primary cursor-pointer" id="newsletter" name="newsletter" type="checkbox"/>
-<label class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed cursor-pointer" for="newsletter">
-              Deseo recibir notas de diseño, aperturas de hornadas y lanzamientos exclusivos de ebanistería del taller Hermanos Jota.
-            </label>
-</div>
-<!-- Botón de Envío -->
-<div class="pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-md">
-<button class="w-full sm:w-auto bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-space-xl py-space-sm hover:bg-primary-container transition-all duration-300 flex items-center justify-center gap-space-xs shadow-md group active:scale-[0.98]" id="submit-btn" type="submit">
-<span>Enviar Mensaje</span>
-<span class="material-symbols-outlined text-lg transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
-</button>
-<p class="font-label-sm text-label-sm text-outline flex items-center gap-1">
-<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
-              Privacidad resguardada bajo estricto secreto de taller.
-            </p>
-</div>
-</form>
-<!-- Mensaje de Éxito Simulado (Oculto inicialmente) -->
-<div class="hidden absolute inset-0 bg-surface-container-lowest p-space-xl flex-col items-center justify-center text-center gap-space-md z-20 transition-opacity duration-300" id="form-success">
-<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
-<span class="material-symbols-outlined text-3xl">done_all</span>
-</div>
-<div class="flex flex-col gap-space-2xs max-w-md">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Recepción Confirmada</span>
-<h3 class="font-headline-md text-headline-md text-on-surface">¡Gracias por contactar a Hermanos Jota!</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-              Nuestro maestro ebanista y equipo de proyecto te responderán a la brevedad dentro de las próximas 24 horas hábiles.
-            </p>
-</div>
-<button class="mt-space-xs bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase px-space-lg py-space-xs hover:bg-surface-container-highest transition-colors" id="reset-form-btn" type="button">
-            Enviar otra consulta
-          </button>
-</div>
-</div>
-<!-- Columna Derecha: Información del Taller & Experiencia Presencial -->
-<div class="lg:col-span-5 flex flex-col gap-space-xl">
-<!-- Tarjeta Taller y Showroom Directo -->
-<div class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-lg shadow-sm">
-<div class="flex flex-col gap-space-2xs">
-<div class="flex items-center justify-between">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Sede Central</span>
-<span class="inline-flex items-center gap-1 text-xs text-secondary font-medium">
-<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                Abierto hoy
-              </span>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface">Taller y Showroom</h2>
-</div>
-<!-- Bloques de Información -->
-<div class="flex flex-col gap-space-md divide-y divide-outline-variant/20">
-<!-- Dirección & Ubicación -->
-<div class="flex items-start gap-space-sm pt-space-xs first:pt-0">
-<span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Dirección</span>
-<p class="font-body-md text-body-md text-on-surface mt-0.5">Gurruchaga 1840, Palermo Viejo</p>
-<span class="font-body-sm text-body-sm text-outline">Ciudad Autónoma de Buenos Aires, Argentina</span>
-</div>
-</div>
-<!-- Horarios de Atención -->
-<div class="flex items-start gap-space-sm pt-space-sm">
-<span class="material-symbols-outlined text-primary text-xl mt-0.5">schedule</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Horarios de Exposición</span>
-<p class="font-body-md text-body-md text-on-surface mt-0.5">Lunes a Viernes: 10:00 a 19:00 hs</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Sábados: 11:00 a 17:00 hs</p>
-</div>
-</div>
-<!-- Teléfono & Canales Directos -->
-<div class="flex items-start gap-space-sm pt-space-sm">
-<span class="material-symbols-outlined text-primary text-xl mt-0.5">chat</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Contacto Directo</span>
-<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors mt-0.5" href="tel:+541148327711">
-                  +54 11 4832-7711 (Tel / WhatsApp)
-                </a>
-<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="mailto:contacto@hermanosjota.com.ar">
-                  contacto@hermanosjota.com.ar
-                </a>
-</div>
-</div>
-<!-- Redes & Diálogo -->
-<div class="flex items-start gap-space-sm pt-space-sm">
-<span class="material-symbols-outlined text-primary text-xl mt-0.5">photo_camera</span>
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Instagram del Atelier</span>
-<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors mt-0.5" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
-                  @hermanosjota.diseno
-                </a>
-<span class="font-body-sm text-body-sm text-outline">Proceso de encastre y pruebas de lustre diario</span>
-</div>
-</div>
-</div>
-<!-- Botón de Ubicación en Mapa -->
-<a class="w-full bg-surface-container-high text-on-surface py-space-xs font-label-caps text-label-caps uppercase text-center hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-2xs" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-base">near_me</span>
-<span>Ver cómo llegar al taller</span>
-</a>
-</div>
-<!-- Tarjeta Editorial: Cita Privada para Recorrer el Taller -->
-<div class="bg-primary-container text-on-primary-container p-space-lg flex flex-col gap-space-sm shadow-sm relative overflow-hidden">
-<div class="flex items-center gap-space-xs text-on-tertiary-container">
-<span class="material-symbols-outlined text-xl">handshake</span>
-<span class="font-label-caps text-label-caps uppercase tracking-widest">Experiencia Presencial</span>
-</div>
-<h3 class="font-headline-sm text-headline-sm text-on-primary font-medium">
-            Agendá una cita personalizada en nuestro taller
-          </h3>
-<p class="font-body-sm text-body-sm text-on-primary/90 leading-relaxed">
-            Recorre junto al ebanista principal las mesas de cepillado, selecciona en vivo la veta del petiribí o nogal macizo y siente al tacto los cueros encerados para tus futuros ensambles.
-          </p>
-<div class="pt-space-2xs">
-<button class="bg-surface-bright text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase hover:bg-surface-container-lowest transition-all shadow-sm" onclick="document.getElementById('subject').value='visita-showroom'; document.getElementById('full-name').focus();" type="button">
-              Solicitar horario exclusivo
-            </button>
-</div>
-</div>
-<!-- Compromiso Ecológico & Sustentabilidad -->
-<div class="bg-surface-container-high/60 p-space-md flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-secondary text-2xl shrink-0">forest</span>
-<div class="flex flex-col gap-0.5">
-<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Maderas FSC &amp; Trazabilidad</span>
-<p class="font-body-sm text-body-sm text-on-surface-variant">
-              Todos nuestros empaques y envíos compensan su huella de carbono mediante reforestación de especies nativas.
-            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Sección Mapa / Galería de Entorno Palermo -->
-<section class="w-full bg-surface-container-low py-space-2xl mt-space-xl">
-<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-lg">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant/30 pb-space-md">
-<div>
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">Atmósfera Palermo Viejo</span>
-<h2 class="font-headline-md text-headline-md text-on-surface mt-1">El espacio donde nace el oficio</h2>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
-          Un antiguo galpón de techos altos reconvertido en punto de encuentro entre arquitectura, aroma a viruta fresca y diseño atemporal.
-        </p>
-</div>
-<!-- Bento Grid Visual del Taller & Mapeo -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-<!-- Mapa del Showroom -->
-<div class="md:col-span-2 relative min-h-[340px] shadow-sm overflow-hidden flex flex-col justify-end p-space-md group">
-<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-location="Gurruchaga 1840, Palermo, Buenos Aires" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJG2bohQR7J0zHKdfeV3Y7alYlOilzDb5_o89yMg5Lvhv-94j1iF0mX8D6gBqOpj3GjGYlDGb9OaRroc7v-Y4Cwx02ULuiwYeWQN9AzgBO-gJnJGGnk4P3hA5LdiKjLlQznVclWne5fBHE0IijBTMyL_mSbGr5ae-tTavUD-URj2lTETdPMym6TkV25grfavIK6smEvVQxnGiq8ZLR9EZZ3l-6CQ1yc3IfNRthGgBuxuc_Xiqd0Vs')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
-<div class="relative z-10 flex items-center justify-between text-on-primary">
-<div class="flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary-fixed tracking-wider">Palermo Soho / Viejo</span>
-<span class="font-headline-sm text-headline-sm">Gurruchaga 1840</span>
-</div>
-<span class="material-symbols-outlined text-3xl">map</span>
-</div>
-</div>
-<!-- Fotografía Detalle del Taller -->
-<div class="relative min-h-[340px] shadow-sm overflow-hidden flex flex-col justify-end p-space-md group">
-<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Intimate view of a fine woodworking workshop in Buenos Aires, soft natural morning sunlight illuminating hand planes, cedar wood shavings on a workbench, warm earth tones, quiet luxury and architectural stillness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNOXnCi5GANg_geeV-EdlDNl92q-c5xp6QsY62en7dN_YPz7jG3KZDp2mtSmeBuRDtXsohcchfj6H4gFA-GuUXl8kL64sOVFI3cc4GWaQpnPmgUE6rM-K9i-ncSxrjsC5C9CQdXDJHTeuG0HaJsIcQktSwW042T4ve6pWPkHJ6hJr9bWWdvMtiaOpfUDTipDWDUb8Yd10NOKaKV-4o-TFnh3QNZyW60TlKbrNNMZBK1RPglNeBU7w"/>
-<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
-<div class="relative z-10 text-on-primary flex flex-col">
-<span class="font-label-caps text-label-caps text-tertiary-fixed tracking-wider">La Mesa del Ebanista</span>
-<span class="font-body-sm text-body-sm text-inverse-on-surface">Cada empalme es ajustado a mano con gubia tradicional.</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Script Vanilla JS para Manejo e Interacción del Formulario -->
-<script>
-    (function() {
-      const form = document.getElementById('contact-form');
-      const successBox = document.getElementById('form-success');
-      const resetBtn = document.getElementById('reset-form-btn');
-      const submitBtn = document.getElementById('submit-btn');
-
-      const nameInput = document.getElementById('full-name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-
-      const nameErr = document.getElementById('name-error');
-      const emailErr = document.getElementById('email-error');
-      const msgErr = document.getElementById('message-error');
-
-      function validateEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
       }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#5c4300",
+              "inverse-surface": "#362f2d",
+              "tertiary-container": "#856200",
+              "on-tertiary-container": "#ffe4b4",
+              "on-primary-fixed-variant": "#76320f",
+              error: "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#fff1ed",
+              "surface-variant": "#ede0dc",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#fff8f6",
+              "secondary-fixed": "#c9eea9",
+              "on-surface": "#211a18",
+              "tertiary-fixed-dim": "#f2bf50",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#dac1b8",
+              "on-primary-container": "#ffe1d6",
+              outline: "#87736b",
+              "on-background": "#211a18",
+              "on-surface-variant": "#54433c",
+              "primary-fixed": "#ffdbcd",
+              "inverse-primary": "#ffb596",
+              "inverse-on-surface": "#fceeea",
+              "surface-dim": "#e4d7d4",
+              "secondary-container": "#c9eea9",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#aed18f",
+              primary: "#823b18",
+              "surface-tint": "#944925",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#4e6d36",
+              "surface-container-high": "#f3e5e2",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffdea1",
+              secondary: "#486730",
+              "on-tertiary-fixed": "#261900",
+              "primary-container": "#a0522d",
+              "surface-container-highest": "#ede0dc",
+              "on-secondary-fixed": "#0b2000",
+              "surface-container": "#f9ebe7",
+              "on-primary-fixed": "#360f00",
+              surface: "#fff8f6",
+              "on-secondary-fixed-variant": "#314e1b",
+              tertiary: "#674b00",
+              background: "#fff8f6",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-3xl": "6rem",
+              "space-4xl": "8rem",
+              "margin-desktop": "4rem",
+              "space-xs": "0.75rem",
+              "space-lg": "2rem",
+              "gutter-desktop": "2rem",
+              "margin-mobile": "1.25rem",
+              "space-2xl": "4rem",
+              "space-sm": "1rem",
+              "margin-tablet": "2.5rem",
+              "space-md": "1.5rem",
+              "space-xl": "3rem",
+              "space-3xs": "0.25rem",
+              "gutter-mobile": "1rem",
+              "space-2xs": "0.5rem",
+            },
+            fontFamily: {
+              "headline-lg": ["playfairDisplay"],
+              "headline-md": ["playfairDisplay"],
+              "display-hero-mobile": ["playfairDisplay"],
+              "label-sm": ["inter"],
+              "headline-lg-mobile": ["playfairDisplay"],
+              "body-md": ["inter"],
+              "body-sm": ["inter"],
+              "headline-sm": ["playfairDisplay"],
+              "display-hero": ["playfairDisplay"],
+              "label-md": ["inter"],
+              "body-lg": ["inter"],
+              "title-editorial": ["playfairDisplay"],
+              "label-caps": ["inter"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "40px",
+                {
+                  lineHeight: "48px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero-mobile": [
+                "38px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg-mobile": [
+                "30px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "body-md": [
+                "15px",
+                {
+                  lineHeight: "24px",
+                  fontWeight: "400",
+                },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "20px",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-sm": [
+                "22px",
+                {
+                  lineHeight: "28px",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero": [
+                "56px",
+                {
+                  lineHeight: "64px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "title-editorial": [
+                "18px",
+                {
+                  lineHeight: "24px",
+                  fontWeight: "400",
+                },
+              ],
+              "label-caps": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.14em",
+                  fontWeight: "600",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,37,35,0.04)]"
+    >
+      <div
+        class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-sm">
+          <button
+            aria-label="Abrir menú"
+            class="md:hidden flex items-center justify-center text-on-surface p-space-2xs hover:bg-surface-container-high transition-colors"
+            type="button"
+          >
+            <span class="material-symbols-outlined">menu</span></button
+          ><a class="flex items-center gap-space-xs" data-path="inicio" href="#"
+            ><span
+              class="font-headline-sm text-headline-sm tracking-tight text-on-surface"
+              >Hermanos Jota</span
+            ><span
+              class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant uppercase pt-0.5"
+              >Ebanistería</span
+            ></a
+          >
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-space-xl"
+          data-active-classes="text-primary font-medium border-b border-primary"
+        >
+          <a
+            class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs"
+            data-path="inicio"
+            href="#"
+            >Inicio</a
+          ><a
+            class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs"
+            data-path="productos"
+            href="#"
+            >Productos</a
+          ><a
+            aria-current="page"
+            class="uppercase transition-colors py-space-2xs text-primary font-medium border-b border-primary"
+            data-path="contacto"
+            href="#"
+            >Contacto</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <a
+            aria-label="Carrito de compra"
+            class="relative flex items-center justify-center p-space-2xs text-on-surface hover:text-primary transition-colors"
+            data-path="carrito"
+            href="#"
+            ><span class="material-symbols-outlined text-2xl">shopping_bag</span
+            ><span
+              class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-5 h-5 flex items-center justify-center rounded-full"
+              >2</span
+            ></a
+          >
+          <div
+            class="pl-space-2xs border-l border-outline-variant/30 flex items-center"
+          >
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-OFgvstRahtKxFsxvBWcD8SfJ9UqlpZpwp7pJkLzMIkZsNxFfe7NZeEk2C3Z-5Wtmadgankmv4aB5DR2edARgXpEigPsZx3mIuQEzhfdSM_y4NQggdRhuJj1yNhP504Dir0y8eu39xBX-KcrV2gLEckOW_69yDCVBVevCLm2xzzzqGmat9OsZKZ3S5dKTW5kvLIUKqSglLJ7p29qCio_6bXXG9qJRcBimiRsj8DUrC6xOoc5CRNg"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Sección Principal: Encabezado Editorial & Introducción -->
+        <section
+          class="max-w-7xl mx-auto w-full px-margin-mobile md:px-margin-tablet lg:px-margin-desktop pt-space-xl pb-space-2xl"
+        >
+          <div class="max-w-3xl flex flex-col gap-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="w-8 h-[1px] bg-primary"></span>
+              <span
+                class="font-label-caps text-label-caps text-primary uppercase tracking-widest"
+                >Atelier &amp; Showroom Palermo</span
+              >
+            </div>
+            <h1 class="font-headline-lg text-headline-lg text-on-surface">
+              Conversemos sobre tu próximo espacio
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
+            >
+              Visita nuestro showroom en Palermo o escríbenos para proyectos a
+              medida, curaduría de maderas nobles y asesoramiento integral en
+              arquitectura interior.
+            </p>
+          </div>
+          <!-- Grid Principal de Contacto -->
+          <div
+            class="mt-space-2xl grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-gutter-desktop items-start"
+          >
+            <!-- Columna Izquierda: Formulario Interactivo de Oficio -->
+            <div
+              class="lg:col-span-7 bg-surface-container-low p-space-md sm:p-space-xl rounded-none shadow-sm flex flex-col gap-space-lg relative overflow-hidden"
+            >
+              <!-- Sello de Taller de Fondo sutil -->
+              <div
+                class="absolute -right-8 -bottom-8 pointer-events-none opacity-5 text-on-surface select-none"
+              >
+                <span class="material-symbols-outlined text-[200px]"
+                  >carpenter</span
+                >
+              </div>
+              <div
+                class="flex flex-col gap-space-3xs border-b border-outline-variant/30 pb-space-sm"
+              >
+                <span
+                  class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider"
+                  >Formulario de Consulta Directa</span
+                >
+                <p class="font-headline-sm text-headline-sm text-on-surface">
+                  Escríbenos al taller
+                </p>
+              </div>
+              <!-- Formulario interactivo con gestión de estado -->
+              <form
+                class="flex flex-col gap-space-md relative z-10"
+                id="contact-form"
+                novalidate=""
+              >
+                <!-- Fila: Nombre & Email -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                  <!-- Nombre -->
+                  <div class="flex flex-col gap-space-3xs">
+                    <label
+                      class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between"
+                      for="full-name"
+                    >
+                      <span>Nombre Completo *</span>
+                      <span
+                        class="text-error font-body-sm text-body-sm hidden text-xs lowercase"
+                        id="name-error"
+                        >Requerido</span
+                      >
+                    </label>
+                    <input
+                      class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm"
+                      id="full-name"
+                      name="name"
+                      placeholder="ej. Agustín Larrea"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <!-- Email -->
+                  <div class="flex flex-col gap-space-3xs">
+                    <label
+                      class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between"
+                      for="email"
+                    >
+                      <span>Correo Electrónico *</span>
+                      <span
+                        class="text-error font-body-sm text-body-sm hidden text-xs lowercase"
+                        id="email-error"
+                        >Inválido</span
+                      >
+                    </label>
+                    <input
+                      class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm"
+                      id="email"
+                      name="email"
+                      placeholder="agustin@ejemplo.com"
+                      required=""
+                      type="email"
+                    />
+                  </div>
+                </div>
+                <!-- Fila: Teléfono & Asunto -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                  <!-- Teléfono -->
+                  <div class="flex flex-col gap-space-3xs">
+                    <label
+                      class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between"
+                      for="phone"
+                    >
+                      <span>Teléfono / WhatsApp</span>
+                      <span
+                        class="text-outline/70 font-body-sm text-body-sm text-xs"
+                        >Opcional</span
+                      >
+                    </label>
+                    <input
+                      class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm"
+                      id="phone"
+                      name="phone"
+                      placeholder="+54 9 11 ..."
+                      type="tel"
+                    />
+                  </div>
+                  <!-- Asunto -->
+                  <div class="flex flex-col gap-space-3xs">
+                    <label
+                      class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                      for="subject"
+                    >
+                      Tipo de Proyecto / Asunto *
+                    </label>
+                    <div class="relative">
+                      <select
+                        class="w-full bg-surface-container-lowest px-space-sm py-space-xs font-body-md text-body-md text-on-surface appearance-none outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm cursor-pointer"
+                        id="subject"
+                        name="subject"
+                        required=""
+                      >
+                        <option value="consulta-pieza">
+                          Consulta sobre una pieza específica
+                        </option>
+                        <option value="proyecto-interiorismo">
+                          Proyecto de arquitectura / interiorismo
+                        </option>
+                        <option value="visita-showroom">
+                          Visita al showroom &amp; taller
+                        </option>
+                        <option value="mobiliario-medida">
+                          Mobiliario a medida personalizado
+                        </option>
+                      </select>
+                      <span
+                        class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl"
+                      >
+                        expand_more
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mensaje -->
+                <div class="flex flex-col gap-space-3xs">
+                  <label
+                    class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between"
+                    for="message"
+                  >
+                    <span>Detalles del proyecto o consulta *</span>
+                    <span
+                      class="text-error font-body-sm text-body-sm hidden text-xs lowercase"
+                      id="message-error"
+                      >Por favor escribe tu consulta</span
+                    >
+                  </label>
+                  <textarea
+                    class="w-full bg-surface-container-lowest p-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline/50 outline-none transition-colors duration-200 focus:bg-surface focus:ring-1 focus:ring-primary shadow-sm resize-none"
+                    id="message"
+                    name="message"
+                    placeholder="Cuéntanos tus requerimientos, dimensiones deseadas o la colección que te interesa..."
+                    required=""
+                    rows="5"
+                  ></textarea>
+                </div>
+                <!-- Checkbox Boletín de Diseño -->
+                <div
+                  class="flex items-start gap-space-xs pt-space-2xs cursor-pointer select-none"
+                >
+                  <input
+                    class="mt-1 w-4 h-4 rounded-none accent-primary cursor-pointer"
+                    id="newsletter"
+                    name="newsletter"
+                    type="checkbox"
+                  />
+                  <label
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed cursor-pointer"
+                    for="newsletter"
+                  >
+                    Deseo recibir notas de diseño, aperturas de hornadas y
+                    lanzamientos exclusivos de ebanistería del taller Hermanos
+                    Jota.
+                  </label>
+                </div>
+                <!-- Botón de Envío -->
+                <div
+                  class="pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-md"
+                >
+                  <button
+                    class="w-full sm:w-auto bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-space-xl py-space-sm hover:bg-primary-container transition-all duration-300 flex items-center justify-center gap-space-xs shadow-md group active:scale-[0.98]"
+                    id="submit-btn"
+                    type="submit"
+                  >
+                    <span>Enviar Mensaje</span>
+                    <span
+                      class="material-symbols-outlined text-lg transition-transform duration-200 group-hover:translate-x-1"
+                      >arrow_forward</span
+                    >
+                  </button>
+                  <p
+                    class="font-label-sm text-label-sm text-outline flex items-center gap-1"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm text-secondary"
+                      >verified_user</span
+                    >
+                    Privacidad resguardada bajo estricto secreto de taller.
+                  </p>
+                </div>
+              </form>
+              <!-- Mensaje de Éxito Simulado (Oculto inicialmente) -->
+              <div
+                class="hidden absolute inset-0 bg-surface-container-lowest p-space-xl flex-col items-center justify-center text-center gap-space-md z-20 transition-opacity duration-300"
+                id="form-success"
+              >
+                <div
+                  class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >done_all</span
+                  >
+                </div>
+                <div class="flex flex-col gap-space-2xs max-w-md">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                    >Recepción Confirmada</span
+                  >
+                  <h3 class="font-headline-md text-headline-md text-on-surface">
+                    ¡Gracias por contactar a Hermanos Jota!
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant">
+                    Nuestro maestro ebanista y equipo de proyecto te responderán
+                    a la brevedad dentro de las próximas 24 horas hábiles.
+                  </p>
+                </div>
+                <button
+                  class="mt-space-xs bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase px-space-lg py-space-xs hover:bg-surface-container-highest transition-colors"
+                  id="reset-form-btn"
+                  type="button"
+                >
+                  Enviar otra consulta
+                </button>
+              </div>
+            </div>
+            <!-- Columna Derecha: Información del Taller & Experiencia Presencial -->
+            <div class="lg:col-span-5 flex flex-col gap-space-xl">
+              <!-- Tarjeta Taller y Showroom Directo -->
+              <div
+                class="bg-surface-container-lowest p-space-lg flex flex-col gap-space-lg shadow-sm"
+              >
+                <div class="flex flex-col gap-space-2xs">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="font-label-caps text-label-caps text-primary uppercase tracking-widest"
+                      >Sede Central</span
+                    >
+                    <span
+                      class="inline-flex items-center gap-1 text-xs text-secondary font-medium"
+                    >
+                      <span
+                        class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+                      ></span>
+                      Abierto hoy
+                    </span>
+                  </div>
+                  <h2 class="font-headline-md text-headline-md text-on-surface">
+                    Taller y Showroom
+                  </h2>
+                </div>
+                <!-- Bloques de Información -->
+                <div
+                  class="flex flex-col gap-space-md divide-y divide-outline-variant/20"
+                >
+                  <!-- Dirección & Ubicación -->
+                  <div
+                    class="flex items-start gap-space-sm pt-space-xs first:pt-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-xl mt-0.5"
+                      >location_on</span
+                    >
+                    <div class="flex flex-col">
+                      <span
+                        class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                        >Dirección</span
+                      >
+                      <p
+                        class="font-body-md text-body-md text-on-surface mt-0.5"
+                      >
+                        Gurruchaga 1840, Palermo Viejo
+                      </p>
+                      <span class="font-body-sm text-body-sm text-outline"
+                        >Ciudad Autónoma de Buenos Aires, Argentina</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Horarios de Atención -->
+                  <div class="flex items-start gap-space-sm pt-space-sm">
+                    <span
+                      class="material-symbols-outlined text-primary text-xl mt-0.5"
+                      >schedule</span
+                    >
+                    <div class="flex flex-col">
+                      <span
+                        class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                        >Horarios de Exposición</span
+                      >
+                      <p
+                        class="font-body-md text-body-md text-on-surface mt-0.5"
+                      >
+                        Lunes a Viernes: 10:00 a 19:00 hs
+                      </p>
+                      <p
+                        class="font-body-sm text-body-sm text-on-surface-variant"
+                      >
+                        Sábados: 11:00 a 17:00 hs
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Teléfono & Canales Directos -->
+                  <div class="flex items-start gap-space-sm pt-space-sm">
+                    <span
+                      class="material-symbols-outlined text-primary text-xl mt-0.5"
+                      >chat</span
+                    >
+                    <div class="flex flex-col">
+                      <span
+                        class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                        >Contacto Directo</span
+                      >
+                      <a
+                        class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors mt-0.5"
+                        href="tel:+541148327711"
+                      >
+                        +54 11 4832-7711 (Tel / WhatsApp)
+                      </a>
+                      <a
+                        class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+                        href="mailto:contacto@hermanosjota.com.ar"
+                      >
+                        contacto@hermanosjota.com.ar
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Redes & Diálogo -->
+                  <div class="flex items-start gap-space-sm pt-space-sm">
+                    <span
+                      class="material-symbols-outlined text-primary text-xl mt-0.5"
+                      >photo_camera</span
+                    >
+                    <div class="flex flex-col">
+                      <span
+                        class="font-label-caps text-label-caps uppercase text-on-surface-variant"
+                        >Instagram del Atelier</span
+                      >
+                      <a
+                        class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors mt-0.5"
+                        href="https://instagram.com"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        @hermanosjota.diseno
+                      </a>
+                      <span class="font-body-sm text-body-sm text-outline"
+                        >Proceso de encastre y pruebas de lustre diario</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Botón de Ubicación en Mapa -->
+                <a
+                  class="w-full bg-surface-container-high text-on-surface py-space-xs font-label-caps text-label-caps uppercase text-center hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-space-2xs"
+                  href="https://maps.google.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <span class="material-symbols-outlined text-base"
+                    >near_me</span
+                  >
+                  <span>Ver cómo llegar al taller</span>
+                </a>
+              </div>
+              <!-- Tarjeta Editorial: Cita Privada para Recorrer el Taller -->
+              <div
+                class="bg-primary-container text-on-primary-container p-space-lg flex flex-col gap-space-sm shadow-sm relative overflow-hidden"
+              >
+                <div
+                  class="flex items-center gap-space-xs text-on-tertiary-container"
+                >
+                  <span class="material-symbols-outlined text-xl"
+                    >handshake</span
+                  >
+                  <span
+                    class="font-label-caps text-label-caps uppercase tracking-widest"
+                    >Experiencia Presencial</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-headline-sm text-on-primary font-medium"
+                >
+                  Agendá una cita personalizada en nuestro taller
+                </h3>
+                <p
+                  class="font-body-sm text-body-sm text-on-primary/90 leading-relaxed"
+                >
+                  Recorre junto al ebanista principal las mesas de cepillado,
+                  selecciona en vivo la veta del petiribí o nogal macizo y
+                  siente al tacto los cueros encerados para tus futuros
+                  ensambles.
+                </p>
+                <div class="pt-space-2xs">
+                  <button
+                    class="bg-surface-bright text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase hover:bg-surface-container-lowest transition-all shadow-sm"
+                    onclick="
+                      document.getElementById('subject').value =
+                        'visita-showroom';
+                      document.getElementById('full-name').focus();
+                    "
+                    type="button"
+                  >
+                    Solicitar horario exclusivo
+                  </button>
+                </div>
+              </div>
+              <!-- Compromiso Ecológico & Sustentabilidad -->
+              <div
+                class="bg-surface-container-high/60 p-space-md flex items-center gap-space-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-2xl shrink-0"
+                  >forest</span
+                >
+                <div class="flex flex-col gap-0.5">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase tracking-widest"
+                    >Maderas FSC &amp; Trazabilidad</span
+                  >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Todos nuestros empaques y envíos compensan su huella de
+                    carbono mediante reforestación de especies nativas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Sección Mapa / Galería de Entorno Palermo -->
+        <section
+          class="w-full bg-surface-container-low py-space-2xl mt-space-xl"
+        >
+          <div
+            class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-lg"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant/30 pb-space-md"
+            >
+              <div>
+                <span
+                  class="font-label-caps text-label-caps text-primary uppercase tracking-wider"
+                  >Atmósfera Palermo Viejo</span
+                >
+                <h2
+                  class="font-headline-md text-headline-md text-on-surface mt-1"
+                >
+                  El espacio donde nace el oficio
+                </h2>
+              </div>
+              <p
+                class="font-body-sm text-body-sm text-on-surface-variant max-w-md"
+              >
+                Un antiguo galpón de techos altos reconvertido en punto de
+                encuentro entre arquitectura, aroma a viruta fresca y diseño
+                atemporal.
+              </p>
+            </div>
+            <!-- Bento Grid Visual del Taller & Mapeo -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+              <!-- Mapa del Showroom -->
+              <div
+                class="md:col-span-2 relative min-h-[340px] shadow-sm overflow-hidden flex flex-col justify-end p-space-md group"
+              >
+                <div
+                  class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  data-location="Gurruchaga 1840, Palermo, Buenos Aires"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDJG2bohQR7J0zHKdfeV3Y7alYlOilzDb5_o89yMg5Lvhv-94j1iF0mX8D6gBqOpj3GjGYlDGb9OaRroc7v-Y4Cwx02ULuiwYeWQN9AzgBO-gJnJGGnk4P3hA5LdiKjLlQznVclWne5fBHE0IijBTMyL_mSbGr5ae-tTavUD-URj2lTETdPMym6TkV25grfavIK6smEvVQxnGiq8ZLR9EZZ3l-6CQ1yc3IfNRthGgBuxuc_Xiqd0Vs&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"
+                ></div>
+                <div
+                  class="relative z-10 flex items-center justify-between text-on-primary"
+                >
+                  <div class="flex flex-col">
+                    <span
+                      class="font-label-caps text-label-caps text-tertiary-fixed tracking-wider"
+                      >Palermo Soho / Viejo</span
+                    >
+                    <span class="font-headline-sm text-headline-sm"
+                      >Gurruchaga 1840</span
+                    >
+                  </div>
+                  <span class="material-symbols-outlined text-3xl">map</span>
+                </div>
+              </div>
+              <!-- Fotografía Detalle del Taller -->
+              <div
+                class="relative min-h-[340px] shadow-sm overflow-hidden flex flex-col justify-end p-space-md group"
+              >
+                <img
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Intimate view of a fine woodworking workshop in Buenos Aires, soft natural morning sunlight illuminating hand planes, cedar wood shavings on a workbench, warm earth tones, quiet luxury and architectural stillness."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNOXnCi5GANg_geeV-EdlDNl92q-c5xp6QsY62en7dN_YPz7jG3KZDp2mtSmeBuRDtXsohcchfj6H4gFA-GuUXl8kL64sOVFI3cc4GWaQpnPmgUE6rM-K9i-ncSxrjsC5C9CQdXDJHTeuG0HaJsIcQktSwW042T4ve6pWPkHJ6hJr9bWWdvMtiaOpfUDTipDWDUb8Yd10NOKaKV-4o-TFnh3QNZyW60TlKbrNNMZBK1RPglNeBU7w"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"
+                ></div>
+                <div class="relative z-10 text-on-primary flex flex-col">
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary-fixed tracking-wider"
+                    >La Mesa del Ebanista</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-inverse-on-surface"
+                    >Cada empalme es ajustado a mano con gubia
+                    tradicional.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Script Vanilla JS para Manejo e Interacción del Formulario -->
+        <script>
+          (function () {
+            const form = document.getElementById("contact-form");
+            const successBox = document.getElementById("form-success");
+            const resetBtn = document.getElementById("reset-form-btn");
+            const submitBtn = document.getElementById("submit-btn");
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        let valid = true;
+            const nameInput = document.getElementById("full-name");
+            const emailInput = document.getElementById("email");
+            const messageInput = document.getElementById("message");
 
-        // Reset errors
-        nameErr.classList.add('hidden');
-        emailErr.classList.add('hidden');
-        msgErr.classList.add('hidden');
+            const nameErr = document.getElementById("name-error");
+            const emailErr = document.getElementById("email-error");
+            const msgErr = document.getElementById("message-error");
 
-        if (!nameInput.value.trim()) {
-          nameErr.classList.remove('hidden');
-          nameInput.classList.add('ring-1', 'ring-error');
-          valid = false;
-        } else {
-          nameInput.classList.remove('ring-1', 'ring-error');
-        }
+            function validateEmail(email) {
+              return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
 
-        if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
-          emailErr.classList.remove('hidden');
-          emailInput.classList.add('ring-1', 'ring-error');
-          valid = false;
-        } else {
-          emailInput.classList.remove('ring-1', 'ring-error');
-        }
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              let valid = true;
 
-        if (!messageInput.value.trim()) {
-          msgErr.classList.remove('hidden');
-          messageInput.classList.add('ring-1', 'ring-error');
-          valid = false;
-        } else {
-          messageInput.classList.remove('ring-1', 'ring-error');
-        }
+              // Reset errors
+              nameErr.classList.add("hidden");
+              emailErr.classList.add("hidden");
+              msgErr.classList.add("hidden");
 
-        if (valid) {
-          // Animación de envío simulado
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">progress_activity</span><span>Enviando al taller...</span>';
+              if (!nameInput.value.trim()) {
+                nameErr.classList.remove("hidden");
+                nameInput.classList.add("ring-1", "ring-error");
+                valid = false;
+              } else {
+                nameInput.classList.remove("ring-1", "ring-error");
+              }
 
-          setTimeout(function() {
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<span>Enviar Mensaje</span><span class="material-symbols-outlined text-lg">arrow_forward</span>';
-            successBox.classList.remove('hidden');
-            successBox.classList.add('flex');
-          }, 800);
-        }
-      });
+              if (
+                !emailInput.value.trim() ||
+                !validateEmail(emailInput.value.trim())
+              ) {
+                emailErr.classList.remove("hidden");
+                emailInput.classList.add("ring-1", "ring-error");
+                valid = false;
+              } else {
+                emailInput.classList.remove("ring-1", "ring-error");
+              }
 
-      resetBtn.addEventListener('click', function() {
-        successBox.classList.add('hidden');
-        successBox.classList.remove('flex');
-        nameInput.focus();
-      });
-    })();
-  </script>
-</div></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col gap-space-md"><h2 class="font-headline-md text-headline-md text-on-surface">Hermanos Jota</h2><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Piezas únicas de mobiliario de autor concebidas bajo la nobleza de la madera maciza, ensambladas a mano con rigor arquitectónico y vocación eterna.</p><div class="pt-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">eco</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Maderas Nativas con Certificación FSC</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Navegación</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li data-path="inicio"><a class="hover:text-primary transition-colors" href="#">Inicio</a></li><li data-path="productos"><a class="hover:text-primary transition-colors" href="#">Catálogo Completo</a></li><li data-path="contacto"><a class="hover:text-primary transition-colors" href="#">Contacto y Taller</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Taller &amp; Showroom</h3><address class="not-italic flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant"><span>Gorriti 5840, Palermo</span><span>Ciudad Autónoma de Buenos Aires</span><span class="pt-space-2xs">Martes a Sábados: 11:00 a 19:00 hs</span><span>Atención personalizada con cita previa</span></address></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Contacto Directo</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">contacto@hermanosjota.com.ar</a></li><li><a class="hover:text-primary transition-colors" href="#">+54 11 4772 9010</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-3xs" href="#"><span>@hermanosjota</span></a></li></ul></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-on-surface-variant"><p>© 2025 Hermanos Jota. Todos los derechos reservados. Fabricado en Argentina.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Términos de Adquisición</a><a class="hover:text-on-surface transition-colors" href="#">Garantía Artesanal</a></div></div></div></footer></body></html>
+              if (!messageInput.value.trim()) {
+                msgErr.classList.remove("hidden");
+                messageInput.classList.add("ring-1", "ring-error");
+                valid = false;
+              } else {
+                messageInput.classList.remove("ring-1", "ring-error");
+              }
+
+              if (valid) {
+                // Animación de envío simulado
+                submitBtn.disabled = true;
+                submitBtn.innerHTML =
+                  '<span class="material-symbols-outlined animate-spin text-lg">progress_activity</span><span>Enviando al taller...</span>';
+
+                setTimeout(function () {
+                  form.reset();
+                  submitBtn.disabled = false;
+                  submitBtn.innerHTML =
+                    '<span>Enviar Mensaje</span><span class="material-symbols-outlined text-lg">arrow_forward</span>';
+                  successBox.classList.remove("hidden");
+                  successBox.classList.add("flex");
+                }, 800);
+              }
+            });
+
+            resetBtn.addEventListener("click", function () {
+              successBox.classList.add("hidden");
+              successBox.classList.remove("flex");
+              nameInput.focus();
+            });
+          })();
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-low mt-space-3xl">
+      <div
+        class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"
+        >
+          <div class="lg:col-span-4 flex flex-col gap-space-md">
+            <h2 class="font-headline-md text-headline-md text-on-surface">
+              Hermanos Jota
+            </h2>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant max-w-sm"
+            >
+              Piezas únicas de mobiliario de autor concebidas bajo la nobleza de
+              la madera maciza, ensambladas a mano con rigor arquitectónico y
+              vocación eterna.
+            </p>
+            <div class="pt-space-xs flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-lg"
+                >eco</span
+              ><span
+                class="font-label-caps text-label-caps text-on-surface-variant uppercase"
+                >Maderas Nativas con Certificación FSC</span
+              >
+            </div>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Navegación
+            </h3>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li data-path="inicio">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li data-path="productos">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Catálogo Completo</a
+                >
+              </li>
+              <li data-path="contacto">
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Contacto y Taller</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Taller &amp; Showroom
+            </h3>
+            <address
+              class="not-italic flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <span>Gorriti 5840, Palermo</span
+              ><span>Ciudad Autónoma de Buenos Aires</span
+              ><span class="pt-space-2xs"
+                >Martes a Sábados: 11:00 a 19:00 hs</span
+              ><span>Atención personalizada con cita previa</span>
+            </address>
+          </div>
+          <div class="lg:col-span-3 flex flex-col gap-space-sm">
+            <h3
+              class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest"
+            >
+              Contacto Directo
+            </h3>
+            <ul
+              class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"
+            >
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >contacto@hermanosjota.com.ar</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#"
+                  >+54 11 4772 9010</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-primary transition-colors flex items-center gap-space-3xs"
+                  href="#"
+                  ><span>@hermanosjota</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-on-surface-variant"
+        >
+          <p>
+            © 2025 Hermanos Jota. Todos los derechos reservados. Fabricado en
+            Argentina.
+          </p>
+          <div class="flex items-center gap-space-lg">
+            <a class="hover:text-on-surface transition-colors" href="#"
+              >Términos de Adquisición</a
+            ><a class="hover:text-on-surface transition-colors" href="#"
+              >Garantía Artesanal</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
