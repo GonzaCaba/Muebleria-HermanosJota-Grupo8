@@ -76,22 +76,26 @@ All tasks originate from and must be tracked in the **GitHub Projects** board.
 ### Column Progression:
 
 1. **Backlog:**
-   - Pending cards or user stories awaiting assignment.
-   - Tasks must have clear acceptance criteria before work begins.
+   - General pool of pending cards, ideas, and feature requests.
+   - Tasks may still require scope definition or breakdown.
 
-2. **In Progress:**
+2. **Ready:**
+   - Refined tasks with defined scope and clear acceptance criteria.
+   - Prioritized and immediately available for any team member or agent to pick up.
+
+3. **In Progress:**
    - When a contributor starts working on a card:
      - Assign self to the task / issue.
-     - Move the card to **In Progress**.
+     - Move the card from **Ready** to **In Progress**.
      - Create a dedicated branch off `main` (never work directly on `main`).
 
-3. **In Review:**
+4. **In Review:**
    - Work is complete, verified locally, and committed.
    - Push branch to remote and open a Pull Request (PR) targeted at `main`.
    - Link the PR to the GitHub Project issue/card using keywords (e.g., `Closes #12`).
    - Move the card to **In Review** and request at least one peer review.
 
-4. **Done:**
+5. **Done:**
    - Once the PR receives approval and merges into `main`, move the card to **Done**.
 
 ---
