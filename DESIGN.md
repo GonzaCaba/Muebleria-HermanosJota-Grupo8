@@ -1,18 +1,18 @@
 ---
-name: Taller y Oficio
+name: Editorial Calmo
 colors:
-  surface: '#fff8f4'
-  surface-dim: '#e8d7c9'
-  surface-bright: '#fff8f4'
+  surface: '#fff8f6'
+  surface-dim: '#e4d7d4'
+  surface-bright: '#fff8f6'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#fff1e7'
-  surface-container: '#fcebdc'
-  surface-container-high: '#f7e5d7'
-  surface-container-highest: '#f1dfd1'
-  on-surface: '#221a11'
+  surface-container-low: '#fff1ed'
+  surface-container: '#f9ebe7'
+  surface-container-high: '#f3e5e2'
+  surface-container-highest: '#ede0dc'
+  on-surface: '#211a18'
   on-surface-variant: '#54433c'
-  inverse-surface: '#382f25'
-  inverse-on-surface: '#ffeee0'
+  inverse-surface: '#362f2d'
+  inverse-on-surface: '#fceeea'
   outline: '#87736b'
   outline-variant: '#dac1b8'
   surface-tint: '#944925'
@@ -45,188 +45,208 @@ colors:
   tertiary-fixed-dim: '#f2bf50'
   on-tertiary-fixed: '#261900'
   on-tertiary-fixed-variant: '#5c4300'
-  background: '#fff8f4'
-  on-background: '#221a11'
-  surface-variant: '#f1dfd1'
+  background: '#fff8f6'
+  on-background: '#211a18'
+  surface-variant: '#ede0dc'
 typography:
-  display-lg:
-    fontFamily: Playfair Display
+  display-hero:
+    fontFamily: playfairDisplay
     fontSize: 56px
-    fontWeight: '600'
+    fontWeight: '400'
     lineHeight: 64px
     letterSpacing: -0.02em
-  display-lg-mobile:
-    fontFamily: Playfair Display
+  display-hero-mobile:
+    fontFamily: playfairDisplay
     fontSize: 38px
-    fontWeight: '600'
-    lineHeight: 46px
+    fontWeight: '400'
+    lineHeight: 44px
     letterSpacing: -0.01em
   headline-lg:
-    fontFamily: Playfair Display
+    fontFamily: playfairDisplay
     fontSize: 40px
-    fontWeight: '500'
+    fontWeight: '400'
     lineHeight: 48px
     letterSpacing: -0.015em
   headline-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 28px
-    fontWeight: '500'
+    fontFamily: playfairDisplay
+    fontSize: 30px
+    fontWeight: '400'
     lineHeight: 36px
     letterSpacing: -0.01em
   headline-md:
-    fontFamily: Playfair Display
+    fontFamily: playfairDisplay
     fontSize: 28px
     fontWeight: '500'
     lineHeight: 36px
-    letterSpacing: '0'
   headline-sm:
-    fontFamily: Playfair Display
+    fontFamily: playfairDisplay
     fontSize: 22px
-    fontWeight: '600'
-    lineHeight: 30px
-    letterSpacing: '0'
-  title-md:
-    fontFamily: Inter
+    fontWeight: '500'
+    lineHeight: 28px
+  title-editorial:
+    fontFamily: playfairDisplay
     fontSize: 18px
-    fontWeight: '600'
-    lineHeight: 26px
-    letterSpacing: -0.005em
+    fontWeight: '400'
+    lineHeight: 24px
   body-lg:
-    fontFamily: Inter
+    fontFamily: inter
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 28px
-    letterSpacing: '0'
+    letterSpacing: -0.005em
   body-md:
-    fontFamily: Inter
+    fontFamily: inter
     fontSize: 15px
     fontWeight: '400'
     lineHeight: 24px
-    letterSpacing: '0'
   body-sm:
-    fontFamily: Inter
+    fontFamily: inter
     fontSize: 13px
     fontWeight: '400'
     lineHeight: 20px
-    letterSpacing: 0.01em
-  label-md:
-    fontFamily: Inter
-    fontSize: 12px
-    fontWeight: '600'
-    lineHeight: 16px
-    letterSpacing: 0.08em
-  label-sm:
-    fontFamily: Inter
+  label-caps:
+    fontFamily: inter
     fontSize: 11px
-    fontWeight: '500'
+    fontWeight: '600'
     lineHeight: 14px
-    letterSpacing: 0.06em
-rounded:
-  sm: 0.25rem
-  DEFAULT: 0.5rem
-  md: 0.75rem
-  lg: 1rem
-  xl: 1.5rem
-  full: 9999px
+    letterSpacing: 0.14em
+  label-md:
+    fontFamily: inter
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+  label-sm:
+    fontFamily: inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
 spacing:
-  space-2xs: 0.25rem
-  space-xs: 0.5rem
-  space-sm: 0.75rem
-  space-md: 1rem
-  space-lg: 1.5rem
-  space-xl: 2rem
-  space-2xl: 3rem
-  space-3xl: 4.5rem
-  space-4xl: 6rem
+  space-3xs: 0.25rem
+  space-2xs: 0.5rem
+  space-xs: 0.75rem
+  space-sm: 1rem
+  space-md: 1.5rem
+  space-lg: 2rem
+  space-xl: 3rem
+  space-2xl: 4rem
+  space-3xl: 6rem
+  space-4xl: 8rem
   gutter-mobile: 1rem
   gutter-desktop: 2rem
-  container-max: 80rem
+  margin-mobile: 1.25rem
+  margin-tablet: 2.5rem
+  margin-desktop: 4rem
 ---
 
 ## Brand & Style
 
-This design system embodies the material intimacy, architectural composure, and tactile patience of an artisanal furniture workshop rooted in Buenos Aires. The aesthetic bridges mid-century Latin American modernism—recalling the sculpted joinery and organic forms of the 1960s—with the precision and environmental stewardship of contemporary conscious luxury.
+Este sistema de diseño traduce la artesanía de mobiliario de autor y la nobleza de los materiales naturales a una experiencia digital contemplativa, serena y profundamente editorial. Concibe la interfaz como un catálogo de colección o una monografía de arquitectura antes que como un catálogo transaccional convencional.
 
-The visual language rejects synthetic gloss and cold industrial minimalism. Instead, it prioritizes:
-- **Material honesty:** Digital surfaces feel like hand-planed timber, porous ceramic, and woven cane.
-- **Architectural poise:** Generous editorial margins and intentional pauses reflect thoughtful spatial design.
-- **Rooted luxury:** High-touch, warm, and grounded in Argentine provenance (algarrobo, caldén, and quebracho grains).
+### Personalidad de Marca
+- **Atemporal y Noble:** Valora la permanencia, el grano de la madera, la pátina del cuero y la honestidad constructiva por sobre las tendencias pasajeras.
+- **Sobrio y Poético:** Utiliza la pausa, la palabra justa y la composición equilibrada para proyectar un lujo silencioso, arraigado en la identidad vernácula argentina.
+- **Artesanal y Curado:** Trata cada producto como una pieza única numerada, donde la fotografía a gran escala y la materialidad son el centro del relato.
 
-The target audience comprises discerning interior architects, collectors, and design-literate homeowners who value provenance, regenerative craft, and heirloom permanence over seasonal trends.
+### Estilo Visual
+- **Minimalismo Cálido & Editorial:** Combina amplios campos de aire, líneas de corte nítidas y composiciones asimétricas inspiradas en el diseño editorial de libros de arte.
+- **Jerarquía Basada en el Vacío:** El espacio negativo no es ausencia de contenido, sino el elemento estructural que confiere escala, calma y valor tangible a cada pieza.
+- **Atmósfera Táctil:** Los fondos emulan la textura del papel de algodón y el yeso pulido, eliminando estridencias sintéticas o sombras artificiales agresivas.
 
 ## Colors
 
-The palette is derived directly from raw workshop materials: sun-baked clay, botanical finishes, oil-rubbed hardwoods, and untreated brass fittings.
+La paleta se inspira directamente en los talleres de ebanistería, pigmentos minerales y fibras autóctonas. La relación cromática rechaza los contrastes digitales puros (como el negro #000000 o el blanco #FFFFFF clínico), reemplazándolos por contrastes naturales de alta legibilidad y calidez táctil.
 
-- **Primary (`#A0522D` / Sienna Tostado):** Anchors calls-to-action, active navigational states, and prominent editorial accents. Evokes seasoned algarrobo heartwood and kiln-fired tile.
-- **Secondary (`#87A96B` / Verde Salvia):** Designated for sustainability certifications, provenance badges, ecological sourcing transparency, and organic material notes.
-- **Tertiary (`#D4A437` / Vara de Oro):** Applied with deliberate restraint to convey metallurgical precision—patinated brass joinery, limited-run stamps, and premium bespoke indicators.
-- **Soft Accent (`#C47A6D` / Rosa Polvoriento):** A delicate grounding tone for category tags, subtle borders, notifications, and seasonal textile pairings.
-- **Neutral Core (`#2A2118` / Espresso Charcoal):** High-contrast, warm dark tone for legible body copy, iconography, structural dividers, and primary emphasis.
-- **Surfaces (`#F5E6D3` / Warm Alabaster canvas & `#FAF4EB` / Soft Warm Cream containers):** Organic, low-fatigue base backgrounds that impart warmth without drifting into clinical white.
+### Paleta Principal y Acentos
+- **Siena Tostado (`#A0522D`):** Color primario. Se emplea en elementos de interacción noble, estados activos fundamentales, destacados de firma y detalles de grabado.
+- **Verde Salvia (`#87A96B`):** Tono secundario. Comunica sustentabilidad, trazabilidad de maderas certificadas, certificaciones de origen y estados de disponibilidad armónicos.
+- **Vara de Oro (`#D4A437`):** Tono terciario para acentos sutiles, sellos de distinción artesanal, microinsignias y marcadores de exclusividad.
+- **Rosa Polvoriento (`#C47A6D`):** Acento suave textil. Utilizado para representar acabados de tapicería, etiquetas secundarias de categorías de telas y fondos de detalle tenue.
+
+### Superficies y Fondos
+- **Blanco Pergamino / Base (`#FCF9F5`):** Superficie principal de página, que evoca hojas de catálogo sin estucar.
+- **Alabastro Claro (`#F7F2EA`):** Contenedores de producto y módulos elevados de nivel 1.
+- **Alabastro Cálido (`#F5E6D3`):** Superficies de contraste suave, paneles laterales, footers y bandejas de ficha técnica.
+
+### Textos y Líneas
+- **Carbón Suave (`#2C2523`):** Tinta de lectura principal para títulos, subtítulos y textos con peso jerárquico.
+- **Nogal Oscuro (`#4A3E3D`):** Color de texto secundario para cuerpos de lectura prolongada, descripciones botánicas y metadatos de piezas.
+- **Líneas y Delimitadores (`rgba(74, 62, 61, 0.12)`): Filetes tenues de bajo contraste que guían la lectura sin fragmentar la composición.
 
 ## Typography
 
-Typography establishes an editorial rhythm reminiscent of mid-century architectural publications.
+El maridaje tipográfico establece un diálogo entre la tradición humanista y la ingeniería funcional contemporánea.
 
-- **Headlines & Titles:** Set in **Playfair Display**, selected for its high-contrast stroke modulation, graceful terminals, and artisanal weight. Used for hero moments, collection titles, and artisanal storytelling. Display sizes employ subtle negative tracking to preserve structural tension.
-- **Body & Functional UI:** Set in **Inter**, ensuring optimal legibility across mobile displays, dimension specifications, cart interfaces, and technical timber documentation.
-- **Labels & Metatags:** Set in uppercase, slightly tracked Inter (`label-md` and `label-sm`) to delineate provenance data, wood grain certifications, and technical attributes clearly.
+### Reglas de Uso Tipográfico
+- **Títulos y Cabeceras (Playfair Display):** Emplean pesos regular (400) o medium (500). El uso de cursivas (`italic`) está reservado exclusivamente a citas de diseñadores, nombres propios de maderas o acentos de colección poéticos (ej. *Nogal Silvestre*). Mantener tracking ligeramente negativo en tamaños de gran escala.
+- **Cuerpo y Lectura (Inter):** Administra la información utilitaria, especificaciones técnicas y dimensiones de piezas. Su textura neutra y proporciones balanceadas equilibran la fuerza ornamental de la serif.
+- **Microtipografía Editorial (`label-caps`):** Todas las categorías, procedencias de taller, números de serie y llamados de estado secundario se tipografían en mayúsculas sostenidas, tamaño reducido (11px) y un tracking expansivo de `0.14em` para reproducir el acabado de los sellos de prensado en piel y bronce.
 
 ## Layout & Spacing
 
-The layout is built on an adaptable 12-column grid system anchored by proportional whitespace.
+El ritmo espacial sigue la lógica de una galería de exhibición: los objetos demandan espacio a su alrededor para ser apreciados en su totalidad.
 
-- **Grid Mechanics:**
-  - **Desktop (≥ 1024px):** 12 columns, 32px gutters, dynamic outer margins (capped at 1280px container max).
-  - **Tablet (768px – 1023px):** 8 columns, 24px gutters, 32px margins.
-  - **Mobile (< 768px):** 4 columns, 16px gutters, 20px page margins.
-- **Vertical Spacing:** Employs an 8pt base scale. Long-form editorial passages utilize `space-3xl` and `space-4xl` section boundaries to give wood photography breathing room.
-- **Editorial Asymmetry:** Furniture showcase layouts alternate between full-width immersive imagery and asymmetrical 7/5 column pairings to mirror gallery installations.
+### Sistema de Grilla
+- **Dispositivos Móviles (< 768px):** Grilla fluida de 4 columnas con márgenes laterales de `1.25rem` (`20px`) y medianiles de `1rem`. La fotografía de producto abarca típicamente el ancho completo o 4 columnas, eliminando bordes innecesarios para magnificar el detalle de la textura.
+- **Tablets (768px - 1024px):** Grilla de 8 columnas con márgenes de `2.5rem` y medianiles de `1.5rem`.
+- **Desktop (> 1024px):** Grilla simétrica o asimétrica de 12 columnas con un ancho máximo contenido de `1440px`, márgenes de `4rem` y medianiles de `2rem`. Las galerías permiten desbordes selectivos a sangría completa (`full-bleed`) para imágenes de ambientación.
+
+### Ritmo Vertical y Composición
+- Las secciones narrativas mantienen separaciones generosas de `space-3xl` (`6rem`) o `space-4xl` (`8rem`) en desktop, evitando la compresión visual propia de interfaces de comercio masivo.
+- En fichas de producto, la columna de imágenes y la de especificaciones operan de forma asincrónica: el carrete de imágenes se desplaza con naturalidad mientras los datos técnicos permanecen anclados con un espaciado interior pulcro.
 
 ## Elevation & Depth
 
-Depth is tactile and warm, avoiding harsh synthetic drop shadows.
+La profundidad en este sistema se construye exclusivamente a través de la superposición de planos de color natural y filetes constructivos, no mediante proyecciones artificiales de luz.
 
-- **Base Ambient Shadow:** Shadows are subtly tinted with the warm charcoal hue (`#2A2118` at 6%–10% opacity) rather than pure black, mimicking diffused, natural daylight through showroom clerestory windows.
-  - *Card Rest:* `0 2px 8px -2px rgba(42, 33, 24, 0.05), 0 1px 4px -1px rgba(42, 33, 24, 0.03)`
-  - *Card Hover / Floating Panel:* `0 12px 28px -6px rgba(42, 33, 24, 0.08), 0 4px 12px -2px rgba(42, 33, 24, 0.04)`
-- **Tonal Layering:** Visual hierarchy is primarily communicated by nesting `#FAF4EB` (Soft Warm Cream) cards against the `#F5E6D3` (Warm Alabaster) page background.
-- **Framing & Borders:** Thin, soft borders (`1px solid rgba(42, 33, 24, 0.08)`) anchor elements when elevation is inappropriate, preserving a grounded, bespoke blueprint feel.
+### Jerarquía de Superficies
+- **Cero Sombras Predominante:** Las tarjetas de producto, botones y bloques de contenido prescinden de sombras convencionales (`box-shadow: none`), apoyándose sobre cambios sutiles de fondo (de `#FCF9F5` base a `#F7F2EA` contenedor).
+- **Líneas de Ensamblaje:** Se utilizan bordes ultra sutiles de `1px solid rgba(74, 62, 61, 0.1)` para separar zonas críticas de información, evocando las juntas invisibles de la ebanistería fina.
+- **Elevación Contextual (Overlays y Menús Flotantes):** Cuando un panel modal, menú de navegación o vista de detalle ampliada requiere flotar sobre el lienzo, se emplea una sombra etérea tintada con Siena Tostado:
+  - `box-shadow: 0 16px 36px -8px rgba(44, 37, 35, 0.08)`
+  - Acompañada opcionalmente por una atenuación de fondo (`backdrop-filter: blur(8px)`) sobre una veladura de `#FCF9F5` al 85% de opacidad.
 
 ## Shapes
 
-The shape system honors mid-century organic woodwork: softened chamfers, radiused joinery, and bullnose edging.
+La geometría de los componentes responde al corte recto, la proporción arquitectónica y la precisión de la madera escuadrada a mano.
 
-- **Default UI (`rounded-md` / 0.5rem):** Form controls, provenance tags, inline inputs, and badge indicators.
-- **Prominent Elements (`rounded-lg` / 1.0rem):** Workshop showcase cards, modal dialogue frames, imagery containers, and floating navigation bars.
-- **Interactive Micro-elements (`rounded-full`):** Category pill filters, circular wood-swatch pickers, and icon utility buttons.
-- **Sharp Rule:** Strictly avoid 0px rectilinear corners; all boundaries must reflect the subtle hand-sanded finish of fine timber.
+### Geometría Rectilínea y Formal
+- **Radio Cero (`0px`):** Todos los componentes principales (botones, campos de texto, fichas de catálogo, selectores de muestra y etiquetas) adoptan esquinas ortogonales limpias. 
+- **Alineación y Estructura:** La ausencia de curvas traslada una sensación de rigor arquitectónico, solidez estructural y alta alcurnia de diseño, alejando la marca de estéticas de aplicaciones masivas o infantiles.
+- **Muestrarios Textiles y de Madera:** Las muestras de acabado circular o de tacto se representan en cortes estrictamente circulares únicamente cuando se trata de muestras tangibles de material (`swatches`), enmarquetadas con un aro de `1px` de separación.
 
 ## Components
 
-### Buttons
-- **Primary:** Filled in `#A0522D` with `#FAF4EB` text. Border radius `0.5rem`. Smooth hover transition to a deeper sienna `#874322` with a subtle elevation lift.
-- **Secondary / Craft:** Transparent background with a `1.5px` border in `#A0522D`, text in `#A0522D`. Hover fills with `rgba(160, 82, 45, 0.06)`.
-- **Ghost / Narrative:** Text-only button in `#2A2118` with an underlined goldenrod (`#D4A437`) hairline accent that expands on hover.
+### 1. Botones (Buttons)
+- **Botón Primario:** Fondo Siena Tostado (`#A0522D`), texto en Alabastro Claro (`#FCF9F5`), esquinas rectas (`0px`), tipografía `label-caps`. Relleno de `14px 28px`. En hover: transición fluida hacia un Siena profundo (`#874423`) sin alterar la escala del botón.
+- **Botón Secundario / Editorial:** Fondo transparente, borde de `1px solid #2C2523`, texto en Carbón Suave (`#2C2523`), tipografía `label-caps`. En hover: fondo `#2C2523` y texto `#FCF9F5`.
+- **Botón Terciario (Enlace Taller):** Sin borde ni fondo; texto con subrayado fino separado `4px` de la línea base, en color Siena Tostado o Carbón Suave, con microanimación de expansión de línea.
 
-### Cards & Workshop Showcases
-- **Background:** `#FAF4EB` resting on `#F5E6D3`.
-- **Structure:** `rounded-lg` (1.0rem radius), 1px stroke in `rgba(42, 33, 24, 0.06)`.
-- **Content Flow:** High-resolution wood grain / furniture photography bleeding to the top edges, followed by Playfair Display titles, certified origin tags, and price points in warm charcoal.
+### 2. Tarjetas de Producto (Product Cards)
+- **Estructura:** La fotografía es protagonista absoluta ocupando una relación de aspecto vertical de `3:4` o `4:5`. Fondo de contenedor en Alabastro Claro (`#F7F2EA`).
+- **Composición:** Imagen limpia sin iconos superpuestos que obstruyan la pieza. Debajo de la imagen:
+  - Fila 1: Tipografía `label-caps` indicando el tipo de madera o edición (ej. *PETIRIBÍ MACIZO*).
+  - Fila 2: Nombre de la obra en Playfair Display (`headline-sm` o `title-editorial`).
+  - Fila 3: Precio y disponibilidad en Inter (`body-md`), tratado con discreción y peso visual ligero.
+- **Microinteracción:** Al pasar el cursor en desktop, una transición suave (`duration 400ms ease`) revela la fotografía del detalle constructivo (unión de espiga, veta o textura del tapiz) o un panel minimalista de acción.
 
-### Chips & Provenance Badges
-- **Sustainability Chips:** Pill-shaped (`rounded-full`), background `rgba(135, 169, 107, 0.15)` with text in `#4F6B38` and a miniature leaf or FSC glyph.
-- **Species / Finish Chips:** Outlined in `rgba(42, 33, 24, 0.15)`, accompanied by a 12px circular swatch of algarrobo, caldén, or quebracho.
+### 3. Campos de Entrada (Input Fields)
+- **Estilo de Línea Arquitectónica:** Fondo transparente o `#F7F2EA`, delimitado por un borde inferior único de `1px solid rgba(74, 62, 61, 0.25)` o un contorno sutil completo de `1px`.
+- **Etiquetas:** Situadas por encima en tipografía `label-caps`, en Nogal Oscuro (`#4A3E3D`).
+- **Estado de Foco:** La línea inferior transiciona a Siena Tostado (`#A0522D`) de `1.5px` sin resplandores exteriores (*glows*).
 
-### Form Inputs
-- **Base Input:** Background `#FAF4EB`, border `1px solid rgba(42, 33, 24, 0.15)`, text `#2A2118`, placeholder in muted espresso (`rgba(42, 33, 24, 0.4)`).
-- **Focus State:** Border shifts to `#A0522D` with an ambient glow of `0 0 0 3px rgba(160, 82, 45, 0.15)`. No cold blue outlines.
+### 4. Chips y Filtros de Colección
+- Rectangulares de corte neto (`0px` de radio). Fondo transparente con borde fino `1px solid rgba(74, 62, 61, 0.2)`.
+- Estado Activo: Fondo Alabastro Cálido (`#F5E6D3`) con borde y texto en Siena Tostado (`#A0522D`).
 
-### Checkboxes & Radios
-- **Checkbox:** `rounded-sm` (0.25rem), border `1.5px solid #A0522D`. Checked state fills with `#A0522D` displaying an off-white hook icon.
-- **Radio Button:** Concentric rings with `#A0522D` active indicator centered in `#FAF4EB`.
+### 5. Checkboxes y Radio Buttons
+- Estrictamente cuadrados (`0px`). Borde de `1px solid #2C2523`.
+- Marcador interno: Bloque macizo proporcional sin redondeos, en tono Siena Tostado al seleccionarse.
 
-### Domain-Specific Components
-- **Timber Provenance Ledger:** A dedicated split accordion component showcasing harvest coordinates, drying age, and artisan signature for each piece.
-- **Grain Inspection Zoom:** A specialized circular loupe interface framed in brass (`#D4A437`) that allows clients to explore timber oil finishes at macro scale.
+### 6. Listas y Fichas Técnicas
+- Listas de especificaciones estructuradas mediante filetes divisorios horizontales de `1px` en `rgba(74, 62, 61, 0.12)`.
+- Distribución a dos columnas simétricas: Atributo a la izquierda en `label-caps` (Carbón Suave atenuado) y Valor a la derecha en Inter `body-md` (ej. *Dimensiones: 220 × 95 × 75 cm*).
+
+### 7. Componentes Especiales de la Marca
+- **Muestrario de Materiales (Material Swatches):** Círculos concéntricos de 32px para acabados de cuero, teñidos de cera y lino rústico, con borde exterior de selección en Vara de Oro (`#D4A437`) cuando están activos.
+- **Sello de Procedencia Artesanal:** Bloque tipográfico cerrado enmarcado por una línea perimetral tenue que certifica el taller de confección, año de ensamble y número de pieza artesanal.

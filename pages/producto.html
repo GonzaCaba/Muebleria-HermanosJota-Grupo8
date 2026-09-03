@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-tertiary-fixed-variant": "#5c4300",
+                "inverse-surface": "#362f2d",
+                "tertiary-container": "#856200",
+                "on-tertiary-container": "#ffe4b4",
+                "on-primary-fixed-variant": "#76320f",
+                "error": "#ba1a1a",
+                "error-container": "#ffdad6",
+                "surface-container-low": "#fff1ed",
+                "surface-variant": "#ede0dc",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#fff8f6",
+                "secondary-fixed": "#c9eea9",
+                "on-surface": "#211a18",
+                "tertiary-fixed-dim": "#f2bf50",
+                "on-secondary": "#ffffff",
+                "outline-variant": "#dac1b8",
+                "on-primary-container": "#ffe1d6",
+                "outline": "#87736b",
+                "on-background": "#211a18",
+                "on-surface-variant": "#54433c",
+                "primary-fixed": "#ffdbcd",
+                "inverse-primary": "#ffb596",
+                "inverse-on-surface": "#fceeea",
+                "surface-dim": "#e4d7d4",
+                "secondary-container": "#c9eea9",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed-dim": "#ffb596",
+                "on-error": "#ffffff",
+                "secondary-fixed-dim": "#aed18f",
+                "primary": "#823b18",
+                "surface-tint": "#944925",
+                "on-primary": "#ffffff",
+                "on-secondary-container": "#4e6d36",
+                "surface-container-high": "#f3e5e2",
+                "on-error-container": "#93000a",
+                "tertiary-fixed": "#ffdea1",
+                "secondary": "#486730",
+                "on-tertiary-fixed": "#261900",
+                "primary-container": "#a0522d",
+                "surface-container-highest": "#ede0dc",
+                "on-secondary-fixed": "#0b2000",
+                "surface-container": "#f9ebe7",
+                "on-primary-fixed": "#360f00",
+                "surface": "#fff8f6",
+                "on-secondary-fixed-variant": "#314e1b",
+                "tertiary": "#674b00",
+                "background": "#fff8f6"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "space-3xl": "6rem",
+                "space-4xl": "8rem",
+                "margin-desktop": "4rem",
+                "space-xs": "0.75rem",
+                "space-lg": "2rem",
+                "gutter-desktop": "2rem",
+                "margin-mobile": "1.25rem",
+                "space-2xl": "4rem",
+                "space-sm": "1rem",
+                "margin-tablet": "2.5rem",
+                "space-md": "1.5rem",
+                "space-xl": "3rem",
+                "space-3xs": "0.25rem",
+                "gutter-mobile": "1rem",
+                "space-2xs": "0.5rem"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "playfairDisplay"
+                ],
+                "headline-md": [
+                        "playfairDisplay"
+                ],
+                "display-hero-mobile": [
+                        "playfairDisplay"
+                ],
+                "label-sm": [
+                        "inter"
+                ],
+                "headline-lg-mobile": [
+                        "playfairDisplay"
+                ],
+                "body-md": [
+                        "inter"
+                ],
+                "body-sm": [
+                        "inter"
+                ],
+                "headline-sm": [
+                        "playfairDisplay"
+                ],
+                "display-hero": [
+                        "playfairDisplay"
+                ],
+                "label-md": [
+                        "inter"
+                ],
+                "body-lg": [
+                        "inter"
+                ],
+                "title-editorial": [
+                        "playfairDisplay"
+                ],
+                "label-caps": [
+                        "inter"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.015em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "28px",
+                        {
+                                "lineHeight": "36px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-hero-mobile": [
+                        "38px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "30px",
+                        {
+                                "lineHeight": "36px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "15px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "22px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "display-hero": [
+                        "56px",
+                        {
+                                "lineHeight": "64px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "letterSpacing": "-0.005em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "title-editorial": [
+                        "18px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "11px",
+                        {
+                                "lineHeight": "14px",
+                                "letterSpacing": "0.14em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,37,35,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Abrir menú" class="md:hidden flex items-center justify-center text-on-surface p-space-2xs hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">menu</span></button><a class="flex items-center gap-space-xs" data-path="inicio" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Hermanos Jota</span><span class="hidden sm:inline-block font-label-caps text-label-caps text-on-surface-variant uppercase pt-0.5">Ebanistería</span></a></div><nav class="hidden md:flex items-center gap-space-xl" data-active-classes="text-primary font-medium border-b border-primary"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="inicio" href="#">Inicio</a><a aria-current="page" class="uppercase transition-colors py-space-2xs text-primary font-medium border-b border-primary" data-path="productos" href="#">Productos</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors py-space-2xs" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><a aria-label="Carrito de compra" class="relative flex items-center justify-center p-space-2xs text-on-surface hover:text-primary transition-colors" data-path="carrito" href="#"><span class="material-symbols-outlined text-2xl">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-5 h-5 flex items-center justify-center rounded-full">2</span></a><div class="pl-space-2xs border-l border-outline-variant/30 flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzayJcWx1n74Ov_WReoISF6-eUXd5rCjr9-byVxm83yAC1HJWlqPkL_Gza7XVyc93KXZX-7bwO8lM_P4-WVSGsmnWJoG1VqY3dUBn5F-AxIjB-focoG8qFm0RjD2Sed1t0jnHHbIMfnyhYaNEN6i9mVoBB6fylP8_Irqh0bIkUXmAa4xO8EQtsuQuHTJc0DmnGM54BBsmqon-36IEnGZ1R2ifjjsVhX8G6Q_OVcKvHsqpWEhFWToo"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Breadcrumb Superior Minimalista -->
+<div class="w-full bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<nav aria-label="Migas de pan" class="flex items-center gap-space-2xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Inicio</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Catálogo</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Guardado &amp; Aparadores</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Aparador Uspallata</span>
+</nav>
+</div>
+</div>
+<!-- Contenedor Principal: Ficha de Producto Asimétrica & Editorial -->
+<section class="w-full bg-surface pb-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Columna Izquierda: Galería y Documentación Fotográfica (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Canvas Fotográfico Principal -->
+<div class="relative w-full aspect-[4/3] bg-surface-container rounded-none flex items-center justify-center p-space-lg md:p-space-2xl overflow-hidden group">
+<!-- Insignia de Procedencia y Autenticidad -->
+<div class="absolute top-space-md left-space-md z-10 flex items-center gap-space-2xs bg-surface-bright/95 backdrop-blur-md px-space-xs py-space-3xs text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant">Pieza de Taller Nº 048 · Certificación FSC</span>
+</div>
+<div class="absolute top-space-md right-space-md z-10">
+<button aria-label="Ver en detalle" class="w-9 h-9 flex items-center justify-center bg-surface-bright/80 hover:bg-surface-bright text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">zoom_in</span>
+</button>
+</div>
+<!-- Imagen Principal -->
+<img alt="Aparador Uspallata de Petiribí macizo con esterilla vienesa y tapa de mármol pulido mate" class="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.03]" id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdiC6DmUUIMURkpqAmkcMOE3XZvjO_ZYojNO_0uokqlj2MP-KK5Enb2pQFF-7OLKxcu4kiuPqFnPsCi_-Qq6LlJwybWYuwxrUbX8GWC5fvHvh_CgPRpXL0cHcs8oIf2n20mkBl-6oDaNMSMexXopmW_LCmKO-dratCYiG2YAsQF_7c1yAA0G06QDaqJI-96ELFH10c2x0DR9OagTNbjbrbRNtiuXBVhEhpFVEigTdj6goVif2RXWyBR-OCem8QDTp-"/>
+</div>
+<!-- Mosaico de Miniaturas de Detalle y Ensamble -->
+<div class="grid grid-cols-4 gap-space-sm">
+<button class="aspect-[4/3] bg-surface-container-high p-space-2xs ring-1 ring-primary focus:outline-none transition-all" onclick="cambiarImagen('https://lh3.googleusercontent.com/aida-public/AB6AXuCxDICpyfIqSu-MFLF0-ryg-e_B3YuMIME0soUJAo2zhDvztbhbhj_FLNB6mvtnIbeM8V-CcmFXGq8kflpw9zLjVGGX1HEWrACXStL5wm5ryDfGeXNqUCJ0Mie2JmrgLuNlPyD57VOwAsw6Cy0jX-XWXVJBORFBzgkcZVrVEDgROyuqkpnNXy53-K3HBqURI-uS3UUx9CCUu-FlwkV_YcQzh2u9h5Eyj5z01FhQ_pv9nlZplmegRLFqpgQKlmkgT_Je')" type="button">
+<img alt="Vista frontal íntegra" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJZ_rtsW5JhestlVj6UTFXBl4uOTN3OLirJY_UQqdenZXxpb2TyiHNhrTrAfQyFZ2zbUG1bhc_BFSdIvGGw0u0f57p6johEcmstmF7haNWwlxAJ9dM_lSqW-ewA1OfP3D-2e9FUXT6psOBtpvTMFsIleJ61K8IBHE0jt_fMq1xpzj-nf2bGy82VpJ3Tt3Uns4RMpp2AK-KmjvwNykul0T9t02UKCR8Jn6sjy64altuJ2R2PsC_lJt8UHpMnoV5Ryh4"/>
+</button>
+<div class="aspect-[4/3] bg-surface-container overflow-hidden group relative cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro close-up photograph of hand-woven natural Viennese cane webbing and solid petiribi wood cabinet frame with warm studio lighting showing raw tactile grain, craft detail and golden undertones in high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBssmz2kqXRMimCt_0TZMsgsJ2VOfarUj3PVsVl-GQgF5zLq0TDCT95HF551JaX-dW1aMIddtDdAomJXp5nDmSw116pK5BgtGpUddTxQmcWqFSnw9qzbjlvSPf-p68s1QtDZDg68HS0HQJ35esJDz5zNmZDDU1xFofuEl5VpvEGkFj-7MOhFDCJ4KozCQOYdYiC--Q9iowy8NxJoThOtzm7-TFTtvZmSrTzHILkYQJUAwsDgWHCFY4"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-surface-variant bg-surface-bright/90 px-1 py-0.5">Esterilla</span>
+</div>
+<div class="aspect-[4/3] bg-surface-container overflow-hidden group relative cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal macro detail of a hand-brushed raw brass pull handle embedded into warm brown wood cabinetry, subtle metallic reflection and soft shadows, architectural craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfn0f9JilNxDZ9g_e9yM8XRssxtJWJDAPjZ9vlIOjlxsWXel0TqzJBQ8uPYbsRboZ1Q4-fWHMibiz7-yJNFm1TwEkl0mgUQoVI8spWB2TVCnVlVd-B97LFMEFh-wvfw0KzSkZhcvmyhuUto7KBXRyzBjKWjdbFG4nb8pTUN52G_Ai7ZJ9Ub5CMscSwyDLgupkZZQOgoXcbm-7IHWftCqcUbrG_ZSp_i1Qeqj-boBwNvCSWYTpJ9v8"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-surface-variant bg-surface-bright/90 px-1 py-0.5">Bronce Macizo</span>
+</div>
+<div class="aspect-[4/3] bg-surface-container overflow-hidden group relative cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Overhead textured angle of Carrara marble matte hone top meeting natural Argentine petiribi wood chamfered joint, subtle vein contrast, warm editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJG_NTCey67znYv2HunH62zRDcw_7g4Bjc-cFPH01aHVnJCF1Sfq_6BfzibyN6AirvEJ6hagxRvIGfdQRDtEXC9sGOHbUHHWXM6Vpb20KGoP8YF_Bwy7df0Vcv6LjXdnmaXSgq4kG7owUNcUts_3_A75yKF-0vU19AvaChFJigCmZEktr1j1AuQw_mVlnruvNYI_APbC08tLzSgDiVaeMhLsJhC7UxS2UOrqBKHxwC9zNacekk-WU"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-surface-variant bg-surface-bright/90 px-1 py-0.5">Mármol Mate</span>
+</div>
+</div>
+<!-- Nota Poética de Taller -->
+<div class="bg-surface-container-low p-space-lg flex items-start gap-space-md mt-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">handyman</span>
+<div class="flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Criterio Constructivo</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Cada ejemplar del Aparador Uspallata se ensambla bajo pedido en nuestro taller de Palermo. Las vetas del petiribí y las tonalidades de la esterilla tejida al telar varían orgánicamente, asegurando que ninguna pieza sea idéntica a otra.
+              </p>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Datos de Compra, Configuración y Narrativa (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col pt-space-xs lg:pl-space-md">
+<!-- Encabezado de Pieza -->
+<div class="flex flex-col gap-space-2xs pb-space-md">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">
+              Colección Cordillera 2025 · Serie Numerada
+            </span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Aparador Uspallata
+            </h1>
+<div class="flex items-baseline gap-space-sm pt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">
+                $ 1.780.000 ARS
+              </span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold uppercase bg-secondary-fixed/50 px-2 py-0.5">
+                En Stock (2 uds.)
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              3 cuotas sin interés de <span class="font-medium text-on-surface">$ 593.333 ARS</span> con bancos seleccionados o 12% de descuento mediante transferencia directa de taller.
+            </p>
+</div>
+<!-- Selector de Material / Madera -->
+<div class="py-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface">
+                Madera Principal: <span class="font-semibold text-primary" id="nombre-madera">Petiribí Macizo</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acabado con ceras puras</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-2xs" id="madera-selector">
+<!-- Opción 1: Petiribí -->
+<button aria-label="Seleccionar Petiribí Macizo" class="w-10 h-10 rounded-full p-0.5 bg-surface ring-2 ring-primary ring-offset-2 ring-offset-surface transition-all flex items-center justify-center cursor-pointer shadow-sm" onclick="seleccionarMadera('Petiribí Macizo', this)" type="button">
+<span class="w-full h-full rounded-full bg-[#B8874E] block"></span>
+</button>
+<!-- Opción 2: Nogal -->
+<button aria-label="Seleccionar Nogal Seleccionado" class="w-10 h-10 rounded-full p-0.5 bg-surface ring-0 ring-transparent ring-offset-2 ring-offset-surface hover:ring-1 hover:ring-outline transition-all flex items-center justify-center cursor-pointer shadow-sm" onclick="seleccionarMadera('Nogal Seleccionado', this)" type="button">
+<span class="w-full h-full rounded-full bg-[#5D4037] block"></span>
+</button>
+<!-- Opción 3: Guatambú -->
+<button aria-label="Seleccionar Guatambú Rubio" class="w-10 h-10 rounded-full p-0.5 bg-surface ring-0 ring-transparent ring-offset-2 ring-offset-surface hover:ring-1 hover:ring-outline transition-all flex items-center justify-center cursor-pointer shadow-sm" onclick="seleccionarMadera('Guatambú Rubio', this)" type="button">
+<span class="w-full h-full rounded-full bg-[#DEC29B] block"></span>
+</button>
+</div>
+</div>
+<!-- Selector de Cantidad y Botones de Adquisición -->
+<div class="py-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<!-- Contador de Cantidad -->
+<div class="flex items-center bg-surface-container px-space-xs py-space-2xs h-12">
+<button aria-label="Disminuir unidades" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors font-medium text-lg" id="btn-decrementar" type="button">
+                  −
+                </button>
+<span class="w-8 text-center font-label-md text-label-md text-on-surface font-semibold select-none" id="contador-cantidad">
+                  1
+                </span>
+<button aria-label="Incrementar unidades" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors font-medium text-lg" id="btn-incrementar" type="button">
+                  +
+                </button>
+</div>
+<!-- CTA Primario: Añadir al Carrito -->
+<button class="flex-1 h-12 bg-primary-container text-on-primary font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-center gap-space-xs hover:bg-primary transition-all duration-300 shadow-sm" id="btn-add-cart" type="button">
+<span class="material-symbols-outlined text-lg" id="cart-icon">shopping_bag</span>
+<span id="cart-btn-label">Añadir al Carrito</span>
+</button>
+</div>
+<!-- CTA Secundario: Contacto Directo con Taller -->
+<button class="w-full h-11 bg-transparent hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase tracking-widest flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-base">architecture</span>
+<span>Consultar con un ebanista</span>
+</button>
+</div>
+<!-- Beneficios Rápidos de Taller -->
+<div class="grid grid-cols-2 gap-space-sm py-space-md text-on-surface-variant bg-surface-container-lowest p-space-sm mb-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-secondary text-lg">local_shipping</span>
+<span class="font-body-sm text-body-sm">Envío con guante blanco en CABA</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-secondary text-lg">verified_user</span>
+<span class="font-body-sm text-body-sm">Garantía estructural de 10 años</span>
+</div>
+</div>
+<!-- Acordeón Desplegable Editorial -->
+<div class="flex flex-col w-full space-y-space-2xs">
+<!-- Acordeón 1: Narrativa & Descripción -->
+<div class="bg-surface-container-lowest p-space-md">
+<button class="w-full flex items-center justify-between text-left text-on-surface" onclick="toggleAcordeon('acc-desc', 'icon-desc')" type="button">
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-semibold">Descripción &amp; Vocación</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-300" id="icon-desc">expand_less</span>
+</button>
+<div class="pt-space-sm text-on-surface-variant font-body-md text-body-md flex flex-col gap-space-2xs" id="acc-desc">
+<p>
+                  El Aparador Uspallata nace de la búsqueda de balance entre el peso ancestral de la madera maciza y la ligereza permeable del tramado vegetal. Inspirado en los valles mendocinos, sus puertas corredizas combinan la textura de la esterilla vienesa importada tejida a mano con paños ciegos de petiribí de veta continua.
+                </p>
+<p>
+                  Su remate superior en mármol de Carrara con tratamiento mate hidro-repelente confiere una superficie fresca y resistente, ideal para albergar piezas cerámicas o vajilla ceremonial sin comprometer la nobleza de la madera.
+                </p>
+</div>
+</div>
+<!-- Acordeón 2: Materiales & Acabados -->
+<div class="bg-surface-container-lowest p-space-md">
+<button class="w-full flex items-center justify-between text-left text-on-surface" onclick="toggleAcordeon('acc-mat', 'icon-mat')" type="button">
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-semibold">Materiales &amp; Acabados</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-300" id="icon-mat">expand_more</span>
+</button>
+<div class="hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm" id="acc-mat">
+<ul class="flex flex-col gap-space-xs">
+<li class="flex justify-between py-space-3xs bg-surface-container-low/50 px-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Estructura</span>
+<span class="text-on-surface">Petiribí macizo secado a horno (8% humedad)</span>
+</li>
+<li class="flex justify-between py-space-3xs px-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Puerta Enrejada</span>
+<span class="text-on-surface">Esterilla de ratán natural enrejado hexagonal</span>
+</li>
+<li class="flex justify-between py-space-3xs bg-surface-container-low/50 px-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Tapa Superior</span>
+<span class="text-on-surface">Mármol Carrara pulido apomazado mate de 20 mm</span>
+</li>
+<li class="flex justify-between py-space-3xs px-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Herrajes &amp; Patas</span>
+<span class="text-on-surface">Latón de bronce pulido a la cera</span>
+</li>
+<li class="flex justify-between py-space-3xs bg-surface-container-low/50 px-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Protección</span>
+<span class="text-on-surface">Cera natural de abejas y aceite de linaza puro</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Acordeón 3: Sustentabilidad y Trazabilidad -->
+<div class="bg-surface-container-lowest p-space-md">
+<button class="w-full flex items-center justify-between text-left text-on-surface" onclick="toggleAcordeon('acc-sust', 'icon-sust')" type="button">
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-semibold">Sustentabilidad &amp; Trazabilidad</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-300" id="icon-sust">expand_more</span>
+</button>
+<div class="hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-space-2xs" id="acc-sust">
+<div class="flex items-center gap-space-xs text-secondary font-medium pb-space-3xs">
+<span class="material-symbols-outlined text-lg">forest</span>
+<span>Madera chaqueña con cadena de custodia FSC®</span>
+</div>
+<p>
+                  Toda la madera empleada en esta pieza proviene de bosques nativos con manejo silvícola certificado en la región del Gran Chaco. Rechazamos el uso de lacas nitrocelulósicas y poliuretánicas tóxicas. Nuestro proceso genera una huella de carbono neutra en ciclo de producción.
+                </p>
+</div>
+</div>
+<!-- Acordeón 4: Dimensiones y Peso -->
+<div class="bg-surface-container-lowest p-space-md">
+<button class="w-full flex items-center justify-between text-left text-on-surface" onclick="toggleAcordeon('acc-dim', 'icon-dim')" type="button">
+<span class="font-label-caps text-label-caps uppercase tracking-wider font-semibold">Dimensiones &amp; Peso</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-300" id="icon-dim">expand_more</span>
+</button>
+<div class="hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm" id="acc-dim">
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-2xs bg-surface-container-low">
+<span class="block font-label-caps text-label-caps text-on-surface-variant">Largo Total</span>
+<span class="font-semibold text-on-surface">180 cm</span>
+</div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="block font-label-caps text-label-caps text-on-surface-variant">Altura</span>
+<span class="font-semibold text-on-surface">82 cm</span>
+</div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="block font-label-caps text-label-caps text-on-surface-variant">Profundidad</span>
+<span class="font-semibold text-on-surface">45 cm</span>
+</div>
+<div class="p-space-2xs bg-surface-container-low">
+<span class="block font-label-caps text-label-caps text-on-surface-variant">Peso de la Pieza</span>
+<span class="font-semibold text-on-surface">54 kg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección de Filosofía & Rigor Constructivo (Editorial Split) -->
+<section class="w-full bg-surface-container-low py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Manifiesto Artesanal</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            La quietud de la materia noble, libre de artificios.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Construimos pensando en las décadas venideras. Cada ensamblaje a caja y espiga permite que la madera respire según los ciclos climáticos sin fisurarse, mientras que las superficies tratadas al aceite vegetal van madurando hacia una pátina ámbar de singular belleza.
+          </p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-space-xs font-label-caps text-label-caps uppercase tracking-wider text-on-surface hover:text-primary transition-colors group" href="#">
+<span>Conocer nuestro taller en Palermo</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-space-md">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Artisan woodworker hand shaping a solid Argentine petiribi wooden cabinet leg in an authentic airy workshop, wood shavings on floor, warm natural daylight streaming through factory window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmMVktg4CnG_7R8IngONfFwUt5J3H4kpkYgwAYayu9zYnBHSz7guC_1-bZwpNI7N32XtP6cepKjg5uHJno_mx2r5tJSTKVwgZKGreCs4Pieyd-22SV0q4xIge2Sm9y-Rmw5hMqj0mknJpBzAGq_0iIfTvkqLSN7q83Q5eXNK_VAc3iAfAWrRrAUDLSYnfGIyGyEj68mt3us3kQz5ovlNmjAI3HFpN8wQp9nkRE1AxdCF6aAfrRo_I"/>
+</div>
+<div class="aspect-[3/4] bg-surface-container overflow-hidden mt-space-xl">
+<img class="w-full h-full object-cover" data-alt="Close up of traditional mortise and tenon wood joinery without nails or screws, showing precise artisanal woodworking and clean wooden grains in warm beige and amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwKi_IQne900ck72hl8Z1NYaJ0ljqDXlnTCuQBREOzJ7vFJfTz8bCuFUUEa4tKlsiO11jU0WnLRzh5PEdXh84U1zlwZ-yczYAcRTQ_cm9Mq2MN16mN7Pl9xvwJzf9u4gCQJG1f1CyD3UC-X4nJ-SdPcbVF1dwfBmYXVm9x8ljRraB889lpv9oyjvzI1V1rs3vJLYZsXj18oCwv46Ac5e8wk_N9gxzNmP8qtkQMzw5ZvULnoaxQLW8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección: Piezas que Dialogan (Recomendados Curatoriales) -->
+<section class="w-full bg-surface py-space-3xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<!-- Cabecera de Colección -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between pb-space-2xl gap-space-sm">
+<div class="flex flex-col gap-space-3xs">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Continuidad Estética</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Piezas que Dialogan</h2>
+</div>
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-3xs" href="#">
+<span>Explorar catálogo completo</span>
+<span class="material-symbols-outlined text-sm">east</span>
+</a>
+</div>
+<!-- Cuadrícula de Obras Relacionadas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Pieza 1: Sillón Copacabana -->
+<article class="group flex flex-col bg-surface-container-lowest overflow-hidden transition-all duration-300">
+<div class="relative w-full aspect-[4/3] bg-surface-container flex items-center justify-center p-space-lg overflow-hidden">
+<span class="absolute top-space-sm left-space-sm font-label-caps text-label-caps text-on-surface-variant bg-surface-bright/90 px-2 py-0.5">
+              Edición Cuero Vaqueta
+            </span>
+<img alt="Sillón Copacabana en cuero suela coñac y estructura de nogal macizo torneado" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBujdJ1PpGoNU11ltIaTOG1bGsUQ5xJgHmVLlYaUiVSZWPaeqIjsAz3fwMoWMTk4usdNHZWkUlK_RWiboDT_4qtuIB4DXNA315VOX7xvOlNha07C_yWgiL2fjW9ob0hL8DpLftvxgLegQT_16lWTSPlsK_Qo5gachOJcv2i2mKiM2oVZ0l7AyD-UqGFpubSVF5jHwiOerd0_FtfrBQKUqcD-3EdWbb09AuYaAkBlY8MWll-00NTv1q5H-EZEx_VRQFQ"/>
+</div>
+<div class="p-space-lg flex flex-col gap-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Nogal &amp; Cuero Curtido</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              Sillón Copacabana
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Líneas envolventes con apoyabrazos esculpidos a mano y cojines rellenos de vellón siliconado sobre cinchas de cáñamo natural.
+            </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">$ 980.000 ARS</span>
+<span class="font-label-caps text-label-caps uppercase text-primary group-hover:underline">Ver pieza</span>
+</div>
+</div>
+</article>
+<!-- Pieza 2: Sofá Patagonia -->
+<article class="group flex flex-col bg-surface-container-lowest overflow-hidden transition-all duration-300">
+<div class="relative w-full aspect-[4/3] bg-surface-container flex items-center justify-center p-space-lg overflow-hidden">
+<span class="absolute top-space-sm left-space-sm font-label-caps text-label-caps text-on-surface-variant bg-surface-bright/90 px-2 py-0.5">
+              Tapiz Bouclé Salvia
+            </span>
+<img alt="Sofá Patagonia de 3 cuerpos en bouclé salvia con zócalo bajo de madera maciza" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA_c_RtSWkGF9pfBzKYXzwldRPTQPw0ZNaxko4evEf4iYLA_beBPNVoNvD0DQ-0PtS1pFvCqBCxFpk1Be9lBEMFscJoo46fJ7rHsdiddDCVAtu72VRq0BHqHIHzPXv_r75zPijm1KM9De1aH0fSSoJRk7uPDEH-2o7U6L4eF9ugJp4Cat8HSJ-aeReNNl6rt0ltqWL9LvLS-eVAH20xtaTzoBmL8UKHBQm7XCEtWkvrhQYOHlSX7HKzK2OclsrxjMr"/>
+</div>
+<div class="p-space-lg flex flex-col gap-space-2xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Roble Americano &amp; Bouclé</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              Sofá Patagonia
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Proporciones generosas y zócalo perimetral suspendido que brinda liviandad visual a salas contemporáneas de gran porte.
+            </p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">$ 2.450.000 ARS</span>
+<span class="font-label-caps text-label-caps uppercase text-primary group-hover:underline">Ver pieza</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Banner de Asesoramiento Personalizado -->
+<section class="w-full bg-surface-container py-space-2xl">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-3xs max-w-xl text-center md:text-left">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest font-semibold">Proyectos a Medida</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">¿Necesita dimensiones especiales para su espacio?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Adaptamos la longitud, distribución interna de cajoneras y combinaciones de mármoles según los planos de su residencia o estudio de arquitectura.
+          </p>
+</div>
+<button class="px-space-lg py-space-xs bg-on-surface text-surface font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary transition-colors shrink-0 shadow-sm" type="button">
+          Solicitar Presupuesto Especial
+        </button>
+</div>
+</div>
+</section>
+<!-- Notificación Toast Flotante para Carrito -->
+<div class="fixed bottom-6 right-6 z-50 bg-surface-bright text-on-surface px-space-md py-space-sm shadow-xl flex items-center gap-space-sm opacity-0 translate-y-4 pointer-events-none transition-all duration-300" id="toast-cart">
+<span class="material-symbols-outlined text-secondary text-xl">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">Pieza añadida</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-message">Aparador Uspallata se sumó a su selección.</span>
+</div>
+</div>
+<script>
+    // Control de Acordeones
+    function toggleAcordeon(idContent, idIcon) {
+      const content = document.getElementById(idContent);
+      const icon = document.getElementById(idIcon);
+      if (!content || !icon) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Selector de Madera / Variante
+    function seleccionarMadera(nombre, btnElement) {
+      const label = document.getElementById('nombre-madera');
+      if (label) label.textContent = nombre;
+
+      const buttons = document.querySelectorAll('#madera-selector button');
+      buttons.forEach(b => {
+        b.classList.remove('ring-2', 'ring-primary');
+        b.classList.add('ring-0', 'ring-transparent');
+      });
+
+      btnElement.classList.remove('ring-0', 'ring-transparent');
+      btnElement.classList.add('ring-2', 'ring-primary');
+    }
+
+    // Cambiar Imagen Principal
+    function cambiarImagen(url) {
+      const img = document.getElementById('main-product-image');
+      if (img) {
+        img.src = url;
+      }
+    }
+
+    // Contador de Cantidad
+    let cantidadActual = 1;
+    const contadorElem = document.getElementById('contador-cantidad');
+    const btnMas = document.getElementById('btn-incrementar');
+    const btnMenos = document.getElementById('btn-decrementar');
+
+    if (btnMas && btnMenos && contadorElem) {
+      btnMas.addEventListener('click', () => {
+        if (cantidadActual < 5) {
+          cantidadActual++;
+          contadorElem.textContent = cantidadActual;
+        }
+      });
+
+      btnMenos.addEventListener('click', () => {
+        if (cantidadActual > 1) {
+          cantidadActual--;
+          contadorElem.textContent = cantidadActual;
+        }
+      });
+    }
+
+    // Feedback al Añadir al Carrito
+    const btnCart = document.getElementById('btn-add-cart');
+    const toast = document.getElementById('toast-cart');
+    const toastMsg = document.getElementById('toast-message');
+
+    if (btnCart && toast) {
+      btnCart.addEventListener('click', () => {
+        const madera = document.getElementById('nombre-madera')?.textContent || 'Petiribí Macizo';
+        if (toastMsg) {
+          toastMsg.textContent = `${cantidadActual} × Aparador Uspallata (${madera}) añadido.`;
+        }
+
+        // Simular contador en shell si existe badge
+        const badgeCart = document.querySelector('header a[data-path="carrito"] span:last-child');
+        if (badgeCart) {
+          const currentCount = parseInt(badgeCart.textContent || '2', 10);
+          badgeCart.textContent = currentCount + cantidadActual;
+        }
+
+        // Mostrar Toast
+        toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+          toast.classList.remove('opacity-100', 'translate-y-0');
+        }, 3200);
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-3xl"><div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-space-3xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop"><div class="lg:col-span-4 flex flex-col gap-space-md"><h2 class="font-headline-md text-headline-md text-on-surface">Hermanos Jota</h2><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Piezas únicas de mobiliario de autor concebidas bajo la nobleza de la madera maciza, ensambladas a mano con rigor arquitectónico y vocación eterna.</p><div class="pt-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">eco</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Maderas Nativas con Certificación FSC</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Navegación</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li data-path="inicio"><a class="hover:text-primary transition-colors" href="#">Inicio</a></li><li data-path="productos"><a class="hover:text-primary transition-colors" href="#">Catálogo Completo</a></li><li data-path="contacto"><a class="hover:text-primary transition-colors" href="#">Contacto y Taller</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Taller &amp; Showroom</h3><address class="not-italic flex flex-col gap-space-3xs font-body-sm text-body-sm text-on-surface-variant"><span>Gorriti 5840, Palermo</span><span>Ciudad Autónoma de Buenos Aires</span><span class="pt-space-2xs">Martes a Sábados: 11:00 a 19:00 hs</span><span>Atención personalizada con cita previa</span></address></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest">Contacto Directo</h3><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">contacto@hermanosjota.com.ar</a></li><li><a class="hover:text-primary transition-colors" href="#">+54 11 4772 9010</a></li><li><a class="hover:text-primary transition-colors flex items-center gap-space-3xs" href="#"><span>@hermanosjota</span></a></li></ul></div></div><div class="mt-space-2xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-on-surface-variant"><p>© 2025 Hermanos Jota. Todos los derechos reservados. Fabricado en Argentina.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Términos de Adquisición</a><a class="hover:text-on-surface transition-colors" href="#">Garantía Artesanal</a></div></div></div></footer></body></html>
