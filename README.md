@@ -4,7 +4,7 @@
 * Martinez Laureano
 * Drovandi Enzo
 * Cabanne Gonzalo
-* 
+* Olmedo Joaquín
 * 
 
 ## 📝 Descripción del Proyecto
