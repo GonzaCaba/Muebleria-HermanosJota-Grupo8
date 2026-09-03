@@ -1,0 +1,28 @@
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos comprimidos y pesados locales
+*.zip
+*.tar.gz
+*.rar
+
+# Dependencias y logs (por si luego usan linters o paquetes)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Caches locales de herramientas y agentes
+.cache/
+.gemini/
+.claude/
+scratch/
