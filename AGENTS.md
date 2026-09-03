@@ -10,7 +10,7 @@ This document defines the development framework, engineering conventions, and Gi
 - **Core Philosophy:** Pure client-side web fundamentals. No frontend frameworks (React, Vue, Angular), no build pipelines, and no backend dependencies.
 - **Technologies:**
   - **HTML5:** Strictly semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<figure>`, `<label>`).
-  - **CSS3:** Mobile First architecture, responsive breakpoints via CSS Flexbox and CSS Grid. All design tokens sourced from [DESIGN.md](file:///home/enzo/Documentos/ITBA/Sprint_1_2/trabajo_grupo_8/DESIGN.md).
+  - **CSS3:** Mobile First architecture, responsive breakpoints via CSS Flexbox and CSS Grid. All design tokens sourced from [DESIGN.md](DESIGN.md).
   - **JavaScript (Vanilla ES6+):** Client-side state management, DOM manipulation, asynchronous data simulation (`setTimeout` / `async-await`), and event handling.
 
 ---
@@ -49,7 +49,7 @@ trabajo_grupo_8/
 
 ## 3. Design System & Tokens
 
-Always inspect and use tokens defined in [DESIGN.md](file:///home/enzo/Documentos/ITBA/Sprint_1_2/trabajo_grupo_8/DESIGN.md):
+Always inspect and use tokens defined in [DESIGN.md](DESIGN.md):
 
 - **Palette:**
   - Primary: `#A0522D` (Siena Tostado - CTAs, main titles)
