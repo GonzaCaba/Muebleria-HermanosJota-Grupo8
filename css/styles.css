@@ -179,6 +179,13 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   min-height: 100vh;
   background-color: var(--color-bg);
