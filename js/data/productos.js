@@ -5,9 +5,9 @@ const productos = [
     nombre: "Aparador Uspallata",
     precio: 890000,
     categoria: "Aparadores",
-    descripcion: "Aparador de lineas rectas en petiribi macizo, con puertas corredizas y tiradores de bronce. Una pieza sobria que ordena el living sin robarle calma.",
-    medidas: "180 x 45 x 80 cm",
-    materiales: "Madera maciza de petiribi, herrajes de bronce",
+    descripcion: "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. Su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
+    medidas: "180 x 45 x 75 cm",
+    materiales: "Nogal macizo FSC®, herrajes de latón",
     imagen: "assets/img/Aparador Uspallata.png",
     destacado: true
   },
