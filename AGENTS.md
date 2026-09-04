@@ -49,23 +49,12 @@ trabajo_grupo_8/
 
 ## 3. Design System & Tokens
 
-Always inspect and use tokens defined in [DESIGN.md](DESIGN.md):
+[DESIGN.md](DESIGN.md) is the single source of truth. Do not duplicate hex values, font sizes, or geometry here. If a value is needed in code, read it from DESIGN.md (or its implementation in `css/styles.css` `:root`) at that moment.
 
-- **Palette:**
-  - Primary: `#A0522D` (Siena Tostado - CTAs, main titles)
-  - Surface Background: `#F5E6D3` (Alabastro Cálido - warm canvas)
-  - Surface Containers: `#FAF4EB` (Soft Warm Cream - card backgrounds)
-  - Secondary: `#87A96B` (Verde Salvia - badges, sustainability, success)
-  - Tertiary: `#D4A437` (Vara de Oro - brass accents, premium highlights)
-  - Soft Accent: `#C47A6D` (Rosa Polvoriento)
-  - Text Primary: `#2A2118` (Espresso Charcoal - body and high contrast text)
-- **Typography:**
-  - Titles / Headlines: `Playfair Display`, serif.
-  - Body / UI Controls: `Inter`, sans-serif.
-- **Component Geometry:**
-  - Default borders: `rounded-md` (`0.5rem`).
-  - Cards and dialogs: `rounded-lg` (`1.0rem`).
-  - Avoid sharp `0px` rectilinear corners.
+- **Palette:** see DESIGN.md `## Colors` (primary Siena Tostado, secondary Verde Salvia, tertiary Vara de Oro, soft accent Rosa Polvoriento, surfaces Blanco Pergamino / Alabastro Claro / Alabastro Calido, text Carbon Suave / Nogal Oscuro).
+- **Typography:** see DESIGN.md `## Typography` plus the `typography:` frontmatter (Playfair Display for titles, Inter for body, exact sizes in `css/styles.css`).
+- **Component Geometry:** see DESIGN.md `## Shapes` (rectilinear cut, radius zero; circular only for material swatches). Do not apply `rounded-md` / `rounded-lg` unless DESIGN.md says so.
+- **Implementation:** `css/styles.css` `:root` maps the DESIGN.md tokens. New component CSS must reuse those variables instead of hardcoding values.
 
 ---
 
