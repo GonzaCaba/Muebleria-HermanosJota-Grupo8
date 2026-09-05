@@ -37,7 +37,47 @@
     </header>
     
     <!-- contenido especifico de cada pagina -->
-    <main>
+    <main class="contenedor-principal-catalogo">
+        <section class="cabecera-catalogo">
+            <h1>Catálogo Completo</h1>
+            <div class="buscador-container">
+                <label for="input-buscador" class="sr-only">Buscar en el catálogo</label>
+                <input type="search" id="input-buscador" class="input-buscar" placeholder="Buscar muebles por nombre o catergoría.">
+                <button id="btn-buscar" class="btn-buscar" aria-label="Buscar">🔍</button>
+            </div>
+        </section>
+
+        <section id="grilla-productos" class="grilla-productos">
+            <article class="tarjeta-producto">
+                <div class="tarjeta-imagen">
+                    <img src="../assets/img/Aparador Uspallata.png" alt="Aparador Uspallata">
+                    <span class="badge-categoria">Aparadores</span>
+                </div>
+                <div class="tarjeta-info">
+                    <h3 class="producto-titulo">Aparador Uspallata</h3>
+                    <p class="producto-precio">$890.000</p>
+                    <button class="btn-agregar-carrito" data-id="1">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="tarjeta-imagen">
+                    <img src="../assets/img/Biblioteca Recoleta.png" alt="Biblioteca Recoleta">
+                    <span class="badge-categoria">Bibliotecas</span>
+                </div>
+                <div class="tarjeta-info">
+                    <h3 class="producto-titulo">Biblioteca Recoleta</h3>
+                    <p class="producto-precio">$720.000</p>
+                    <button class="btn-agregar-carrito" data-id="2">
+                        Agregar
+                    </button>
+                </div>
+            </article>
+
+
+        </section>
     </main>
 
     <!-- footer compartido-->
@@ -66,5 +106,7 @@
     </footer>
 
     <!-- archivo js-->
+     <script src="../js/data/productos.js"></script>
+     <script src="../js/catalogo.js"></script>
 </body>
 </html>

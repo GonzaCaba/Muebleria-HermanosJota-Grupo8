@@ -374,3 +374,32 @@ p {
   line-height: var(--line-height-label-sm);
   letter-spacing: var(--letter-spacing-label-sm);
 }
+
+
+/* clase para accesibilidad*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*grilla responsive*/
+.grilla-productos{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gutter);
+  padding: var(--page-margin);
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px){
+  .grilla-productos{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
