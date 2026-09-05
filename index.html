@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <!-- header compartido -->
-    <header class="header-principal">
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- header compartido -->
+  <header class="header-principal">
         <div class="logo">
             <img src="./assets/img/logo.svg" alt="Mueblería Hermanos Jota">
         </div>
@@ -35,7 +37,106 @@
     </header>
 
     <!-- contenido especifico de cada pagina -->
-    <main>
+    <main id="contenido">
+      <!-- Hero banner -->
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="hero__contenido">
+          <p class="label-caps hero__sello">Taller argentino · Desde 1985</p>
+          <h1 id="hero-titulo" class="display-hero">
+            Muebles de autor, hechos para durar generaciones
+          </h1>
+          <p class="body-lg hero__bajada">
+            Piezas artesanales en maderas nobles certificadas, construidas en
+            nuestro taller de San Cristóbal con uniones tradicionales y
+            acabados naturales.
+          </p>
+          <div class="hero__acciones">
+            <a class="btn btn--primario" href="./pages/productos.html">Explorar catálogo</a>
+            <a class="btn btn--secundario" href="./pages/contacto.html">Visitar el taller</a>
+          </div>
+        </div>
+        <figure class="hero__media">
+          <img
+            src="./assets/img/Sof%C3%A1%20Patagonia.png"
+            alt="Sofá Patagonia de tres cuerpos en lino color arena, pieza destacada del taller Hermanos Jota"
+            width="1200"
+            height="900"
+            fetchpriority="high"
+          >
+          <figcaption class="body-sm hero__epigrafe">
+            Sofá Patagonia — lino de algodón y roble macizo.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Pilares de sustentabilidad -->
+      <section class="pilares" aria-labelledby="pilares-titulo">
+        <div class="pilares__encabezado">
+          <p class="label-caps pilares__sello">Nuestro compromiso</p>
+          <h2 id="pilares-titulo" class="headline-lg">
+            Sustentabilidad en cada ensamble
+          </h2>
+        </div>
+        <ul class="pilares__lista">
+          <li>
+            <article class="pilar">
+              <p class="label-caps pilar__numero" aria-hidden="true">01</p>
+              <h3 class="headline-sm">Maderas con origen certificado</h3>
+              <p class="body-md">
+                Trabajamos nogal, roble y guatambú de bosques gestionados con
+                certificación FSC®, con trazabilidad del lote hasta el taller.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="pilar">
+              <p class="label-caps pilar__numero" aria-hidden="true">02</p>
+              <h3 class="headline-sm">Oficio local, cero atajos</h3>
+              <p class="body-md">
+                Ensambles a espiga, aceites naturales y tapizados reparables:
+                cada pieza pasa por manos artesanas de San Cristóbal.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="pilar">
+              <p class="label-caps pilar__numero" aria-hidden="true">03</p>
+              <h3 class="headline-sm">Diseño que envejece bien</h3>
+              <p class="body-md">
+                Proporciones atemporales y repuestos garantizados para que tus
+                muebles se hereden, no se descarten.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Productos destacados (rellenado por js/index.js — issue #12) -->
+      <section class="destacados" aria-labelledby="destacados-titulo">
+        <div class="destacados__encabezado">
+          <div>
+            <p class="label-caps destacados__sello">Colección</p>
+            <h2 id="destacados-titulo" class="headline-lg">Piezas destacadas</h2>
+          </div>
+          <a class="btn btn--terciario" href="./pages/productos.html">Ver catálogo completo</a>
+        </div>
+        <div
+          id="destacados-grid"
+          class="destacados__grid"
+          aria-live="polite"
+          aria-busy="true"
+        >
+          <p class="body-md destacados__vacio">
+            Cargando piezas destacadas del taller…
+          </p>
+        </div>
+        <noscript>
+          <p class="body-md">
+            Activá JavaScript para ver las piezas destacadas o
+            <a href="./pages/productos.html">explorá el catálogo completo</a>.
+          </p>
+        </noscript>
+      </section>
     </main>
     
     <!-- footer compartido-->
