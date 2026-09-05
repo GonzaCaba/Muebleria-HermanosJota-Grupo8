@@ -32,6 +32,7 @@
   --color-secondary: var(--color-verde-salvia);
   --color-tertiary: var(--color-vara-de-oro);
   --color-accent-soft: var(--color-rosa-polvoriento);
+  /* Alias semánticos de la paleta principal de marca */
   --color-bg: var(--color-blanco-pergamino);
   --color-surface: var(--color-alabastro-calido);
   --color-container: var(--color-alabastro-claro);
@@ -534,6 +535,16 @@ p {
   color: var(--color-bg);
 }
 
+.btn--invertido {
+  background-color: var(--color-text);
+  color: var(--color-surface);
+}
+
+.btn--invertido:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
 .btn--terciario {
   padding: 0 0 4px;
   background: none;
@@ -572,6 +583,36 @@ p {
   text-align: center;
 }
 
+.hero__datos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 32rem;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-subtle);
+}
+
+.hero__datos li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.hero__datos .headline-sm {
+  color: var(--color-text);
+}
+
+.hero__datos .label-sm {
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.hero__datos li:last-child .headline-sm {
+  color: var(--color-tertiary);
+}
+
 .hero__media {
   margin: 0;
   background-color: var(--color-container);
@@ -589,10 +630,65 @@ p {
   color: var(--color-text-muted);
 }
 
+.hero__media--featured {
+  position: relative;
+  overflow: hidden;
+  border-top: 0;
+}
+
+.hero__media--featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(243, 229, 226, 0.4),
+    transparent 55%,
+    rgba(255, 248, 246, 0.8)
+  );
+  pointer-events: none;
+}
+
+.hero__media--featured img {
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+  transition: transform 700ms ease-out;
+}
+
+.hero__media--featured img:hover {
+  transform: scale(1.03);
+}
+
+.hero__ficha {
+  position: absolute;
+  right: var(--space-sm);
+  bottom: var(--space-sm);
+  z-index: 2;
+  padding: var(--space-2xs) var(--space-sm);
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-overlay);
+}
+
+.hero__ficha span {
+  display: block;
+}
+
+.hero__ficha .label-caps {
+  color: var(--color-primary);
+}
+
+.hero__ficha .title-editorial {
+  color: var(--color-text);
+}
+
+.hero__ficha .body-sm {
+  color: var(--color-accent-soft);
+}
+
 /* Pilares: 1 columna en mobile (Flexbox) */
 .pilares {
   padding-block: var(--space-2xl);
-  border-top: var(--border-subtle);
 }
 
 .pilares__sello {
@@ -633,7 +729,6 @@ p {
 /* Destacados: contenedor vacío para js/index.js (issue #12) */
 .destacados {
   padding-block: var(--space-2xl) var(--space-3xl);
-  border-top: var(--border-subtle);
 }
 
 .destacados__encabezado {
