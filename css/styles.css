@@ -949,6 +949,8 @@ p {
   margin-top: var(--space-sm);
 }
 
+/* Botones duplicados de accion 
+
 .btn-primario {
   display: inline-block;
   width: 100%;
@@ -993,6 +995,13 @@ p {
   color: var(--color-bg);
 }
 
+.btn-primario,
+.btn-secundario {
+    width: auto;
+    flex: 1 1 12rem;
+  }
+*/
+
 .detalle-ayuda {
   color: var(--color-text-muted);
 }
@@ -1020,17 +1029,6 @@ p {
   .detalle-acciones {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .btn-primario,
-  .btn-secundario {
-    width: auto;
-    flex: 1 1 12rem;
-  }
-
-  .footer-contenido {
-    flex-direction: row;
-    gap: var(--space-xl);
   }
 }
 
