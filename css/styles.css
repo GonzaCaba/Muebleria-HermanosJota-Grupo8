@@ -695,6 +695,12 @@ p {
   transition: color var(--duration) var(--ease);
 }
 
+.footer-direccion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
 .footer-seccion a:hover,
 .footer-legal a:hover {
   color: var(--sys-primary);
