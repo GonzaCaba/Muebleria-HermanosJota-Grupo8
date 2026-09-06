@@ -16,64 +16,128 @@
   </head>
   <body>
     <header class="header-principal">
-      <div class="logo">
-        <img src="../assets/img/logo.svg" alt="Mueblería Hermanos Jota" />
+      <div class="header-contenido">
+        <div class="header-identidad">
+          <button
+            id="btn-menu"
+            class="btn-menu-mobile"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-principal"
+            type="button"
+          >
+            <span aria-hidden="true">☰</span>
+          </button>
+          <a
+            class="logo"
+            href="../index.html"
+            aria-label="Hermanos Jota, inicio"
+          >
+            <img src="../assets/img/logo.svg" alt="Mueblería Hermanos Jota" />
+            <span class="logo-texto"
+              ><strong>Hermanos Jota</strong><span>Ebanistería</span></span
+            >
+          </a>
+        </div>
+        <nav
+          id="nav-principal"
+          class="nav-principal"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <a class="activo" aria-current="page" href="./productos.html"
+                >Productos</a
+              >
+            </li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <button
+          id="btn-carrito"
+          class="btn-carrito"
+          aria-label="Ver carrito"
+          type="button"
+        >
+          <span class="icono-carrito" aria-hidden="true"></span
+          ><span id="cart-count" class="badge">0</span>
+        </button>
       </div>
-
-      <button
-        id="btn-menu"
-        class="btn-menu-mobile"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
-
-      <nav id="nav-principal" class="nav-principal">
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./productos.html">Catálogo</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <button id="btn-carrito" class="btn-carrito" aria-label="Ver carrito">
-        🛒 <span id="cart-count" class="badge">0</span>
-      </button>
     </header>
 
     <!-- contenido especifico de cada pagina -->
     <main></main>
 
+    <script src="../js/header.js"></script>
+
     <!-- footer compartido-->
     <footer class="footer-principal">
       <div class="footer-contenido">
-        <section class="footer-showroom">
-          <h4>SHOWROOM</h4>
-          <address>
-            <p>San Cristóbal</p>
-          </address>
-        </section>
-
-        <section class="footer-contacto">
-          <h4>CONTACTO</h4>
-          <address>
+        <div class="footer-grilla">
+          <section class="footer-presentacion">
+            <h2>Hermanos Jota</h2>
             <p>
-              <a href="https://instagram.com/hermanosjota_ba" target="_blank"
-                >@hermanosjota_ba</a
-              >
+              Piezas únicas de mobiliario de autor concebidas bajo la nobleza de
+              la madera maciza, ensambladas a mano con rigor arquitectónico y
+              vocación eterna.
             </p>
-          </address>
-        </section>
-      </div>
-      <div class="footer-legal">
-        <p>
-          &copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.
-          Fabricado en Argentina
-        </p>
+            <p class="footer-certificacion">
+              <span aria-hidden="true">♧</span
+              ><span>Maderas nativas con certificación FSC</span>
+            </p>
+          </section>
+          <section class="footer-seccion">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./productos.html">Catálogo completo</a></li>
+              <li><a href="./contacto.html">Contacto y taller</a></li>
+            </ul>
+          </section>
+          <section class="footer-seccion">
+            <h3>Taller &amp; Showroom</h3>
+            <address>
+              <span>Gorriti 5840, Palermo</span
+              ><span>Ciudad Autónoma de Buenos Aires</span
+              ><span class="footer-destacado"
+                >Martes a sábados: 11:00 a 19:00 hs</span
+              ><span>Atención personalizada con cita previa</span>
+            </address>
+          </section>
+          <section class="footer-seccion">
+            <h3>Contacto directo</h3>
+            <ul>
+              <li>
+                <a href="mailto:contacto@hermanosjota.com.ar"
+                  >consultas@hermanosjota.com.ar</a
+                >
+              </li>
+              <li>
+                <a href="tel:+541147729010">Telefono: +54 11 4772 9010</a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/hermanosjota_ba"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram: @hermanosjota</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer-legal">
+          <p>
+            &copy; 2026 Hermanos Jota. Todos los derechos reservados. Fabricado
+            en Argentina.
+          </p>
+          <div>
+            <a href="#">Términos de adquisición</a
+            ><a href="#">Garantía artesanal</a>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!-- archivo js-->
   </body>
 </html>
