@@ -1198,59 +1198,6 @@ p {
   margin-top: var(--space-sm);
 }
 
-/* Botones duplicados de accion 
-
-.btn-primario {
-  display: inline-block;
-  width: 100%;
-  padding: 0.875rem 1.75rem;
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  font-size: var(--font-size-label-caps);
-  font-weight: 600;
-  line-height: var(--line-height-label-caps);
-  letter-spacing: var(--letter-spacing-label-caps);
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: var(--radius);
-  transition: background-color var(--duration) var(--ease);
-}
-
-.btn-primario:hover {
-  background-color: var(--color-primary-hover);
-}
-
-.btn-secundario {
-  display: inline-block;
-  width: 100%;
-  padding: 0.875rem 1.75rem;
-  background-color: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-text);
-  font-size: var(--font-size-label-caps);
-  font-weight: 600;
-  line-height: var(--line-height-label-caps);
-  letter-spacing: var(--letter-spacing-label-caps);
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  border-radius: var(--radius);
-  transition: background-color var(--duration) var(--ease),
-    color var(--duration) var(--ease);
-}
-
-.btn-secundario:hover {
-  background-color: var(--color-text);
-  color: var(--color-bg);
-}
-
-.btn-primario,
-.btn-secundario {
-    width: auto;
-    flex: 1 1 12rem;
-  }
-*/
-
 .detalle-ayuda {
   color: var(--color-text-muted);
 }
