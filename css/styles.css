@@ -806,6 +806,62 @@ p {
   color: var(--color-primary);
   border-radius: var(--radius);
 }
+/* Contacto */
+.contacto-main {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2xl) var(--page-margin);
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: min(100%, 34rem);
+  padding: var(--space-lg);
+  background-color: var(--color-container);
+  border-top: 2px solid var(--color-primary);
+}
+
+.formulario-contacto h1 {
+  margin-bottom: var(--space-2xs);
+}
+
+.formulario-contacto label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-label-caps);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label-caps);
+  text-transform: uppercase;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: var(--space-xs);
+  background-color: transparent;
+  border: 1px solid var(--color-linea-fuerte);
+  border-radius: var(--radius);
+}
+
+.formulario-contacto textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: var(--color-primary);
+  outline: 1.5px solid var(--color-primary);
+  outline-offset: -1px;
+}
+
+@media (min-width: 768px) {
+  .contacto-main {
+    min-height: 28rem;
+    align-items: center;
+  }
+}
 
 /* Hero: apilado en mobile */
 .hero {

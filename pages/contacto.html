@@ -66,9 +66,21 @@
     </header>
 
     <!-- contenido especifico de cada pagina -->
-    <main></main>
+    <main class="contacto-main">
+      <form id="Formulario" class="formulario-contacto">
+        <h1>Contáctanos</h1>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="Nombre" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required />
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="Mensaje" required></textarea>
+        <button type="submit" class="btn--primario btn--formulario">Enviar</button>
+      </form>
+    </main>
 
     <script src="../js/header.js"></script>
+    <script src="../js/form.js"></script>
 
     <!-- footer compartido-->
     <footer class="footer-principal">

@@ -5,7 +5,7 @@
 * Drovandi Enzo
 * Cabanne Gonzalo
 * Olmedo Joaquín
-* 
+* Iván Fierros
 
 ## 📝 Descripción del Proyecto
 Este proyecto consiste en construir la fachada completa y la experiencia interactiva de un cliente para una mueblería. El sitio es visualmente atractivo, responsivo y simula una experiencia de compra sin conexión a backend, gestionando los productos localmente.
