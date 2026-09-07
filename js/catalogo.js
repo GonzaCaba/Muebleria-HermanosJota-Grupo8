@@ -4,21 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // verificar si existe la grilla
   if (!grilla) return;
 
-  grilla.innerHTML = `
-    <div class="spinner-container" style="text-align: center; padding: 2rem; grid-column: 1 / -1;">
-      <p>Cargando catálogo...</p>
-    </div>
-  `;
+  grilla.innerHTML = "";
 
-  setTimeout(() => {
-    grilla.innerHTML = "";
+  if (typeof globalThis.productos === "undefined") {
+    grilla.innerHTML = `<p>Error: No se pudieron cargar los productos.</p>`;
+    return;
+  }
 
-    if (typeof globalThis.productos === "undefined") {
-      grilla.innerHTML = `<p>Error: No se pudieron cargar los productos.</p>`;
-      return;
-    }
-
-    globalThis.productos.forEach((producto) => {
+  globalThis.productos.forEach((producto) => {
       const article = document.createElement("article");
       article.classList.add("tarjeta-producto");
 
@@ -49,5 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
       grilla.appendChild(article);
     });
-  }, 1500); // se agrega retardo de 1.5 para simular la red
 });
