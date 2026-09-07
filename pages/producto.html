@@ -40,7 +40,7 @@
             href="../index.html"
             aria-label="Hermanos Jota, inicio"
           >
-            <img src="../assets/img/logo.svg" alt="Mueblería Hermanos Jota" />
+            <img src="../assets/icons/logo.svg" alt="Mueblería Hermanos Jota" />
             <span class="logo-texto"
               ><strong>Hermanos Jota</strong><span>Ebanistería</span></span
             >
@@ -73,6 +73,7 @@
       </div>
     </header>
 
+    <!-- contenido especifico de cada pagina -->
     <main id="contenido" class="detalle-contenedor">
       <nav class="breadcrumb" aria-label="Miga de pan">
         <a href="./productos.html">Catálogo</a>
@@ -82,7 +83,7 @@
 
       <p id="detalle-estado" class="detalle-estado" role="status" hidden></p>
 
-      <article class="detalle-producto" aria-labelledby="detalle-nombre">
+      <article class="detalle-producto" aria-labelledby="detalle-nombre" hidden>
         <div class="detalle-grid">
           <figure class="detalle-galeria">
             <!-- Placeholder real del repo: detalle.js (#13) reemplazará src/alt según ?id= con URLSearchParams. -->
@@ -244,5 +245,6 @@
 
     <!-- dataset real que poblará la ficha; detalle.js llegará en #13 -->
     <script src="../js/data/productos.js" defer></script>
+    <script src="../js/detalle.js" defer></script>
   </body>
 </html>
