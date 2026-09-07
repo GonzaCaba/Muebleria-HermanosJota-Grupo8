@@ -701,6 +701,15 @@ p {
   gap: var(--space-3xs);
 }
 
+.footer-seccion .footer-contacto-icono {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: var(--space-2xs);
+  vertical-align: -0.15rem;
+  object-fit: contain;
+}
+
 .footer-seccion a:hover,
 .footer-legal a:hover {
   color: var(--sys-primary);
