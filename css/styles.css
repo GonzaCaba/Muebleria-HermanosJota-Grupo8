@@ -892,8 +892,6 @@ p {
   color: var(--sys-on-surface-variant);
 }
 
-.panel-contacto__encabezado h2,
-
 .formulario-contacto__fila {
   display: grid;
   gap: var(--space-md);
