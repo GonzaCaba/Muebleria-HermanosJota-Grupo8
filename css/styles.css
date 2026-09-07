@@ -815,7 +815,6 @@ p {
   color: var(--color-primary);
   border-radius: var(--radius);
 }
-
 /* Contacto: formulario, taller y ubicación */
 .contacto-pagina {
   display: block;
