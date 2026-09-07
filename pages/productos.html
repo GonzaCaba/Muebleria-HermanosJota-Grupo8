@@ -61,8 +61,13 @@
           aria-label="Ver carrito"
           type="button"
         >
-          <span class="icono-carrito" aria-hidden="true"></span
-          ><span id="cart-count" class="badge">0</span>
+          <img
+            class="icono-carrito"
+            src="../assets/icons/shopping-cart-svgrepo-com (1).svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <span id="cart-count" class="badge">0</span>
         </button>
       </div>
     </header>
@@ -70,54 +75,92 @@
     <!-- contenido especifico de cada pagina -->
     <main class="contenedor-principal-catalogo">
       <section class="cabecera-catalogo">
-        <h1>Catálogo Completo</h1>
-        <div class="buscador-container">
-          <label for="input-buscador" class="sr-only"
-            >Buscar en el catálogo</label
+        <div class="cabecera-catalogo-intro">
+          <div class="cabecera-kicker">
+            <span aria-hidden="true">◆</span>
+            <span>Edición artesanal 2026</span>
+          </div>
+          <h1>Catálogo de Mobiliario</h1>
+          <p>
+            Mobiliario atemporal fabricado a mano en maderas argentinas nobles y
+            sostenibles. Piezas concebidas bajo el rigor del ensamble
+            tradicional.
+          </p>
+        </div>
+        <div
+          class="cabecera-distinciones"
+          aria-label="Distinciones de la colección"
+        >
+          <span><strong aria-hidden="true">♧</strong>Madera nativa FSC</span>
+          <span><strong aria-hidden="true">10</strong>Garantía decenal</span>
+        </div>
+
+        <div class="catalogo-utilidades">
+          <div
+            class="filtros-categoria"
+            id="categoryFilterBar"
+            aria-label="Filtrar por categoría"
           >
-          <input
-            type="search"
-            id="input-buscador"
-            class="input-buscar"
-            placeholder="Buscar muebles por nombre o catergoría."
-          />
-          <button id="btn-buscar" class="btn-buscar" aria-label="Buscar">
-            🔍
-          </button>
+            <button class="category-btn activo" data-filter="all" type="button">
+              Todos los muebles
+            </button>
+            <button class="category-btn" data-filter="living" type="button">
+              Living y descanso
+            </button>
+            <button class="category-btn" data-filter="comedor" type="button">
+              Comedor y sillas
+            </button>
+            <button class="category-btn" data-filter="estudio" type="button">
+              Espacios de trabajo
+            </button>
+            <button class="category-btn" data-filter="guardado" type="button">
+              Guardado y mesas
+            </button>
+          </div>
+
+          <div class="catalogo-controles">
+            <div class="buscador-container">
+              <label for="searchInput" class="sr-only"
+                >Buscar en el catálogo</label
+              >
+              <span aria-hidden="true">⌕</span>
+              <input
+                type="search"
+                id="searchInput"
+                class="input-buscar"
+                placeholder="Buscar por nombre, madera..."
+              />
+              <button
+                id="clearSearch"
+                type="button"
+                aria-label="Limpiar búsqueda"
+              >
+                ×
+              </button>
+            </div>
+            <label class="orden-catalogo">
+              <span aria-hidden="true">↕</span>
+              <span class="sr-only">Ordenar productos</span>
+              <select id="sortSelect">
+                <option value="featured">Destacados</option>
+                <option value="price-asc">Menor precio</option>
+                <option value="price-desc">Mayor precio</option>
+                <option value="alpha">Alfabético (A-Z)</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="catalogo-meta">
+          <span id="resultsCount">Mostrando 11 piezas exclusivas</span>
+          <span id="activeFilterLabel" hidden>• Colección filtrada</span>
+          <span class="catalogo-meta-extra"
+            >Diseñado en Buenos Aires · Envíos a todo el país</span
+          >
         </div>
       </section>
 
-      <section id="grilla-productos" class="grilla-productos">
-        <article class="tarjeta-producto">
-          <div class="tarjeta-imagen">
-            <img
-              src="../assets/img/Aparador Uspallata.png"
-              alt="Aparador Uspallata"
-            />
-            <span class="badge-categoria">Aparadores</span>
-          </div>
-          <div class="tarjeta-info">
-            <h3 class="producto-titulo">Aparador Uspallata</h3>
-            <p class="producto-precio">$890.000</p>
-            <button class="btn-agregar-carrito" data-id="1">Agregar</button>
-          </div>
-        </article>
-
-        <article class="tarjeta-producto">
-          <div class="tarjeta-imagen">
-            <img
-              src="../assets/img/Biblioteca Recoleta.png"
-              alt="Biblioteca Recoleta"
-            />
-            <span class="badge-categoria">Bibliotecas</span>
-          </div>
-          <div class="tarjeta-info">
-            <h3 class="producto-titulo">Biblioteca Recoleta</h3>
-            <p class="producto-precio">$720.000</p>
-            <button class="btn-agregar-carrito" data-id="2">Agregar</button>
-          </div>
-        </article>
-      </section>
+      <section id="grilla-productos" class="grilla-productos"></section>
     </main>
 
     <!-- footer compartido-->
@@ -207,8 +250,8 @@
       </div>
     </footer>
     <script src="../js/header.js"></script>
-
     <script src="../js/data/productos.js"></script>
     <script src="../js/catalogo.js"></script>
+    <script src="../js/cart.js"></script>
   </body>
 </html>
