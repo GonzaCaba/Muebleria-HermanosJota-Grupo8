@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de producto de Mueblería Hermanos Jota: imagen destacada, materiales, medidas, precio y añadir al carrito."
+    />
     <title>Detalle de Producto - Mueblería Hermanos Jota</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +19,9 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- header compartido -->
     <header class="header-principal">
       <div class="header-contenido">
         <div class="header-identidad">
@@ -66,8 +73,97 @@
       </div>
     </header>
 
-    <!-- contenido especifico de cada pagina -->
-    <main></main>
+    <main id="contenido" class="detalle-contenedor">
+      <nav class="breadcrumb" aria-label="Miga de pan">
+        <a href="./productos.html">Catálogo</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">Detalle de producto</span>
+      </nav>
+
+      <p id="detalle-estado" class="detalle-estado" role="status" hidden></p>
+
+      <article class="detalle-producto" aria-labelledby="detalle-nombre">
+        <div class="detalle-grid">
+          <figure class="detalle-galeria">
+            <!-- Placeholder real del repo: detalle.js (#13) reemplazará src/alt según ?id= con URLSearchParams. -->
+            <!-- OJO: js/data/productos.js guarda imagen como "assets/img/..." (relativa a raíz); desde pages/ hay que anteponer "../". -->
+            <img
+              id="detalle-imagen"
+              src="../assets/img/Aparador%20Uspallata.png"
+              alt="Vista principal del producto seleccionado"
+              width="1200"
+              height="1500"
+              fetchpriority="high"
+            />
+            <figcaption id="detalle-imagen-leyenda" class="detalle-leyenda">
+              Fotografía de estudio de la pieza
+            </figcaption>
+          </figure>
+
+          <section
+            id="detalle-info"
+            class="detalle-info"
+            aria-live="polite"
+            aria-busy="false"
+            aria-labelledby="detalle-nombre"
+          >
+            <p id="detalle-categoria" class="label-caps detalle-categoria">
+              Colección Hermanos Jota
+            </p>
+            <h1 id="detalle-nombre" class="detalle-nombre">
+              Nombre del producto
+            </h1>
+            <p id="detalle-precio" class="detalle-precio" data-precio="">$ 0</p>
+            <p id="detalle-descripcion" class="detalle-descripcion body-md">
+              Descripción de la pieza: detalle.js la completará con los datos de
+              js/data/productos.js.
+            </p>
+
+            <dl class="detalle-ficha">
+              <div class="detalle-ficha-fila">
+                <dt>Medidas</dt>
+                <dd id="detalle-medidas">—</dd>
+              </div>
+              <div class="detalle-ficha-fila">
+                <dt>Materiales</dt>
+                <dd id="detalle-materiales">—</dd>
+              </div>
+            </dl>
+
+            <div class="detalle-acciones">
+              <button
+                id="btn-agregar"
+                class="btn btn--primario"
+                type="button"
+                data-id=""
+              >
+                Añadir al Carrito
+              </button>
+              <a class="btn btn--secundario" href="./productos.html">
+                Volver al catálogo
+              </a>
+            </div>
+
+            <p class="detalle-ayuda body-sm">
+              Pieza de fabricación artesanal. Stock y plazos de entrega se
+              confirman al finalizar la compra.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <p id="detalle-error" class="detalle-error" role="alert" hidden>
+        No encontramos ese producto. Revisá el
+        <a href="./productos.html">catálogo</a> y elegí otra pieza.
+      </p>
+
+      <noscript>
+        <p class="detalle-error">
+          Para ver la ficha necesitás activar JavaScript, o recorré el
+          <a href="./productos.html">catálogo</a> directamente.
+        </p>
+      </noscript>
+    </main>
 
     <script src="../js/header.js"></script>
 
@@ -145,5 +241,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- dataset real que poblará la ficha; detalle.js llegará en #13 -->
+    <script src="../js/data/productos.js" defer></script>
   </body>
 </html>
