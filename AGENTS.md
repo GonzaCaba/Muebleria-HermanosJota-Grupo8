@@ -31,8 +31,8 @@ trabajo_grupo_8/
 │   ├── producto.html       <-- Single product dynamic detail view
 │   └── productos.html      <-- Full catalog with filters / search
 ├── assets/
-│   ├── images/             <-- Furniture photography & logo.svg
-│   └── icons/              <-- SVG or UI glyphs
+│   ├── img/                <-- Furniture photography
+│   └── icons/              <-- Logo, SVG and UI glyphs
 ├── css/
 │   └── styles.css          <-- Unified CSS variables (:root) & core styles
 └── js/
@@ -40,7 +40,6 @@ trabajo_grupo_8/
     │   └── productos.js    <-- Array of product objects
     ├── cart.js             <-- Simulated shopping cart (localStorage)
     ├── catalogo.js         <-- Dynamic rendering for productos.html
-    ├── contacto.js         <-- Form validation and DOM feedback
     ├── detalle.js          <-- Dynamic single product renderer (URLSearchParams)
     └── index.js            <-- Featured products renderer for index.html
 ```

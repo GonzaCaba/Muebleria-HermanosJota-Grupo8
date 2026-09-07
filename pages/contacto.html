@@ -32,7 +32,7 @@
             href="../index.html"
             aria-label="Hermanos Jota, inicio"
           >
-            <img src="../assets/img/logo.svg" alt="Mueblería Hermanos Jota" />
+            <img src="../assets/icons/logo.svg" alt="Mueblería Hermanos Jota" />
             <span class="logo-texto"
               ><strong>Hermanos Jota</strong><span>Ebanistería</span></span
             >
@@ -65,8 +65,317 @@
       </div>
     </header>
 
-    <!-- contenido especifico de cada pagina -->
-    <main></main>
+    <main id="contenido" class="contacto-pagina">
+      <section class="contacto-intro" aria-labelledby="contacto-titulo">
+        <div class="contacto-intro__contenido">
+          <p class="contacto-kicker">
+            <span aria-hidden="true"></span> Atelier &amp; Showroom San
+            Cristóbal
+          </p>
+          <h1 id="contacto-titulo">Conversemos sobre tu próximo espacio</h1>
+          <p class="contacto-intro__bajada">
+            Visita nuestra casa taller en San Cristóbal o escribinos para
+            proyectos a medida, curaduría de maderas nobles y asesoramiento
+            integral en arquitectura interior.
+          </p>
+        </div>
+      </section>
+
+      <section class="contacto-principal" aria-label="Contacto y ubicación">
+        <div class="contacto-formulario panel-contacto">
+          <div class="panel-contacto__encabezado">
+            <p class="label-caps">Formulario de consulta directa</p>
+            <h2>Escribinos al taller</h2>
+          </div>
+
+          <form id="contact-form" class="formulario-contacto">
+            <div class="formulario-contacto__fila">
+              <div class="campo-contacto">
+                <label for="full-name">
+                  <span>Nombre completo <span aria-hidden="true">*</span></span>
+                  <span id="name-error" class="campo-contacto__error" hidden
+                    >Requerido</span
+                  >
+                </label>
+                <input
+                  id="full-name"
+                  name="name"
+                  type="text"
+                  placeholder="Ej. Agustín Larrea"
+                  autocomplete="name"
+                  required
+                  aria-describedby="name-error"
+                />
+              </div>
+
+              <div class="campo-contacto">
+                <label for="email">
+                  <span
+                    >Correo electrónico <span aria-hidden="true">*</span></span
+                  >
+                  <span id="email-error" class="campo-contacto__error" hidden
+                    >Inválido</span
+                  >
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="agustin@ejemplo.com"
+                  autocomplete="email"
+                  required
+                  aria-describedby="email-error"
+                />
+              </div>
+            </div>
+
+            <div class="formulario-contacto__fila">
+              <div class="campo-contacto">
+                <label for="phone">
+                  <span>Teléfono / WhatsApp</span>
+                  <span class="campo-contacto__opcional">Opcional</span>
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+54 9 11 ..."
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="campo-contacto">
+                <label for="subject"
+                  >Tipo de proyecto / asunto
+                  <span aria-hidden="true">*</span></label
+                >
+                <select id="subject" name="subject" required>
+                  <option value="consulta-pieza">
+                    Consulta sobre una pieza específica
+                  </option>
+                  <option value="proyecto-interiorismo">
+                    Proyecto de arquitectura / interiorismo
+                  </option>
+                  <option value="visita-showroom">
+                    Visita al showroom y taller
+                  </option>
+                  <option value="mobiliario-medida">
+                    Mobiliario a medida personalizado
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo-contacto">
+              <label for="message">
+                <span
+                  >Detalles del proyecto o consulta
+                  <span aria-hidden="true">*</span></span
+                >
+                <span id="message-error" class="campo-contacto__error" hidden
+                  >Por favor escribí tu consulta</span
+                >
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Contanos tus requerimientos, dimensiones deseadas o la colección que te interesa..."
+                required
+                aria-describedby="message-error"
+              ></textarea>
+            </div>
+
+            <div class="formulario-contacto__boletin">
+              <input id="newsletter" name="newsletter" type="checkbox" />
+              <label for="newsletter">
+                Deseo recibir notas de diseño, aperturas de hornadas y
+                lanzamientos exclusivos de ebanistería del taller Hermanos Jota.
+              </label>
+            </div>
+
+            <div class="formulario-contacto__acciones">
+              <button id="submit-btn" class="btn--primario" type="submit">
+                <span>Enviar mensaje</span><span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </form>
+
+          <div
+            id="form-success"
+            class="formulario-exito"
+            role="status"
+            aria-live="polite"
+            hidden
+          >
+            <span class="formulario-exito__icono" aria-hidden="true">✓</span>
+            <p class="label-caps">Recepción confirmada</p>
+            <h3>¡Gracias por contactar a Hermanos Jota!</h3>
+            <p>
+              Nuestro maestro ebanista y equipo de proyecto te responderán a la
+              brevedad dentro de las próximas 24 horas hábiles.
+            </p>
+            <button id="reset-form-btn" class="btn--secundario" type="button">
+              Enviar otra consulta
+            </button>
+          </div>
+        </div>
+
+        <aside class="contacto-aside" aria-label="Información del taller">
+          <section class="info-taller panel-contacto">
+            <div class="info-taller__encabezado">
+              <div>
+                <p class="label-caps">Casa taller</p>
+                <h2>Hermanos Jota — Casa Taller</h2>
+              </div>
+            </div>
+
+            <div class="info-taller__lista">
+              <div class="info-taller__item">
+                <img
+                  class="info-taller__icono"
+                  src="../assets/icons/google-maps-platform-svgrepo-com.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div>
+                  <p class="label-caps">Dirección</p>
+                  <p>Av. San Juan 2847</p>
+                  <span
+                    >C1232AAB — Barrio de San Cristóbal<br />Ciudad Autónoma de
+                    Buenos Aires<br />Argentina</span
+                  >
+                </div>
+              </div>
+              <div class="info-taller__item">
+                <img
+                  class="info-taller__icono"
+                  src="../assets/icons/clock-two-svgrepo-com.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div>
+                  <p class="label-caps">Horarios</p>
+                  <p>Lunes a viernes: 10:00 - 19:00</p>
+                  <span>Sábados: 10:00 - 14:00</span>
+                </div>
+              </div>
+              <div class="info-taller__item">
+                <img
+                  class="info-taller__icono"
+                  src="../assets/icons/whatsapp-svgrepo-com.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div>
+                  <p class="label-caps">Contacto directo</p>
+                  <a href="tel:+541145678900">+54 11 4567-8900</a>
+                </div>
+              </div>
+              <div class="info-taller__item">
+                <img
+                  class="info-taller__icono"
+                  src="../assets/icons/instagram-logo-facebook-2-svgrepo-com.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div>
+                  <p class="label-caps">Instagram del atelier</p>
+                  <a
+                    href="https://instagram.com/hermanosjota_ba"
+                    target="_blank"
+                    rel="noopener"
+                    >@hermanosjota_ba</a
+                  >
+                  <span>Proceso de encastre y pruebas de lustre diario</span>
+                </div>
+              </div>
+            </div>
+
+            <a
+              class="btn--secundario info-taller__mapa"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Av.+San+Juan+2847%2C+Buenos+Aires"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                class="info-taller__accion-icono"
+                src="../assets/icons/google-maps-platform-svgrepo-com.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Ver cómo llegar a la casa taller
+            </a>
+          </section>
+
+          <section class="contacto-cita">
+            <p class="label-caps">Experiencia presencial</p>
+            <h3>Agendá una cita personalizada en nuestro taller</h3>
+            <p>
+              Recorré junto al ebanista principal las mesas de cepillado,
+              seleccioná en vivo la veta del petiribí o nogal macizo y sentí al
+              tacto los cueros encerados para tus futuros ensambles.
+            </p>
+            <button id="btn-cita" class="btn--invertido" type="button">
+              Solicitar horario exclusivo
+            </button>
+          </section>
+
+          <section class="contacto-sustentabilidad">
+            <span class="contacto-sustentabilidad__icono" aria-hidden="true"
+              >♧</span
+            >
+            <div>
+              <p class="label-caps">Maderas FSC y trazabilidad</p>
+              <p>
+                Nuestros empaques y envíos compensan su huella de carbono
+                mediante reforestación de especies nativas.
+              </p>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="contacto-entorno" aria-labelledby="entorno-titulo">
+        <div class="contacto-entorno__encabezado">
+          <div>
+            <p class="label-caps">Atmósfera San Cristóbal</p>
+            <h2 id="entorno-titulo">El espacio donde nace el oficio</h2>
+          </div>
+          <p>
+            Un antiguo galpón de techos altos reconvertido en punto de encuentro
+            entre arquitectura, aroma a viruta fresca y diseño atemporal.
+          </p>
+        </div>
+        <div class="contacto-entorno__grid">
+          <a
+            class="contacto-mapa-visual"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Av.+San+Juan+2847%2C+Buenos+Aires"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="contacto-mapa-visual__trama" aria-hidden="true"></span>
+            <span class="contacto-mapa-visual__contenido">
+              <span class="label-caps">San Cristóbal / Buenos Aires</span>
+              <strong>Av. San Juan 2847</strong>
+              <span class="contacto-mapa-visual__enlace"
+                >Abrir ubicación ↗</span
+              >
+            </span>
+          </a>
+          <div class="contacto-oficio-visual">
+            <span
+              class="contacto-oficio-visual__marco"
+              aria-hidden="true"
+            ></span>
+            <div>
+              <p class="label-caps">La mesa del ebanista</p>
+              <p>Cada empalme es ajustado a mano con gubia tradicional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="../js/header.js"></script>
 
