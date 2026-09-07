@@ -69,32 +69,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     estado.hidden = true;
     info.setAttribute("aria-busy", "false");
+    articulo.hidden = false;
   };
 
-  // Retardo para simular red, misma convención que catalogo.js.
-  setTimeout(() => {
-    const catalogo = globalThis.productos;
+  const catalogo = globalThis.productos;
 
-    if (!Array.isArray(catalogo) || catalogo.length === 0) {
-      mostrarError();
-      return;
-    }
+  if (!Array.isArray(catalogo) || catalogo.length === 0) {
+    mostrarError();
+    return;
+  }
 
-    const idParam = new URLSearchParams(window.location.search).get("id");
-    const id = Number(idParam);
+  const idParam = new URLSearchParams(window.location.search).get("id");
+  const id = Number(idParam);
 
-    if (!idParam || Number.isNaN(id)) {
-      mostrarError();
-      return;
-    }
+  if (!idParam || Number.isNaN(id)) {
+    mostrarError();
+    return;
+  }
 
-    const producto = catalogo.find((item) => item.id === id);
+  const producto = catalogo.find((item) => item.id === id);
 
-    if (!producto) {
-      mostrarError();
-      return;
-    }
+  if (!producto) {
+    mostrarError();
+    return;
+  }
 
-    renderizar(producto);
-  }, 800);
+  renderizar(producto);
 });
