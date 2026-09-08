@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const destacados = globalThis.productos
     .filter((producto) => producto.destacado)
-    .slice(0, 4);
+    .slice(0, 3);
 
   if (destacados.length === 0) {
     showMessage("Muy pronto vas a ver acá las piezas destacadas del taller.");
