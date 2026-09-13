@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartCount = document.getElementById("cart-count");
   const catalog = Array.isArray(globalThis.productos) ? globalThis.productos : [];
   let cart = readCart();
+  let lastTrigger = null;
 
   function readCart() {
     try {
@@ -125,28 +126,53 @@ document.addEventListener("DOMContentLoaded", () => {
     cartTotal.textContent = formatPrice(total);
   }
 
+  function isCartOpen() {
+    const cartPanel = document.getElementById("cartPanel");
+    return cartPanel?.classList.contains("cart-panel-open") ?? false;
+  }
+
+  function getCartFocusables(cartPanel) {
+    return [
+      ...cartPanel.querySelectorAll(
+        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
+    ];
+  }
+
   function openCart() {
     const cartPanel = document.getElementById("cartPanel");
     const cartBackdrop = document.getElementById("cartBackdrop");
-    if (!cartPanel || !cartBackdrop) return;
+    if (!cartPanel || !cartBackdrop || isCartOpen()) return;
 
+    lastTrigger = document.activeElement;
     cartPanel.classList.add("cart-panel-open");
     cartBackdrop.hidden = false;
     cartPanel.setAttribute("aria-hidden", "false");
+    cartPanel.removeAttribute("inert");
+    if ("inert" in cartPanel) cartPanel.inert = false;
     document.body.classList.add("cart-is-open");
     cartButton?.setAttribute("aria-expanded", "true");
+    document.getElementById("closeCart")?.focus();
   }
 
-  function closeCart() {
+  function closeCart(returnFocus = true) {
     const cartPanel = document.getElementById("cartPanel");
     const cartBackdrop = document.getElementById("cartBackdrop");
-    if (!cartPanel || !cartBackdrop) return;
+    if (!cartPanel || !cartBackdrop || !isCartOpen()) return;
 
     cartPanel.classList.remove("cart-panel-open");
     cartBackdrop.hidden = true;
     cartPanel.setAttribute("aria-hidden", "true");
+    cartPanel.setAttribute("inert", "");
+    if ("inert" in cartPanel) cartPanel.inert = true;
     document.body.classList.remove("cart-is-open");
     cartButton?.setAttribute("aria-expanded", "false");
+    if (returnFocus) {
+      const trigger =
+        lastTrigger instanceof HTMLElement ? lastTrigger : cartButton;
+      trigger?.focus();
+      lastTrigger = null;
+    }
   }
 
   function createCartPanel() {
@@ -154,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "beforeend",
       `
         <div class="cart-backdrop" id="cartBackdrop" hidden></div>
-        <aside class="cart-panel" id="cartPanel" aria-labelledby="cartTitle" aria-hidden="true">
+        <aside class="cart-panel" id="cartPanel" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" inert>
           <div class="cart-panel-header">
             <h2 id="cartTitle">Tu carrito</h2>
             <button id="closeCart" type="button" aria-label="Cerrar carrito">×</button>
@@ -207,9 +233,40 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCount();
   renderCart();
 
+  cartButton?.setAttribute("aria-expanded", "false");
+  cartButton?.setAttribute("aria-controls", "cartPanel");
+  cartButton?.setAttribute("aria-haspopup", "dialog");
+
   cartButton?.addEventListener("click", openCart);
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeCart();
+    if (!isCartOpen()) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeCart();
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const cartPanel = document.getElementById("cartPanel");
+      if (!cartPanel) return;
+
+      const focusables = getCartFocusables(cartPanel);
+      if (focusables.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
   document.addEventListener("click", (event) => {
     const addButton = event.target.closest(".btn-agregar-carrito, #btn-agregar");
