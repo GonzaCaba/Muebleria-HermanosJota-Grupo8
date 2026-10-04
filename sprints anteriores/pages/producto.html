@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ficha de producto de Mueblería Hermanos Jota: imagen destacada, materiales, medidas, precio y añadir al carrito."
+    />
+    <title>Detalle de Producto - Mueblería Hermanos Jota</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <!-- header compartido -->
+    <header class="header-principal">
+      <div class="header-contenido">
+        <div class="header-identidad">
+          <button
+            id="btn-menu"
+            class="btn-menu-mobile"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-principal"
+            type="button"
+          >
+            <span aria-hidden="true">☰</span>
+          </button>
+          <a
+            class="logo"
+            href="../index.html"
+            aria-label="Hermanos Jota, inicio"
+          >
+            <img src="../assets/icons/logo.svg" alt="Mueblería Hermanos Jota" />
+            <span class="logo-texto"
+              ><strong>Hermanos Jota</strong><span>Ebanistería</span></span
+            >
+          </a>
+        </div>
+        <nav
+          id="nav-principal"
+          class="nav-principal"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <a class="activo" aria-current="page" href="./productos.html"
+                >Productos</a
+              >
+            </li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <button
+          id="btn-carrito"
+          class="btn-carrito"
+          aria-label="Ver carrito"
+          aria-expanded="false"
+          aria-controls="cartPanel"
+          type="button"
+        >
+          <img
+            class="icono-carrito"
+            src="../assets/icons/shopping-cart-svgrepo-com (1).svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <span id="cart-count" class="badge">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- contenido especifico de cada pagina -->
+    <main id="contenido" class="detalle-contenedor">
+      <nav class="breadcrumb" aria-label="Miga de pan">
+        <a href="./productos.html">Catálogo</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">Detalle de producto</span>
+      </nav>
+
+      <p id="detalle-estado" class="detalle-estado" role="status" hidden></p>
+
+      <article class="detalle-producto" aria-labelledby="detalle-nombre" hidden>
+        <div class="detalle-grid">
+          <figure class="detalle-galeria">
+            <!-- Placeholder real del repo: detalle.js (#13) reemplazará src/alt según ?id= con URLSearchParams. -->
+            <!-- OJO: js/data/productos.js guarda imagen como "assets/img/..." (relativa a raíz); desde pages/ hay que anteponer "../". -->
+            <img
+              id="detalle-imagen"
+              src="../assets/img/Aparador%20Uspallata.png"
+              alt="Vista principal del producto seleccionado"
+              width="1200"
+              height="1500"
+              fetchpriority="high"
+            />
+            <figcaption id="detalle-imagen-leyenda" class="detalle-leyenda">
+              Fotografía de estudio de la pieza
+            </figcaption>
+          </figure>
+
+          <section
+            id="detalle-info"
+            class="detalle-info"
+            aria-live="polite"
+            aria-busy="false"
+            aria-labelledby="detalle-nombre"
+          >
+            <p id="detalle-categoria" class="label-caps detalle-categoria">
+              Colección Hermanos Jota
+            </p>
+            <h1 id="detalle-nombre" class="detalle-nombre">
+              Nombre del producto
+            </h1>
+            <p id="detalle-precio" class="detalle-precio" data-precio="">$ 0</p>
+            <p id="detalle-descripcion" class="detalle-descripcion body-md">
+              Descripción de la pieza: detalle.js la completará con los datos de
+              js/data/productos.js.
+            </p>
+
+            <dl class="detalle-ficha">
+              <div class="detalle-ficha-fila">
+                <dt>Medidas</dt>
+                <dd id="detalle-medidas">—</dd>
+              </div>
+              <div class="detalle-ficha-fila">
+                <dt>Materiales</dt>
+                <dd id="detalle-materiales">—</dd>
+              </div>
+            </dl>
+
+            <div class="detalle-acciones">
+              <button
+                id="btn-agregar"
+                class="btn btn--primario"
+                type="button"
+                data-id=""
+              >
+                Añadir al Carrito
+              </button>
+              <a class="btn btn--secundario" href="./productos.html">
+                Volver al catálogo
+              </a>
+            </div>
+
+            <p class="detalle-ayuda body-sm">
+              Pieza de fabricación artesanal. Stock y plazos de entrega se
+              confirman al finalizar la compra.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <p id="detalle-error" class="detalle-error" role="alert" hidden>
+        No encontramos ese producto. Revisá el
+        <a href="./productos.html">catálogo</a> y elegí otra pieza.
+      </p>
+
+      <noscript>
+        <p class="detalle-error">
+          Para ver la ficha necesitás activar JavaScript, o recorré el
+          <a href="./productos.html">catálogo</a> directamente.
+        </p>
+      </noscript>
+    </main>
+
+    <script src="../js/header.js"></script>
+
+    <!-- footer compartido-->
+    <footer class="footer-principal">
+      <div class="footer-contenido">
+        <div class="footer-grilla">
+          <section class="footer-presentacion">
+            <h2>Hermanos Jota</h2>
+            <p>
+              Piezas únicas de mobiliario de autor concebidas bajo la nobleza de
+              la madera maciza, ensambladas a mano con rigor arquitectónico y
+              vocación eterna.
+            </p>
+            <p class="footer-certificacion">
+              <span aria-hidden="true">♧</span
+              ><span>Maderas nativas con certificación FSC</span>
+            </p>
+          </section>
+          <section class="footer-seccion">
+            <h3>Navegación</h3>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./productos.html">Catálogo completo</a></li>
+              <li><a href="./contacto.html">Contacto y taller</a></li>
+            </ul>
+          </section>
+          <section class="footer-seccion">
+            <h3>Taller &amp; Showroom</h3>
+            <address>
+              <a
+                class="footer-direccion"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Av.+San+Juan+2847%2C+San+Cristobal%2C+Buenos+Aires"
+                target="_blank"
+                rel="noopener"
+                ><span>Av. San Juan 2847, San Cristóbal</span
+                ><span>Ciudad Autónoma de Buenos Aires</span></a
+              >
+              <span class="footer-destacado"
+                >Lunes a viernes: 10:00 a 19:00 hs</span
+              ><span>Sábados: 10:00 a 14:00 hs</span
+              ><span>Atención personalizada con cita previa</span>
+            </address>
+          </section>
+          <section class="footer-seccion">
+            <h3>Contacto directo</h3>
+            <ul>
+              <li>
+                <a href="mailto:info@hermanosjota.com.ar"
+                  >info@hermanosjota.com.ar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/541145678900"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    class="footer-contacto-icono"
+                    src="../assets/icons/whatsapp-svgrepo-com.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />WhatsApp: +54 11 4567-8900</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/hermanosjota_ba"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    class="footer-contacto-icono"
+                    src="../assets/icons/instagram-logo-facebook-2-svgrepo-com.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />Instagram: @hermanosjota_ba</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer-legal">
+          <p>
+            &copy; 2026 Hermanos Jota. Todos los derechos reservados. Fabricado
+            en Argentina.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- dataset real que poblará la ficha; detalle.js llegará en #13 -->
+    <script src="../js/data/productos.js" defer></script>
+    <script src="../js/detalle.js" defer></script>
+    <script src="../js/cart.js" defer></script>
+  </body>
+</html>
